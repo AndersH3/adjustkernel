@@ -1,0 +1,10 @@
+typer>=0.16
+rich>=13.9
+attrs>=24.2
+cattrs>=24.1
+pyparsing>=3.2
+networkx>=3.4
+more-itertools>=10.5
+platformdirs>=4.3
+filelock>=3.16
+tomlkit>=0.13

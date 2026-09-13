@@ -1,0 +1,68 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "adjustkernel-ng"
+version = "3.0.0"
+description = "Conservative NetBSD kernel-config minimizer based on the live device tree"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "BSD-2-Clause"}
+authors = [{name = "OpenAI / ChatGPT, for Anders Hellström"}]
+keywords = ["NetBSD", "kernel", "config", "drvctl"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: POSIX :: BSD",
+  "Topic :: System :: Operating System Kernels",
+  "License :: OSI Approved :: BSD License",
+]
+dependencies = [
+  "typer>=0.16",
+  "rich>=13.9",
+  "attrs>=24.2",
+  "cattrs>=24.1",
+  "pyparsing>=3.2",
+  "networkx>=3.4",
+  "more-itertools>=10.5",
+  "platformdirs>=4.3",
+  "filelock>=3.16",
+  "tomlkit>=0.13",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3",
+  "hypothesis>=6.120",
+  "pytest-cov>=6.0",
+  "ruff>=0.9",
+  "mypy>=1.14",
+]
+
+[project.scripts]
+adjustkernel = "adjustkernel_ng.cli:app"
+adjustkernel-ng = "adjustkernel_ng.cli:app"
+
+[project.urls]
+Documentation = "https://man.netbsd.org/config.5"
+NetBSD = "https://www.netbsd.org/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/adjustkernel_ng"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["adjustkernel_ng"]

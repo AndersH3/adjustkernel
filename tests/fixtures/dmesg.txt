@@ -1,0 +1,7 @@
+[     0.000000] mainbus0 (root)
+[     0.100000] pci0 at mainbus0 bus 0
+[     0.200000] wm0 at pci0 dev 1 function 0: Intel Ethernet
+[     0.300000] azalia0 at pci0 dev 31 function 3: HD Audio
+[     0.400000] audio0 at azalia0: playback, capture
+[     0.500000] isa0 at mainbus0
+[     0.600000] com0 at isa0 port 0x3f8 irq 4

@@ -1,0 +1,7 @@
+mainbus0
+  pci0
+    wm0
+    azalia0
+      audio0
+  isa0
+    com0

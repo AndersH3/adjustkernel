@@ -1,0 +1,11 @@
+# Minimal synthetic NetBSD config fixture
+mainbus0 at root
+pci* at mainbus? bus ?
+isa0 at mainbus?
+wm* at pci? dev ? function ?
+re* at pci? dev ? function ?
+azalia* at pci? dev ? function ?
+audio* at audiobus?
+com0 at isa? port 0x3f8 irq 4
+puc* at pci?
+com* at puc? port ?
