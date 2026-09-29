@@ -18,10 +18,19 @@ available in the NetBSD binary package repository.
 
 ## Configure GNOME for XDM
 
-When the repository is cloned locally:
+If the repository is cloned locally:
 
 ```sh
 sh netbsd/setup-desktop.sh anonymous
+```
+
+If the repository is not cloned, download and run the repository-maintained
+installer directly:
+
+```sh
+ftp -4 -o install-from-github.sh \
+  https://raw.githubusercontent.com/AndersH3/adjustkernel/main/netbsd/install-from-github.sh
+sh install-from-github.sh anonymous
 ```
 
 The setup script:
