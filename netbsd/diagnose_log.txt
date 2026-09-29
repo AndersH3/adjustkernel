@@ -1,0 +1,120 @@
+=== SYSTEM ===
+NetBSD computer4 11.0 NetBSD 11.0 (GENERIC) #0: Thu Jul 30 15:23:12 UTC 2026  mkrepro@mkrepro.NetBSD.org:/usr/src/sys/arch/amd64/compile/GENERIC amd64
+
+=== RELEVANT PACKAGES ===
+dbus-1.16.2nb3      Message bus system
+dbus-glib-0.114nb2  GLib bindings for the D-BUS message bus system
+consolekit-1.2.6nb2 Framework for defining and tracking users, login sessions, and seats
+gnome-settings-daemon-3.38.1nb55 GNOME settings daemon
+mutter-40.2nb19     GNOME window manager
+gnome-session-40.1.1nb29 GNOME3 session management utilities
+gnome-shell-40.2nb47 Next generation GNOME shell
+glx-utils-8.4.0     OpenGL glxgears and glxinfo
+MesaLib-21.3.9nb5   Open source OpenGL implementation (amber branch)
+
+=== DBUS ===
+dbus is running as pid 1915.
+
+=== CONSOLEKIT ===
+Session1:
+	unix-user = '1000'
+	realname = '(null)'
+	seat = 'seat0'
+	session-type = 'unspecified'
+	session-class = 'user'
+	session-state = 'online'
+	session-service = 'unspecified'
+	active = FALSE
+	x11-display = ':0'
+	x11-display-device = '/dev/ttyE4'
+	display-device = ''
+	remote-host-name = ''
+	is-local = TRUE
+	on-since = '2026-09-29T22:52:00.965089Z'
+	login-session-id = ''
+	XDG_RUNTIME_DIR = '/var/run/user/1000'
+	VTNr = '5'
+
+=== XSESSION ===
+#!/bin/sh
+# XDM session for GNOME on NetBSD.
+
+PATH="/usr/pkg/bin:/usr/pkg/sbin:/usr/X11R7/bin:/usr/bin:/bin"
+export PATH
+
+# Recommended by pkgsrc GNOME/mutter on NetBSD.
+XCURSOR_PATH="/usr/pkg/share/icons"
+export XCURSOR_PATH
+
+# Swedish keyboard layout for X11.
+setxkbmap se
+
+# GNOME on NetBSD uses ConsoleKit rather than systemd-logind.  Register the
+# graphical login session so gnome-session can resolve the current seat/session.
+exec ck-launch-session gnome-session
+
+=== XSESSION ERRORS ===
+_IceTransmkdir: ERROR: euid != 0,directory /tmp/.ICE-unix will not be created.
+(gsd-usb-protection:1406): usb-protection-plugin-WARNING **: 22:52:02.606: Failed to get screen saver status: Cannot invoke method; proxy is for the well-known name org.gnome.ScreenSaver without an owner, and proxy was constructed with the G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START flag
+(gsd-usb-protection:1406): usb-protection-plugin-WARNING **: 22:52:02.649: Failed to fetch USBGuard parameters: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.usbguard1 was not provided by any .service files
+(gsd-media-keys:2756): media-keys-plugin-WARNING **: 22:52:02.662: Unable to inhibit keypresses: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.login1 was not provided by any .service files
+(gsd-media-keys:2756): media-keys-plugin-WARNING **: 22:52:02.662: Unable to inhibit suspend: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.login1 was not provided by any .service files
+(gsd-xsettings:1590): xsettings-plugin-WARNING **: 22:52:02.683: Failed to get current display configuration state: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Name "org.gnome.Mutter.DisplayConfig" does not exist
+(gsd-color:2110): color-plugin-WARNING **: 22:52:02.932: failed to connect to colord: Error calling StartServiceByName for org.freedesktop.ColorManager: Launch helper exited with unknown return code 1
+Failed to play sound: File or data not found
+(tracker-miner-fs-3:2352): Tracker-CRITICAL **: 22:52:03.342:   Empty locale file found at '/home/anonymous/.cache/tracker3/files/locale-for-miner-apps.txt'
+
+=== XORG ERRORS ===
+--- /var/log/Xorg.0.log ---
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[    13.063] 	X.Org Video Driver: 25.2
+[    13.063] 	X.Org XInput driver : 24.4
+[    13.069] 		Driver	"intel"
+[    13.069] 		Driver	"modesetting"
+[    13.069] 		Driver	"vesa"
+[    13.069] 		Driver	"wsfb"
+[    13.072] (II) LoadModule: "glx"
+[    13.074] (II) Loading /usr/X11R7/lib/modules/extensions/libglx.so
+[    13.077] (II) Module glx: vendor="X.Org Foundation"
+[    13.077] (II) Loading /usr/X11R7/lib/modules/drivers/intel_drv.so
+[    13.083] 	Module class: X.Org Video Driver
+[    13.083] 	ABI class: X.Org Video Driver, version 25.2
+[    13.084] (II) Loading /usr/X11R7/lib/modules/drivers/modesetting_drv.so
+[    13.085] 	Module class: X.Org Video Driver
+[    13.085] 	ABI class: X.Org Video Driver, version 25.2
+[    13.086] (II) Loading /usr/X11R7/lib/modules/drivers/vesa_drv.so
+[    13.086] 	Module class: X.Org Video Driver
+[    13.086] 	ABI class: X.Org Video Driver, version 25.2
+[    13.087] (II) Loading /usr/X11R7/lib/modules/drivers/wsfb_drv.so
+[    13.088] 	ABI class: X.Org Video Driver, version 25.2
+[    13.088] (II) intel: Driver for Intel(R) Integrated Graphics Chipsets:
+[    13.088] (II) intel: Driver for Intel(R) HD Graphics
+[    13.088] (II) intel: Driver for Intel(R) Iris(TM) Graphics
+[    13.088] (II) intel: Driver for Intel(R) Iris(TM) Pro Graphics
+[    13.088] (II) modesetting: Driver for Modesetting Kernel Drivers: kms
+[    13.088] (II) VESA: driver for VESA chipsets: vesa
+[    13.088] (II) wsfb: driver for wsdisplay framebuffer: wsfb
+[    13.088] (--) Using wscons driver on /dev/ttyE4 in pcvt compatibility mode (version 3.32)
+[    13.108] (II) intel(0): Using Kernel Mode Setting driver: i915, version 1.6.0 20200114
+[    13.114] (II) Loading sub module "dri2"
+[    13.114] (II) LoadModule: "dri2"
+[    13.114] (II) Module "dri2" already built-in
+[    13.122] (II) intel(0): [DRI2] Setup complete
+[    13.122] (II) intel(0): [DRI2]   DRI driver: i965
+[    13.122] (II) intel(0): [DRI2]   VDPAU driver: va_gl
+[    13.122] (II) intel(0): direct rendering: DRI2 enabled
+[    13.128] (II) Initializing extension DRI3
+[    13.129] (II) Initializing extension GLX
+[    13.180] (II) AIGLX: Loaded and initialized i965
+[    13.180] (II) GLX: Initialized DRI2 GL provider for screen 0
+[    13.181] (II) Initializing extension XFree86-DRI
+[    13.181] (II) Initializing extension DRI2
+[    13.276] (II) Loading /usr/X11R7/lib/modules/drivers/kbd_drv.so
+[    13.277] 	Module class: X.Org XInput Driver
+[    13.277] 	ABI class: X.Org XInput driver, version 24.4
+[    13.277] (II) Using input driver 'kbd' for '/dev/wskbd'
+[    13.385] (II) Loading /usr/X11R7/lib/modules/drivers/ws_drv.so
+[    13.386] 	Module class: X.Org XInput Driver
+[    13.386] 	ABI class: X.Org XInput driver, version 24.4
+[    13.386] (II) Using input driver 'ws' for '/dev/wsmouse'
+[    81.383] (II) AIGLX: Suspending AIGLX clients for VT switch
