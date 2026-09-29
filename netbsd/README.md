@@ -19,8 +19,7 @@ repository.
 
 MesaLib is installed explicitly because NetBSD PR pkg/58858 documents a mutter
 packaging problem in which MesaLib may be absent even though mutter needs it at
-runtime.  Typical symptoms include black/unrendered windows or a GNOME session
-that fails during startup.
+runtime.
 
 ## Configure GNOME for XDM
 
@@ -42,11 +41,34 @@ The setup script enables system D-Bus and XDM, verifies ConsoleKit, installs
 `netbsd/xsession` as the user's `~/.xsession`, and configures the X11
 keyboard as Swedish.
 
-GNOME on NetBSD runs under Xorg.  The session currently launches through:
+GNOME on NetBSD runs under Xorg. The session launches through:
 
 ```sh
 exec ck-launch-session gnome-session
 ```
+
+## SpiderMonkey JIT / PaX workaround
+
+On NetBSD 11, the current GNOME/GJS stack can fail with:
+
+```text
+MOZ_CRASH([unhandlable oom] ExecutableAllocator::reprotectPool)
+Application 'org.gnome.Shell.desktop' killed by signal 11
+```
+
+This is a SpiderMonkey JIT executable-memory reprotection failure, not evidence
+that the machine is actually out of RAM. NetBSD pkgsrc itself marks current GJS
+executables as not PaX-MPROTECT-safe because of the SpiderMonkey JIT.
+
+The repository's `xsession` therefore currently sets:
+
+```sh
+export GJS_DISABLE_JIT=1
+```
+
+before starting GNOME. This avoids the JIT path without globally disabling PaX
+MPROTECT. If a future pkgsrc GNOME/GJS combination no longer needs the
+workaround, remove this export and retest.
 
 ## Diagnostics
 
@@ -63,9 +85,6 @@ For OpenGL verification from a running X session:
 ```sh
 glxinfo -B
 ```
-
-The renderer should identify working direct rendering rather than showing a
-missing GL implementation.
 
 ## Configuration fragments
 
