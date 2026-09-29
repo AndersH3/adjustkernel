@@ -11,6 +11,15 @@ export XCURSOR_PATH
 # Swedish keyboard layout for X11.
 setxkbmap se
 
-# GNOME on NetBSD uses ConsoleKit rather than systemd-logind.  Register the
+# Work around a SpiderMonkey JIT / PaX MPROTECT crash seen in gnome-shell on
+# NetBSD 11 with the current mozjs128-based GJS stack.  The failure appears as:
+#   MOZ_CRASH([unhandlable oom] ExecutableAllocator::reprotectPool)
+# followed by gnome-shell dying with SIGSEGV.
+#
+# Disabling the GJS JIT avoids executable-page reprotection and keeps NetBSD's
+# PaX MPROTECT protection enabled for gnome-shell.
+export GJS_DISABLE_JIT=1
+
+# GNOME on NetBSD uses ConsoleKit rather than systemd-logind. Register the
 # graphical login session so gnome-session can resolve the current seat/session.
 exec ck-launch-session gnome-session
