@@ -13,8 +13,14 @@ ftp -4 -o bootstrap.sh \
 sh bootstrap.sh
 ```
 
-The bootstrap script installs `pkgin`, basic tools, ConsoleKit, and the GNOME
-components available in the NetBSD binary package repository.
+The bootstrap script installs `pkgin`, basic tools, ConsoleKit, MesaLib,
+`glx-utils`, and the GNOME components available in the NetBSD binary package
+repository.
+
+MesaLib is installed explicitly because NetBSD PR pkg/58858 documents a mutter
+packaging problem in which MesaLib may be absent even though mutter needs it at
+runtime.  Typical symptoms include black/unrendered windows or a GNOME session
+that fails during startup.
 
 ## Configure GNOME for XDM
 
@@ -24,8 +30,7 @@ If the repository is cloned locally:
 sh netbsd/setup-desktop.sh anonymous
 ```
 
-If the repository is not cloned, download and run the repository-maintained
-installer directly:
+If the repository is not cloned:
 
 ```sh
 ftp -4 -o install-from-github.sh \
@@ -33,24 +38,34 @@ ftp -4 -o install-from-github.sh \
 sh install-from-github.sh anonymous
 ```
 
-The setup script:
+The setup script enables system D-Bus and XDM, verifies ConsoleKit, installs
+`netbsd/xsession` as the user's `~/.xsession`, and configures the X11
+keyboard as Swedish.
 
-- enables the system D-Bus daemon;
-- enables XDM;
-- verifies that ConsoleKit's `ck-launch-session` is installed;
-- installs `netbsd/xsession` as the user's `~/.xsession`;
-- configures the X11 keyboard as Swedish;
-- starts D-Bus immediately when needed.
-
-GNOME on NetBSD runs under Xorg.  The session file launches GNOME as:
+GNOME on NetBSD runs under Xorg.  The session currently launches through:
 
 ```sh
 exec ck-launch-session gnome-session
 ```
 
-This registers the graphical session with ConsoleKit.  Without that wrapper,
-`gnome-session` can emit `GetSessionForUnixProcess failed` and the GNOME
-Shell session may fall back to the "Oh no! Something has gone wrong" screen.
+## Diagnostics
+
+To collect the relevant GNOME, ConsoleKit and Xorg failures:
+
+```sh
+ftp -4 -o diagnose-gnome.sh \
+  https://raw.githubusercontent.com/AndersH3/adjustkernel/main/netbsd/diagnose-gnome.sh
+sh diagnose-gnome.sh anonymous
+```
+
+For OpenGL verification from a running X session:
+
+```sh
+glxinfo -B
+```
+
+The renderer should identify working direct rendering rather than showing a
+missing GL implementation.
 
 ## Configuration fragments
 
