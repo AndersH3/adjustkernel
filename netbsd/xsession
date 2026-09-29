@@ -4,11 +4,13 @@
 PATH="/usr/pkg/bin:/usr/pkg/sbin:/usr/X11R7/bin:/usr/bin:/bin"
 export PATH
 
-# Required/recommended by pkgsrc GNOME/mutter on NetBSD.
+# Recommended by pkgsrc GNOME/mutter on NetBSD.
 XCURSOR_PATH="/usr/pkg/share/icons"
 export XCURSOR_PATH
 
 # Swedish keyboard layout for X11.
 setxkbmap se
 
-exec gnome-session
+# GNOME on NetBSD uses ConsoleKit rather than systemd-logind.  Register the
+# graphical login session so gnome-session can resolve the current seat/session.
+exec ck-launch-session gnome-session
