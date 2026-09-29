@@ -1,0 +1,956 @@
+g1: DAC00 2ch: Speaker [Built-In], HP Out [Jack]
+[     1.038282] hdafg1: ADC01 2ch: Mic In [Jack]
+[     1.038282] hdafg1: ADC02 2ch: Mic In [Built-In]
+[     1.038282] hdafg1: 2ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+[     1.038282] audio1 at hdafg1: playback, capture, full duplex, independent
+[     1.038282] audio1: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+[     1.038282] audio1: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+[     1.038282] spkr1 at audio1: PC Speaker (synthesized)
+[     1.038282] wsbell at spkr1 not configured
+[     1.038282] ppb0 at pci0 dev 28 function 0: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038282] ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+[     1.038282] pci1 at ppb0 bus 1
+[     1.038282] pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038282] ppb1 at pci0 dev 28 function 1: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038282] ppb1: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+[     1.038282] ppb1: link is x1 @ 2.5GT/s
+[     1.038282] pci2 at ppb1 bus 2
+[     1.038282] pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038282] rtsx0 at pci2 dev 0 function 0: Realtek Semiconductor RTS5227 PCI-E Card Reader (rev. 0x01)
+[     1.038282] rtsx0: interrupting at msi4 vec 0
+[     1.038282] sdmmc0 at rtsx0
+[     1.038282] ppb2 at pci0 dev 28 function 3: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038282] ppb2: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+[     1.038282] ppb2: link is x1 @ 2.5GT/s
+[     1.038282] pci3 at ppb2 bus 3
+[     1.038282] pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038282] iwm0 at pci3 dev 0 function 0: Intel Dual Band Wireless AC 7265 (rev. 0x48)
+[     1.038282] iwm0: interrupting at msi5 vec 0
+[     1.038282] ppb3 at pci0 dev 28 function 4: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038282] ppb3: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 5.0GT/s
+[     1.038282] pci4 at ppb3 bus 4
+[     1.038282] pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038282] radeon0 at pci4 dev 0 function 0: ATI Technologies Radeon R7 M265/M365X/M465 (rev. 0x00)
+[     1.038282] ehci0 at pci0 dev 29 function 0: Intel Core 5G (mobile) USB EHCI (rev. 0x03)
+[     1.038282] ehci0: 64-bit DMA
+[     1.038282] ehci0: interrupting at ioapic0 pin 17
+[     1.038282] ehci0: EHCI version 1.0
+[     1.038282] ehci0: Using DMA subregion for control data structures
+[     1.038282] usb2 at ehci0: USB revision 2.0
+[     1.038282] pcib0 at pci0 dev 31 function 0: Intel Core 5G (mobile) LPC (rev. 0x03)
+[     1.038282] ahcisata0 at pci0 dev 31 function 2: Intel Core 5G (mobile) SATA Controller (AHCI) (rev. 0x03)
+[     1.038282] ahcisata0: 64-bit DMA
+[     1.038282] ahcisata0: AHCI revision 1.30, 2 ports, 32 slots, CAP 0xc734ff01<PSC,SSC,PMD,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SNCQ,S64A>
+[     1.038282] ahcisata0: interrupting at msi6 vec 0
+[     1.038282] atabus0 at ahcisata0 channel 1
+[     1.038282] ichsmb0 at pci0 dev 31 function 3: Intel Core 5G (mobile) SMBus (rev. 0x03)
+[     1.038282] ichsmb0: interrupting at ioapic0 pin 18
+[     1.038282] iic0 at ichsmb0: I2C bus
+[     1.038282] isa0 at pcib0
+[     1.038282] pcppi0 at isa0 port 0x61
+[     1.038282] spkr2 at pcppi0: PC Speaker
+[     1.038282] wsbell at spkr2 not configured
+[     1.038282] midi0 at pcppi0: PC speaker
+[     1.038282] sysbeep0 at pcppi0
+[     1.038282] attimer1: attached to pcppi0
+[     1.038282] acpicpu0 at cpu0: ACPI CPU
+[     1.038282] acpicpu0: C1: FFH, lat   1 us, pow  1000 mW
+[     1.038282] acpicpu0: C2: FFH, lat 230 us, pow   200 mW
+[     1.038282] acpicpu0: C3: FFH, lat 506 us, pow   200 mW
+[     1.038282] acpicpu0: P0: FFH, lat  10 us, pow 15000 mW, 2301 MHz, turbo boost
+[     1.038282] acpicpu0: P1: FFH, lat  10 us, pow 15000 mW, 2300 MHz
+[     1.038282] acpicpu0: P2: FFH, lat  10 us, pow 14088 mW, 2200 MHz
+[     1.038282] acpicpu0: P3: FFH, lat  10 us, pow 12462 mW, 2000 MHz
+[     1.038282] acpicpu0: P4: FFH, lat  10 us, pow 11745 mW, 1900 MHz
+[     1.038282] acpicpu0: P5: FFH, lat  10 us, pow 11042 mW, 1800 MHz
+[     1.038282] acpicpu0: P6: FFH, lat  10 us, pow 10215 mW, 1700 MHz
+[     1.038282] acpicpu0: P7: FFH, lat  10 us, pow  8882 mW, 1500 MHz
+[     1.038282] acpicpu0: P8: FFH, lat  10 us, pow  8101 mW, 1400 MHz
+[     1.038282] acpicpu0: P9: FFH, lat  10 us, pow  7471 mW, 1300 MHz
+[     1.038282] acpicpu0: P10: FFH, lat  10 us, pow  6121 mW, 1100 MHz
+[     1.038282] acpicpu0: P11: FFH, lat  10 us, pow  5531 mW, 1000 MHz
+[     1.038282] acpicpu0: P12: FFH, lat  10 us, pow  4955 mW,  900 MHz
+[     1.038282] acpicpu0: P13: FFH, lat  10 us, pow  4267 mW,  800 MHz
+[     1.038282] acpicpu0: P14: FFH, lat  10 us, pow  3182 mW,  600 MHz
+[     1.038282] acpicpu0: P15: FFH, lat  10 us, pow  2538 mW,  500 MHz
+[     1.038282] acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+[     1.038282] acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+[     1.038282] acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+[     1.038282] acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+[     1.038282] acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+[     1.038282] acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+[     1.038282] acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+[     1.038282] acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+[     1.038282] coretemp0 at cpu0: thermal sensor, 1 C resolution, Tjmax=105
+[     1.038282] acpicpu1 at cpu1: ACPI CPU
+[     1.038282] acpicpu2 at cpu2: ACPI CPU
+[     1.038282] coretemp1 at cpu2: thermal sensor, 1 C resolution, Tjmax=105
+[     1.038282] acpicpu3 at cpu3: ACPI CPU
+[     1.038282] timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+[     1.038282] timecounter: Timecounter "TSC" frequency 2294689000 Hz quality 3000
+[     1.165046] acpiacad0: AC adapter online.
+[     1.165046] uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+[     1.200681] uhub0: 4 ports with 4 removable, self powered
+[     1.200681] uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+[     1.240681] uhub1: 11 ports with 11 removable, self powered
+[     1.240681] IPsec: Initialized Security Association Processing.
+[     1.250681] uhub2 at usb2: NetBSD (0x0000) EHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 1
+[     1.280681] uhub2: 3 ports with 3 removable, self powered
+[     1.290683] tpm0: read 8 bytes, expected 10
+[     1.300680] acpibat0: Hewlett-Packard LIon rechargeable battery
+[     1.300680] tpm0: deactivating entropy source
+[     1.326887] acpibat0: granularity: low->warn 0.100 Ah, warn->full 0.100 Ah
+[     1.370682] ahcisata0 port 1: device present, speed: 6.0Gb/s
+[     1.690682] uhub3 at uhub0 port 3: SMSC (0x0424) USB5534B (0x5534), class 9/0, rev 3.00/60.82, addr 1
+[     1.720680] uhub3: 4 ports with 3 removable, self powered
+[     1.770682] uhub4 at uhub1 port 3: SMSC (0x0424) USB2134B (0x2134), class 9/0, rev 2.10/60.82, addr 2
+[     1.770682] uhub4: multiple transaction translators
+[     1.770682] uhub4: 4 ports with 3 removable, self powered
+[     2.390682] uhub5 at uhub2 port 1: vendor 8087 (0x8087) product 8001 (0x8001), class 9/0, rev 2.00/0.03, addr 2
+[     2.420679] uhub5: single transaction translator
+[     2.450679] uhub5: 8 ports with 8 removable, self powered
+[     2.620681] ubt0 at uhub1 port 4
+[     2.650679] ubt0: vendor 8087 (0x8087) product 0a2a (0x0a2a), rev 2.01/0.01, addr 3
+[     2.950681] wd0 at atabus0 drive 0
+[     2.950681] wd0: <LITEON CV3-DE128>
+[     2.950681] wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+[     2.950681] wd0: 119 GB, 248085 cyl, 16 head, 63 sec, 512 bytes/sect x 250069680 sectors
+[     2.950681] wd0: GPT GUID: abdef7c1-11a4-4b05-88ba-5d3cd586902c
+[     2.950681] dk0 at wd0: "EFI System Partition", 262144 blocks at 64, type: msdos
+[     2.950681] dk1 at wd0: "f32c8105-b3af-4c2a-85ec-62e3d62b65b9", 216506944 blocks at 262208, type: ffs
+[     2.950681] dk2 at wd0: "9998d1be-9aa8-485c-a529-4eb1e349fe57", 33300480 blocks at 216769152, type: swap
+[     2.950681] wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), NCQ (32 tags)
+[     2.950681] wd0(ahcisata0:1:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+[     5.450679] sdmmc0: autoconfiguration error: couldn't enable card: 60
+[     5.480677] swwdog0: software watchdog initialized
+[     5.480677] WARNING: 1 error while detecting hardware; check system log.
+[     5.480677] boot device: wd0
+[     5.480677] root on dk1 dumps on dk2
+[     5.490831] root file system type: ffs
+[     5.490831] kern.module.path=/stand/amd64/11.0/modules
+[     5.492466] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     5.530676] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     5.570677] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     5.610677] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[     5.640687] [drm] Driver supports precise vblank timestamp query.
+[     5.680677] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     5.730700] i915drmkms0: interrupting at msi7 vec 0 (i915drmkms0)
+[     5.790679] iwm0: hw rev 0x180, fw ver 17.352738.0, address 64:80:99:d7:28:6e
+[     5.790679] [drm] initializing kernel modesetting (OLAND 0x1002:0x6604 0x103C:0x8006 0x00).
+[     5.790679] [drm] register mmio base: 0xc1000000
+[     5.801096] [drm] register mmio size: 262144
+[     5.810677] ATOM BIOS: IEC/HP
+[     5.810677] [drm] GPU not posted. posting now...
+[     5.810677] radeon0: VRAM: 1024M 0x0000000000000000 - 0x000000003FFFFFFF (1024M used)
+[     5.821156] radeon0: GTT: 2048M 0x0000000040000000 - 0x00000000BFFFFFFF
+[     5.821156] [drm] Detected VRAM RAM=400M, BAR=256M
+[     5.821156] [drm] RAM width 128bits DDR
+[     5.821156] Zone  kernel: Available graphics memory: 9007199252883958 KiB
+[     5.821156] Zone   dma32: Available graphics memory: 2097152 KiB
+[     5.821156] [drm] radeon: 1024M of VRAM memory ready
+[     5.821156] [drm] radeon: 2048M of GTT memory ready.
+[     5.821156] [drm] Loading oland Microcode
+[     5.830677] [drm] Internal thermal controller with fan control
+[     5.840677] [drm] radeon: dpm initialized
+[     5.840677] [drm] Initialized i915 1.6.0 20200114 for i915drmkms0 on minor 0
+[     5.870676] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     7.410674] [drm] Found VCE firmware/feedback version 50.0.1 / 17!
+[     7.410674] [drm] GART: num cpu pages 524288, num gpu pages 524288
+[     7.410674] [drm] PCIE gen 2 link speeds already enabled
+[     7.420676] [drm] PCIE GART of 2048M enabled (table at 0x00000000001D6000).
+[     7.431366] radeon0: WB enabled
+[     7.431366] radeon0: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xffff8d573b89ac00
+[     7.431366] radeon0: fence driver on ring 1 use gpu addr 0x0000000040000c04 and cpu addr 0x0xffff8d573b89ac04
+[     7.431366] radeon0: fence driver on ring 2 use gpu addr 0x0000000040000c08 and cpu addr 0x0xffff8d573b89ac08
+[     7.431366] radeon0: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xffff8d573b89ac0c
+[     7.431366] radeon0: fence driver on ring 4 use gpu addr 0x0000000040000c10 and cpu addr 0x0xffff8d573b89ac10
+[     7.431366] radeon0: fence driver on ring 5 use gpu addr 0x0000000000075a18 and cpu addr 0x0xffff9904ba60aa18
+[     7.530674] radeon0: autoconfiguration error: error: failed VCE resume (-60).
+[     7.530674] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[     7.530674] [drm] Driver supports precise vblank timestamp query.
+[     7.530674] radeon0: radeon: MSI limited to 32-bit
+[     7.540784] radeon0: radeon: using MSI.
+[     7.540784] radeon0: interrupting at msi8 vec 0 (radeon0)
+[     7.540784] [drm] radeon: irq initialized.
+[     7.770674] [drm] ring test on 0 succeeded in 1 usecs
+[     7.770674] [drm] ring test on 1 succeeded in 1 usecs
+[     7.770674] [drm] ring test on 2 succeeded in 1 usecs
+[     7.781064] [drm] ring test on 3 succeeded in 4 usecs
+[     7.781064] [drm] ring test on 4 succeeded in 4 usecs
+[     7.950674] [drm] ring test on 5 succeeded in 2 usecs
+[     7.950674] [drm] UVD initialized successfully.
+[     7.960927] [drm] ib test on ring 0 succeeded in 0 usecs
+[     7.960927] [drm] ib test on ring 1 succeeded in 0 usecs
+[     7.960927] [drm] ib test on ring 2 succeeded in 0 usecs
+[     7.960927] [drm] ib test on ring 3 succeeded in 0 usecs
+[     7.960927] [drm] ib test on ring 4 succeeded in 0 usecs
+[     8.120675] intelfb0 at i915drmkms0
+[     8.150674] [drm] DRM_I915_DEBUG enabled
+[     8.180674] [drm] DRM_I915_DEBUG_GEM enabled
+[     8.210674] intelfb0: framebuffer at 0xb0001000, size 1920x1080, depth 32, stride 7680
+[     8.610675] [drm] ib test on ring 5 succeeded
+[     8.610675] [drm] Radeon Display Connectors
+[     8.610675] [drm] Initialized radeon 2.50.0 20080528 for radeon0 on minor 1
+[    10.100672] wsdisplay0 at intelfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+[    10.150672] wsmux1: connecting to wsdisplay0
+[    11.160672] wsdisplay0: screen 1 added (default, vt100 emulation)
+[    11.160672] wsdisplay0: screen 2 added (default, vt100 emulation)
+[    11.160672] wsdisplay0: screen 3 added (default, vt100 emulation)
+[    11.160672] wsdisplay0: screen 4 added (default, vt100 emulation)
+[    11.230671] sdmmc0: autoconfiguration error: couldn't enable card: 60
+[    59.500631] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[    62.500629] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[    65.500626] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[    68.500623] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[   347.379974] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[   351.279972] syncing disks... done
+[   351.279972] unmounted tmpfs on /var/shm type tmpfs
+[   351.279972] unmounted procfs on /proc type procfs
+[   351.279972] unmounted ptyfs on /dev/pts type ptyfs
+[   351.279972] unmounted kernfs on /kern type kernfs
+[   351.279972] unmounted tmpfs on /tmp type tmpfs
+[   351.349970] uhub5: detached
+[   351.349970] uhub4: detached
+[   351.389969] uhub3: detached
+[   351.389969] sysbeep0: detached
+[   351.389969] midi0: detached
+[     1.000000] Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003,
+[     1.000000]     2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+[     1.000000]     2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
+[     1.000000]     2024, 2025, 2026
+[     1.000000]     The NetBSD Foundation, Inc.  All rights reserved.
+[     1.000000] Copyright (c) 1982, 1986, 1989, 1991, 1993
+[     1.000000]     The Regents of the University of California.  All rights reserved.
+
+[     1.000000] NetBSD 11.0 (GENERIC) #0: Thu Jul 30 15:23:12 UTC 2026
+[     1.000000] 	mkrepro@mkrepro.NetBSD.org:/usr/src/sys/arch/amd64/compile/GENERIC
+[     1.000000] total memory = 16259 MB
+[     1.000000] avail memory = 15698 MB
+[     1.000000] timecounter: Timecounters tick every 10.000 msec
+[     1.000000] Kernelized RAIDframe activated
+[     1.000000] timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+[     1.000004] efi: systbl at pa 9947ef18
+[     1.000004] mainbus0 (root)
+[     1.000004] ACPI: RSDP 0x0000000099FFE014 000024 (v02 HPQOEM)
+[     1.000004] ACPI: XSDT 0x0000000099FFD0E8 0000A4 (v01 HPQOEM SLIC-MPC 00000001      01000013)
+[     1.000004] ACPI: FACP 0x0000000099FFB000 00010C (v05 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: DSDT 0x0000000099FCF000 026A0D (v02 HPQOEM 2216     00000001 INTL 20130927)
+[     1.000004] ACPI: FACS 0x0000000099F76000 000040
+[     1.000004] ACPI: HPET 0x0000000099FFA000 000038 (v01 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: APIC 0x0000000099FF9000 0000BC (v01 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: MCFG 0x0000000099FF8000 00003C (v01 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: TCPA 0x0000000099FF6000 000032 (v02 HPQOEM 2216     00000000 HP   00000001)
+[     1.000004] ACPI: SSDT 0x0000000099FCC000 0002D9 (v01 HPQOEM SataAhci 00001000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FCB000 00048A (v01 HPQOEM PtidDevc 00001000 INTL 20130927)
+[     1.000004] ACPI: SLIC 0x0000000099FCA000 000176 (v01 HPQOEM SLIC-MPC 00000001 HP   00000001)
+[     1.000004] ACPI: FPDT 0x0000000099FC8000 000044 (v01 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: BGRT 0x0000000099FC7000 000038 (v00 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: SSDT 0x0000000099FC3000 000544 (v02 PmRef  Cpu0Ist  00003000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FC2000 000B8F (v02 CpuRef CpuSsdt  00003000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FC1000 0001D5 (v02 PmRef  LakeTiny 00003000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FC0000 00092C (v02 SaSsdt SaSsdt   00003000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FBE000 00170B (v02 HP     AMDSGTBL 00001000 INTL 20130927)
+[     1.000004] ACPI: ASF! 0x0000000099FF7000 0000A5 (v32 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: 8 ACPI AML tables successfully acquired and loaded
+[     1.000004] ioapic0 at mainbus0 apid 0: pa 0xfec00000, version 0x20, 40 pins
+[     1.000004] cpu0 at mainbus0 apid 0
+[     1.000004] cpu0: Use lfence to serialize rdtsc
+[     1.000004] cpu0: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, id 0x306d4
+[     1.000004] cpu0: node 0, package 0, core 0, smt 0
+[     1.000004] cpu1 at mainbus0 apid 1
+[     1.000004] cpu1: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, id 0x306d4
+[     1.000004] cpu1: node 0, package 0, core 0, smt 1
+[     1.000004] cpu2 at mainbus0 apid 2
+[     1.000004] cpu2: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, id 0x306d4
+[     1.000004] cpu2: node 0, package 0, core 1, smt 0
+[     1.000004] cpu3 at mainbus0 apid 3
+[     1.000004] cpu3: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, id 0x306d4
+[     1.000004] cpu3: node 0, package 0, core 1, smt 1
+[     1.000004] acpi0 at mainbus0: Intel ACPICA 20241212
+[     1.000004] acpi0: X/RSDT: OemId <HPQOEM,SLIC-MPC,00000001>, AslId <    ,01000013>
+[     1.000004] acpi0: MCFG: segment 0, bus 0-255, address 0x00000000e0000000
+[     1.000004] ACPI: Dynamic OEM Table Load:
+[     1.000004] ACPI: SSDT 0xFFFF845C2E3A7008 0003F3 (v02 PmRef  Cpu0Cst  00003001 INTL 20130927)
+[     1.000004] ACPI: Dynamic OEM Table Load:
+[     1.000004] ACPI: SSDT 0xFFFF845C2E307008 0005DB (v02 PmRef  ApIst    00003000 INTL 20130927)
+[     1.000004] ACPI: Dynamic OEM Table Load:
+[     1.000004] ACPI: SSDT 0xFFFF845C2E302B08 000119 (v02 PmRef  ApCst    00003000 INTL 20130927)
+[     1.000004] acpi0: SCI interrupting at int 9
+[     1.000004] acpi0: fixed power button present
+[     1.000004] timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+[     1.037486] hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+[     1.037486] timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+[     1.038274] acpiec0 at acpi0 (EC0, PNP0C09-1): io 0x62,0x66
+[     1.038274] WLBU (HPQ6001) at acpi0 not configured
+[     1.038274] acpivga0 at acpi0 (GFX0): ACPI Display Adapter
+[     1.038274] acpiout0 at acpivga0 (DD01, 0x0100): ACPI Display Output Device
+[     1.038274] acpiout1 at acpivga0 (DD02, 0x0400): ACPI Display Output Device
+[     1.038274] acpiout1: brightness levels: [0-67,69-100]
+[     1.038274] acpiout2 at acpivga0 (DD03, 0x0300): ACPI Display Output Device
+[     1.038274] acpiout3 at acpivga0 (DD04, 0x0301): ACPI Display Output Device
+[     1.038274] acpiout4 at acpivga0 (DD05, 0x0302): ACPI Display Output Device
+[     1.038274] acpiout5 at acpivga0 (DD06, 0x0006): ACPI Display Output Device
+[     1.038274] acpiout6 at acpivga0 (DD07, 0x0007): ACPI Display Output Device
+[     1.038274] acpiout7 at acpivga0 (DD08, 0x0008): ACPI Display Output Device
+[     1.038274] acpivga0: connected output devices:
+[     1.038274] acpivga0:   0x0400 (acpiout1): Unknown Output Device, head 0
+[     1.038274] FWHD (INT0800) at acpi0 not configured
+[     1.038274] attimer1 at acpi0 (TIMR, PNP0100): io 0x40-0x43,0x50-0x53 irq 0
+[     1.038274] pckbc1 at acpi0 (PS2K, HPQ8002) (kbd port): io 0x60,0x64 irq 1
+[     1.038274] pckbc2 at acpi0 (PS2M, SYN3025) (aux port): irq 12
+[     1.038274] acpivga1 at acpi0 (DGFX): ACPI Display Adapter
+[     1.038274] acpiout8 at acpivga1 (DD01, 0x0100): ACPI Display Output Device
+[     1.038274] acpiout9 at acpivga1 (DD02, 0x0400): ACPI Display Output Device
+[     1.038274] acpiout9: brightness levels: [0-67,69-100]
+[     1.038274] acpiout10 at acpivga1 (DD03, 0x0300): ACPI Display Output Device
+[     1.038274] acpiout11 at acpivga1 (DD04, 0x0301): ACPI Display Output Device
+[     1.038274] acpiout12 at acpivga1 (DD05, 0x0302): ACPI Display Output Device
+[     1.038274] acpiout13 at acpivga1 (DD06, 0x0006): ACPI Display Output Device
+[     1.038274] acpiout14 at acpivga1 (DD07, 0x0007): ACPI Display Output Device
+[     1.038274] acpiout15 at acpivga1 (DD08, 0x0008): ACPI Display Output Device
+[     1.038274] acpivga1: connected output devices:
+[     1.038274] acpivga1:   0x0400 (acpiout9): Unknown Output Device, head 0
+[     1.038274] ACEL (HPQ6007) at acpi0 not configured
+[     1.038274] acpibat0 at acpi0 (BAT0, PNP0C0A-2): ACPI Battery
+[     1.038274] acpiacad0 at acpi0 (AC, ACPI0003): ACPI AC Adapter
+[     1.038274] acpibut0 at acpi0 (SLPB, PNP0C0E): ACPI Sleep Button
+[     1.038274] acpilid0 at acpi0 (LID, PNP0C0D): ACPI Lid Switch
+[     1.038274] acpiwmi0 at acpi0 (WMID, PNP0C14-0): ACPI WMI Interface
+[     1.038274] wmihp0 at acpiwmi0: HP WMI mappings
+[     1.038274] tpm0 at acpi0 (GTPM, IFX0102): mem 0xfed40000-0xfed44fff
+[     1.038274] tpm0: device 0x001a15d1 rev 0x10
+[     1.038274] acpitz0 at acpi0 (CPUZ)
+[     1.038274] acpitz0: levels: critical 128.0 C, hot 104.0 C, passive cooling
+[     1.038274] acpitz1 at acpi0 (GFXZ): cpu0
+[     1.038274] acpitz1: levels: critical 128.0 C, passive 105.0 C, passive cooling
+[     1.038274] acpitz2 at acpi0 (EXTZ)
+[     1.038274] acpitz2: levels: critical 128.0 C, passive cooling
+[     1.038274] acpitz3 at acpi0 (LOCZ)
+[     1.038274] acpitz3: levels: critical 128.0 C, passive cooling
+[     1.038274] acpitz4 at acpi0 (BATZ): cpu0
+[     1.038274] acpitz4: levels: critical 128.0 C, passive 55.0 C, passive cooling
+[     1.038274] acpitz5 at acpi0 (PCHZ)
+[     1.038274] acpitz5: levels: critical 128.0 C, passive cooling
+[     1.038274] ACPI: Enabled 5 GPEs in block 00 to 7F
+[     1.038274] pckbd0 at pckbc1 (kbd slot)
+[     1.038274] pckbc1: using irq 1 for kbd slot
+[     1.038274] wskbd0 at pckbd0: console keyboard
+[     1.038274] pms0 at pckbc1 (aux slot)
+[     1.038274] pckbc1: using irq 12 for aux slot
+[     1.038274] wsmouse0 at pms0 mux 0
+[     1.038274] pci0 at mainbus0 bus 0: configuration mode 1
+[     1.038274] pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+[     1.038274] pchb0 at pci0 dev 0 function 0: Intel Core 5G Host Bridge (rev. 0x09)
+[     1.038274] i915drmkms0 at pci0 dev 2 function 0: Intel HD Graphics 5500 (rev. 0x09)
+[     1.038274] hdaudio0 at pci0 dev 3 function 0: HD Audio Controller
+[     1.038274] hdaudio0: interrupting at msi0 vec 0
+[     1.038274] hdaudio0: HDA ver. 1.0, OSS 3, ISS 0, BSS 0, SDO 1, 64-bit
+[     1.038274] hdafg0 at hdaudio0: Intel HDMI/DP
+[     1.038274] hdafg0: DP00 8ch: Digital Out [Jack]
+[     1.038274] hdafg0: 8ch/0ch 48000Hz PCM16*
+[     1.038274] audio0 at hdafg0: playback
+[     1.038274] audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+[     1.038274] spkr0 at audio0: PC Speaker (synthesized)
+[     1.038274] wsbell at spkr0 not configured
+[     1.038274] xhci0 at pci0 dev 20 function 0: Intel Core 5G (mobile) USB xHCI (rev. 0x03)
+[     1.038274] xhci0: 64-bit DMA
+[     1.038274] xhci0: interrupting at msi1 vec 0
+[     1.038274] xhci0: xHCI version 1.0
+[     1.038274] usb0 at xhci0: USB revision 3.0
+[     1.038274] usb1 at xhci0: USB revision 2.0
+[     1.038274] Intel Core 5G (mobile) ME Interface (miscellaneous communications, revision 0x03) at pci0 dev 22 function 0 not configured
+[     1.038274] wm0 at pci0 dev 25 function 0, 64-bit DMA: I218 LM Ethernet Connection (rev. 0x03)
+[     1.038274] wm0: interrupting at msi2 vec 0
+[     1.038274] wm0: PCI-Express bus
+[     1.038274] wm0: 2048 words FLASH, version 0.2.4
+[     1.038274] wm0: RX packet buffer size: 26KB
+[     1.038274] wm0: Ethernet address fc:3f:db:86:97:8a
+[     1.038274] wm0: 0x6a4080<FLASH,PCIE,ASF_FIRM,AMT,WOL,EEE>
+[     1.038274] ihphy0 at wm0 phy 2: i217 10/100/1000 media interface, rev. 5
+[     1.038274] ihphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-FDX, auto
+[     1.038274] hdaudio1 at pci0 dev 27 function 0: HD Audio Controller
+[     1.038274] hdaudio1: interrupting at msi3 vec 0
+[     1.038274] hdaudio1: HDA ver. 1.0, OSS 4, ISS 4, BSS 0, SDO 1, 64-bit
+[     1.038274] hdafg1 at hdaudio1: Realtek ALC280
+[     1.038274] hdafg1: DAC00 2ch: Speaker [Built-In], HP Out [Jack]
+[     1.038274] hdafg1: ADC01 2ch: Mic In [Jack]
+[     1.038274] hdafg1: ADC02 2ch: Mic In [Built-In]
+[     1.038274] hdafg1: 2ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+[     1.038274] audio1 at hdafg1: playback, capture, full duplex, independent
+[     1.038274] audio1: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+[     1.038274] audio1: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+[     1.038274] spkr1 at audio1: PC Speaker (synthesized)
+[     1.038274] wsbell at spkr1 not configured
+[     1.038274] ppb0 at pci0 dev 28 function 0: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038274] ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+[     1.038274] pci1 at ppb0 bus 1
+[     1.038274] pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038274] ppb1 at pci0 dev 28 function 1: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038274] ppb1: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+[     1.038274] ppb1: link is x1 @ 2.5GT/s
+[     1.038274] pci2 at ppb1 bus 2
+[     1.038274] pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038274] rtsx0 at pci2 dev 0 function 0: Realtek Semiconductor RTS5227 PCI-E Card Reader (rev. 0x01)
+[     1.038274] rtsx0: interrupting at msi4 vec 0
+[     1.038274] sdmmc0 at rtsx0
+[     1.038274] ppb2 at pci0 dev 28 function 3: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038274] ppb2: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+[     1.038274] ppb2: link is x1 @ 2.5GT/s
+[     1.038274] pci3 at ppb2 bus 3
+[     1.038274] pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038274] iwm0 at pci3 dev 0 function 0: Intel Dual Band Wireless AC 7265 (rev. 0x48)
+[     1.038274] iwm0: interrupting at msi5 vec 0
+[     1.038274] ppb3 at pci0 dev 28 function 4: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038274] ppb3: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 5.0GT/s
+[     1.038274] pci4 at ppb3 bus 4
+[     1.038274] pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038274] radeon0 at pci4 dev 0 function 0: ATI Technologies Radeon R7 M265/M365X/M465 (rev. 0x00)
+[     1.038274] ehci0 at pci0 dev 29 function 0: Intel Core 5G (mobile) USB EHCI (rev. 0x03)
+[     1.038274] ehci0: 64-bit DMA
+[     1.038274] ehci0: interrupting at ioapic0 pin 17
+[     1.038274] ehci0: EHCI version 1.0
+[     1.038274] ehci0: Using DMA subregion for control data structures
+[     1.038274] usb2 at ehci0: USB revision 2.0
+[     1.038274] pcib0 at pci0 dev 31 function 0: Intel Core 5G (mobile) LPC (rev. 0x03)
+[     1.038274] ahcisata0 at pci0 dev 31 function 2: Intel Core 5G (mobile) SATA Controller (AHCI) (rev. 0x03)
+[     1.038274] ahcisata0: 64-bit DMA
+[     1.038274] ahcisata0: AHCI revision 1.30, 2 ports, 32 slots, CAP 0xc734ff01<PSC,SSC,PMD,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SNCQ,S64A>
+[     1.038274] ahcisata0: interrupting at msi6 vec 0
+[     1.038274] atabus0 at ahcisata0 channel 1
+[     1.038274] ichsmb0 at pci0 dev 31 function 3: Intel Core 5G (mobile) SMBus (rev. 0x03)
+[     1.038274] ichsmb0: interrupting at ioapic0 pin 18
+[     1.038274] iic0 at ichsmb0: I2C bus
+[     1.038274] isa0 at pcib0
+[     1.038274] pcppi0 at isa0 port 0x61
+[     1.038274] spkr2 at pcppi0: PC Speaker
+[     1.038274] wsbell at spkr2 not configured
+[     1.038274] midi0 at pcppi0: PC speaker
+[     1.038274] sysbeep0 at pcppi0
+[     1.038274] attimer1: attached to pcppi0
+[     1.038274] acpicpu0 at cpu0: ACPI CPU
+[     1.038274] acpicpu0: C1: FFH, lat   1 us, pow  1000 mW
+[     1.038274] acpicpu0: C2: FFH, lat 230 us, pow   200 mW
+[     1.038274] acpicpu0: C3: FFH, lat 506 us, pow   200 mW
+[     1.038274] acpicpu0: P0: FFH, lat  10 us, pow 15000 mW, 2301 MHz, turbo boost
+[     1.038274] acpicpu0: P1: FFH, lat  10 us, pow 15000 mW, 2300 MHz
+[     1.038274] acpicpu0: P2: FFH, lat  10 us, pow 14088 mW, 2200 MHz
+[     1.038274] acpicpu0: P3: FFH, lat  10 us, pow 12462 mW, 2000 MHz
+[     1.038274] acpicpu0: P4: FFH, lat  10 us, pow 11745 mW, 1900 MHz
+[     1.038274] acpicpu0: P5: FFH, lat  10 us, pow 11042 mW, 1800 MHz
+[     1.038274] acpicpu0: P6: FFH, lat  10 us, pow 10215 mW, 1700 MHz
+[     1.038274] acpicpu0: P7: FFH, lat  10 us, pow  8882 mW, 1500 MHz
+[     1.038274] acpicpu0: P8: FFH, lat  10 us, pow  8101 mW, 1400 MHz
+[     1.038274] acpicpu0: P9: FFH, lat  10 us, pow  7471 mW, 1300 MHz
+[     1.038274] acpicpu0: P10: FFH, lat  10 us, pow  6121 mW, 1100 MHz
+[     1.038274] acpicpu0: P11: FFH, lat  10 us, pow  5531 mW, 1000 MHz
+[     1.038274] acpicpu0: P12: FFH, lat  10 us, pow  4955 mW,  900 MHz
+[     1.038274] acpicpu0: P13: FFH, lat  10 us, pow  4267 mW,  800 MHz
+[     1.038274] acpicpu0: P14: FFH, lat  10 us, pow  3182 mW,  600 MHz
+[     1.038274] acpicpu0: P15: FFH, lat  10 us, pow  2538 mW,  500 MHz
+[     1.038274] acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+[     1.038274] acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+[     1.038274] acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+[     1.038274] acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+[     1.038274] acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+[     1.038274] acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+[     1.038274] acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+[     1.038274] acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+[     1.038274] coretemp0 at cpu0: thermal sensor, 1 C resolution, Tjmax=105
+[     1.038274] acpicpu1 at cpu1: ACPI CPU
+[     1.038274] acpicpu2 at cpu2: ACPI CPU
+[     1.038274] coretemp1 at cpu2: thermal sensor, 1 C resolution, Tjmax=105
+[     1.038274] acpicpu3 at cpu3: ACPI CPU
+[     1.038274] timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+[     1.038274] timecounter: Timecounter "TSC" frequency 2294690000 Hz quality 3000
+[     1.169271] uhub0 at usb0acpiacad0: AC adapter online.
+[     1.169271] : NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+[     1.204863] uhub0: 4 ports with 4 removable, self powered
+[     1.204863] uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+[     1.244863] uhub1: 11 ports with 11 removable, self powered
+[     1.244863] IPsec: Initialized Security Association Processing.
+[     1.254871] uhub2 at usb2: NetBSD (0x0000) EHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 1
+[     1.284863] uhub2: 3 ports with 3 removable, self powered
+[     1.304862] tpm0: read 8 bytes, expected 10
+[     1.304862] acpibat0: Hewlett-Packard LIon rechargeable battery
+[     1.304862] tpm0: deactivating entropy source
+[     1.339837] acpibat0: granularity: low->warn 0.100 Ah, warn->full 0.100 Ah
+[     1.414865] ahcisata0 port 1: device present, speed: 6.0Gb/s
+[     1.714864] uhub3 at uhub0 port 3: SMSC (0x0424) USB5534B (0x5534), class 9/0, rev 3.00/60.82, addr 1
+[     1.744862] uhub3: 4 ports with 3 removable, self powered
+[     1.794864] uhub4 at uhub1 port 3: SMSC (0x0424) USB2134B (0x2134), class 9/0, rev 2.10/60.82, addr 2
+[     1.794864] uhub4: multiple transaction translators
+[     1.794864] uhub4: 4 ports with 3 removable, self powered
+[     2.344863] uhub5 at uhub2 port 1: vendor 8087 (0x8087) product 8001 (0x8001), class 9/0, rev 2.00/0.03, addr 2
+[     2.374861] uhub5: single transaction translator
+[     2.404861] uhub5: 8 ports with 8 removable, self powered
+[     2.614863] ubt0 at uhub1 port 4
+[     2.614863] ubt0: vendor 8087 (0x8087) product 0a2a (0x0a2a), rev 2.01/0.01, addr 3
+[     2.944863] wd0 at atabus0 drive 0
+[     2.944863] wd0: <LITEON CV3-DE128>
+[     2.944863] wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+[     2.944863] wd0: 119 GB, 248085 cyl, 16 head, 63 sec, 512 bytes/sect x 250069680 sectors
+[     2.944863] wd0: GPT GUID: abdef7c1-11a4-4b05-88ba-5d3cd586902c
+[     2.944863] dk0 at wd0: "EFI System Partition", 262144 blocks at 64, type: msdos
+[     2.944863] dk1 at wd0: "f32c8105-b3af-4c2a-85ec-62e3d62b65b9", 216506944 blocks at 262208, type: ffs
+[     2.944863] dk2 at wd0: "9998d1be-9aa8-485c-a529-4eb1e349fe57", 33300480 blocks at 216769152, type: swap
+[     2.944863] wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), NCQ (32 tags)
+[     2.944863] wd0(ahcisata0:1:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+[     5.434859] sdmmc0: autoconfiguration error: couldn't enable card: 60
+[     5.464857] swwdog0: software watchdog initialized
+[     5.474857] WARNING: 1 error while detecting hardware; check system log.
+[     5.474857] boot device: wd0
+[     5.474857] root on dk1 dumps on dk2
+[     5.474857] root file system type: ffs
+[     5.474857] kern.module.path=/stand/amd64/11.0/modules
+[     5.479758] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     5.514857] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     5.554857] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     5.594859] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[     5.634857] [drm] Driver supports precise vblank timestamp query.
+[     5.674857] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     7.224854] i915drmkms0: interrupting at msi7 vec 0 (i915drmkms0)
+[     7.274858] iwm0: hw rev 0x180, fw ver 17.352738.0, address 64:80:99:d7:28:6e
+[     7.314855] [drm] initializing kernel modesetting (OLAND 0x1002:0x6604 0x103C:0x8006 0x00).
+[     7.354855] [drm] register mmio base: 0xc1000000
+[     7.394854] [drm] register mmio size: 262144
+[     7.444854] ATOM BIOS: IEC/HP
+[     7.484854] [drm] GPU not posted. posting now...
+[     7.524859] radeon0: VRAM: 1024M 0x0000000000000000 - 0x000000003FFFFFFF (1024M used)
+[     7.564854] radeon0: GTT: 2048M 0x0000000040000000 - 0x00000000BFFFFFFF
+[     7.604855] [drm] Detected VRAM RAM=400M, BAR=256M
+[     7.634854] [drm] RAM width 128bits DDR
+[     7.674854] Zone  kernel: Available graphics memory: 9007199252883986 KiB
+[     7.714854] Zone   dma32: Available graphics memory: 2097152 KiB
+[     7.754856] [drm] radeon: 1024M of VRAM memory ready
+[     7.784854] [drm] radeon: 2048M of GTT memory ready.
+[     7.824854] [drm] Loading oland Microcode
+[     7.874854] [drm] Internal thermal controller with fan control
+[     7.914854] [drm] radeon: dpm initialized
+[     7.954858] [drm] Initialized i915 1.6.0 20200114 for i915drmkms0 on minor 0
+[     7.954858] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     7.964854] [drm] Found VCE firmware/feedback version 50.0.1 / 17!
+[     7.994853] [drm] GART: num cpu pages 524288, num gpu pages 524288
+[     8.034856] [drm] PCIE gen 2 link speeds already enabled
+[     8.094853] [drm] PCIE GART of 2048M enabled (table at 0x00000000001D6000).
+[     8.134853] radeon0: WB enabled
+[     8.164853] radeon0: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xffff845c30062c00
+[     8.194853] radeon0: fence driver on ring 1 use gpu addr 0x0000000040000c04 and cpu addr 0x0xffff845c30062c04
+[     8.224853] radeon0: fence driver on ring 2 use gpu addr 0x0000000040000c08 and cpu addr 0x0xffff845c30062c08
+[     8.264853] radeon0: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xffff845c30062c0c
+[     8.294853] radeon0: fence driver on ring 4 use gpu addr 0x0000000040000c10 and cpu addr 0x0xffff845c30062c10
+[     8.334853] radeon0: fence driver on ring 5 use gpu addr 0x0000000000075a18 and cpu addr 0x0xffff8704ba5fca18
+[     8.474853] radeon0: autoconfiguration error: error: failed VCE resume (-60).
+[     8.504853] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[     8.534853] [drm] Driver supports precise vblank timestamp query.
+[     8.564853] radeon0: radeon: MSI limited to 32-bit
+[     8.594853] radeon0: radeon: using MSI.
+[     8.624853] radeon0: interrupting at msi8 vec 0 (radeon0)
+[     8.635403] [drm] radeon: irq initialized.
+[     8.864852] [drm] ring test on 0 succeeded in 1 usecs
+[     8.864852] [drm] ring test on 1 succeeded in 1 usecs
+[     8.875035] [drm] ring test on 2 succeeded in 1 usecs
+[     8.875035] [drm] ring test on 3 succeeded in 4 usecs
+[     8.875035] [drm] ring test on 4 succeeded in 4 usecs
+[     9.044852] [drm] ring test on 5 succeeded in 2 usecs
+[     9.054882] [drm] UVD initialized successfully.
+[     9.054882] [drm] ib test on ring 0 succeeded in 0 usecs
+[     9.054882] [drm] ib test on ring 1 succeeded in 0 usecs
+[     9.054882] [drm] ib test on ring 2 succeeded in 0 usecs
+[     9.054882] [drm] ib test on ring 3 succeeded in 0 usecs
+[     9.054882] [drm] ib test on ring 4 succeeded in 0 usecs
+[     9.214853] intelfb0 at i915drmkms0
+[     9.214853] [drm] DRM_I915_DEBUG enabled
+[     9.244852] [drm] DRM_I915_DEBUG_GEM enabled
+[     9.274852] intelfb0: framebuffer at 0xb0001000, size 1920x1080, depth 32, stride 7680
+[     9.704853] [drm] ib test on ring 5 succeeded
+[     9.704853] [drm] Radeon Display Connectors
+[     9.704853] [drm] Initialized radeon 2.50.0 20080528 for radeon0 on minor 1
+[    11.164849] wsdisplay0 at intelfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+[    11.214849] wsmux1: connecting to wsdisplay0
+[    12.244848] sdmmc0: autoconfiguration error: couldn't enable card: 60
+[    12.314848] wsdisplay0: screen 1 added (default, vt100 emulation)
+[    12.314848] wsdisplay0: screen 2 added (default, vt100 emulation)
+[    12.314848] wsdisplay0: screen 3 added (default, vt100 emulation)
+[    12.314848] wsdisplay0: screen 4 added (default, vt100 emulation)
+[    86.624753] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[    89.624749] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[    92.624815] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[    95.626311] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[  2352.151812] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[  2356.021786] syncing disks... done
+[  2356.031785] unmounted tmpfs on /var/shm type tmpfs
+[  2356.031785] unmounted procfs on /proc type procfs
+[  2356.031785] unmounted ptyfs on /dev/pts type ptyfs
+[  2356.031785] unmounted kernfs on /kern type kernfs
+[  2356.031785] unmounted tmpfs on /tmp type tmpfs
+[  2356.371782] uhub5: detached
+[  2356.381782] uhub4: detached
+[  2356.381782] uhub3: detached
+[  2356.381782] sysbeep0: detached
+[  2356.381782] midi0: detached
+/dk1 on / type ffs
+[  2356.441781] turning off swap...[   1.0000000] Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003,
+[     1.000000]     2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013,
+[     1.000000]     2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023,
+[     1.000000]     2024, 2025, 2026
+[     1.000000]     The NetBSD Foundation, Inc.  All rights reserved.
+[     1.000000] Copyright (c) 1982, 1986, 1989, 1991, 1993
+[     1.000000]     The Regents of the University of California.  All rights reserved.
+
+[     1.000000] NetBSD 11.0 (GENERIC) #0: Thu Jul 30 15:23:12 UTC 2026
+[     1.000000] 	mkrepro@mkrepro.NetBSD.org:/usr/src/sys/arch/amd64/compile/GENERIC
+[     1.000000] total memory = 16259 MB
+[     1.000000] avail memory = 15698 MB
+[     1.000000] timecounter: Timecounters tick every 10.000 msec
+[     1.000000] Kernelized RAIDframe activated
+[     1.000000] timecounter: Timecounter "i8254" frequency 1193182 Hz quality 100
+[     1.000004] efi: systbl at pa 9947ef18
+[     1.000004] mainbus0 (root)
+[     1.000004] ACPI: RSDP 0x0000000099FFE014 000024 (v02 HPQOEM)
+[     1.000004] ACPI: XSDT 0x0000000099FFD0E8 0000A4 (v01 HPQOEM SLIC-MPC 00000001      01000013)
+[     1.000004] ACPI: FACP 0x0000000099FFB000 00010C (v05 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: DSDT 0x0000000099FCF000 026A0D (v02 HPQOEM 2216     00000001 INTL 20130927)
+[     1.000004] ACPI: FACS 0x0000000099F76000 000040
+[     1.000004] ACPI: HPET 0x0000000099FFA000 000038 (v01 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: APIC 0x0000000099FF9000 0000BC (v01 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: MCFG 0x0000000099FF8000 00003C (v01 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: TCPA 0x0000000099FF6000 000032 (v02 HPQOEM 2216     00000000 HP   00000001)
+[     1.000004] ACPI: SSDT 0x0000000099FCC000 0002D9 (v01 HPQOEM SataAhci 00001000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FCB000 00048A (v01 HPQOEM PtidDevc 00001000 INTL 20130927)
+[     1.000004] ACPI: SLIC 0x0000000099FCA000 000176 (v01 HPQOEM SLIC-MPC 00000001 HP   00000001)
+[     1.000004] ACPI: FPDT 0x0000000099FC8000 000044 (v01 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: BGRT 0x0000000099FC7000 000038 (v00 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: SSDT 0x0000000099FC3000 000544 (v02 PmRef  Cpu0Ist  00003000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FC2000 000B8F (v02 CpuRef CpuSsdt  00003000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FC1000 0001D5 (v02 PmRef  LakeTiny 00003000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FC0000 00092C (v02 SaSsdt SaSsdt   00003000 INTL 20130927)
+[     1.000004] ACPI: SSDT 0x0000000099FBE000 00170B (v02 HP     AMDSGTBL 00001000 INTL 20130927)
+[     1.000004] ACPI: ASF! 0x0000000099FF7000 0000A5 (v32 HPQOEM 2216     00000001 HP   00000001)
+[     1.000004] ACPI: 8 ACPI AML tables successfully acquired and loaded
+[     1.000004] ioapic0 at mainbus0 apid 0: pa 0xfec00000, version 0x20, 40 pins
+[     1.000004] cpu0 at mainbus0 apid 0
+[     1.000004] cpu0: Use lfence to serialize rdtsc
+[     1.000004] cpu0: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, id 0x306d4
+[     1.000004] cpu0: node 0, package 0, core 0, smt 0
+[     1.000004] cpu1 at mainbus0 apid 1
+[     1.000004] cpu1: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, id 0x306d4
+[     1.000004] cpu1: node 0, package 0, core 0, smt 1
+[     1.000004] cpu2 at mainbus0 apid 2
+[     1.000004] cpu2: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, id 0x306d4
+[     1.000004] cpu2: node 0, package 0, core 1, smt 0
+[     1.000004] cpu3 at mainbus0 apid 3
+[     1.000004] cpu3: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, id 0x306d4
+[     1.000004] cpu3: node 0, package 0, core 1, smt 1
+[     1.000004] acpi0 at mainbus0: Intel ACPICA 20241212
+[     1.000004] acpi0: X/RSDT: OemId <HPQOEM,SLIC-MPC,00000001>, AslId <    ,01000013>
+[     1.000004] acpi0: MCFG: segment 0, bus 0-255, address 0x00000000e0000000
+[     1.000004] ACPI: Dynamic OEM Table Load:
+[     1.000004] ACPI: SSDT 0xFFFF8633E2BA7008 0003F3 (v02 PmRef  Cpu0Cst  00003001 INTL 20130927)
+[     1.000004] ACPI: Dynamic OEM Table Load:
+[     1.000004] ACPI: SSDT 0xFFFF8633E2B07008 0005DB (v02 PmRef  ApIst    00003000 INTL 20130927)
+[     1.000004] ACPI: Dynamic OEM Table Load:
+[     1.000004] ACPI: SSDT 0xFFFF8633E2B02B08 000119 (v02 PmRef  ApCst    00003000 INTL 20130927)
+[     1.000004] acpi0: SCI interrupting at int 9
+[     1.000004] acpi0: fixed power button present
+[     1.000004] timecounter: Timecounter "ACPI-Safe" frequency 3579545 Hz quality 900
+[     1.037657] hpet0 at acpi0: high precision event timer (mem 0xfed00000-0xfed00400)
+[     1.037657] timecounter: Timecounter "hpet0" frequency 14318180 Hz quality 2000
+[     1.038447] acpiec0 at acpi0 (EC0, PNP0C09-1): io 0x62,0x66
+[     1.038447] WLBU (HPQ6001) at acpi0 not configured
+[     1.038447] acpivga0 at acpi0 (GFX0): ACPI Display Adapter
+[     1.038447] acpiout0 at acpivga0 (DD01, 0x0100): ACPI Display Output Device
+[     1.038447] acpiout1 at acpivga0 (DD02, 0x0400): ACPI Display Output Device
+[     1.038447] acpiout1: brightness levels: [0-67,69-100]
+[     1.038447] acpiout2 at acpivga0 (DD03, 0x0300): ACPI Display Output Device
+[     1.038447] acpiout3 at acpivga0 (DD04, 0x0301): ACPI Display Output Device
+[     1.038447] acpiout4 at acpivga0 (DD05, 0x0302): ACPI Display Output Device
+[     1.038447] acpiout5 at acpivga0 (DD06, 0x0006): ACPI Display Output Device
+[     1.038447] acpiout6 at acpivga0 (DD07, 0x0007): ACPI Display Output Device
+[     1.038447] acpiout7 at acpivga0 (DD08, 0x0008): ACPI Display Output Device
+[     1.038447] acpivga0: connected output devices:
+[     1.038447] acpivga0:   0x0400 (acpiout1): Unknown Output Device, head 0
+[     1.038447] FWHD (INT0800) at acpi0 not configured
+[     1.038447] attimer1 at acpi0 (TIMR, PNP0100): io 0x40-0x43,0x50-0x53 irq 0
+[     1.038447] pckbc1 at acpi0 (PS2K, HPQ8002) (kbd port): io 0x60,0x64 irq 1
+[     1.038447] pckbc2 at acpi0 (PS2M, SYN3025) (aux port): irq 12
+[     1.038447] acpivga1 at acpi0 (DGFX): ACPI Display Adapter
+[     1.038447] acpiout8 at acpivga1 (DD01, 0x0100): ACPI Display Output Device
+[     1.038447] acpiout9 at acpivga1 (DD02, 0x0400): ACPI Display Output Device
+[     1.038447] acpiout9: brightness levels: [0-67,69-100]
+[     1.038447] acpiout10 at acpivga1 (DD03, 0x0300): ACPI Display Output Device
+[     1.038447] acpiout11 at acpivga1 (DD04, 0x0301): ACPI Display Output Device
+[     1.038447] acpiout12 at acpivga1 (DD05, 0x0302): ACPI Display Output Device
+[     1.038447] acpiout13 at acpivga1 (DD06, 0x0006): ACPI Display Output Device
+[     1.038447] acpiout14 at acpivga1 (DD07, 0x0007): ACPI Display Output Device
+[     1.038447] acpiout15 at acpivga1 (DD08, 0x0008): ACPI Display Output Device
+[     1.038447] acpivga1: connected output devices:
+[     1.038447] acpivga1:   0x0400 (acpiout9): Unknown Output Device, head 0
+[     1.038447] ACEL (HPQ6007) at acpi0 not configured
+[     1.038447] acpibat0 at acpi0 (BAT0, PNP0C0A-2): ACPI Battery
+[     1.038447] acpiacad0 at acpi0 (AC, ACPI0003): ACPI AC Adapter
+[     1.038447] acpibut0 at acpi0 (SLPB, PNP0C0E): ACPI Sleep Button
+[     1.038447] acpilid0 at acpi0 (LID, PNP0C0D): ACPI Lid Switch
+[     1.038447] acpiwmi0 at acpi0 (WMID, PNP0C14-0): ACPI WMI Interface
+[     1.038447] wmihp0 at acpiwmi0: HP WMI mappings
+[     1.038447] tpm0 at acpi0 (GTPM, IFX0102): mem 0xfed40000-0xfed44fff
+[     1.038447] tpm0: device 0x001a15d1 rev 0x10
+[     1.038447] acpitz0 at acpi0 (CPUZ)
+[     1.038447] acpitz0: levels: critical 128.0 C, hot 104.0 C, passive cooling
+[     1.038447] acpitz1 at acpi0 (GFXZ): cpu0
+[     1.038447] acpitz1: levels: critical 128.0 C, passive 105.0 C, passive cooling
+[     1.038447] acpitz2 at acpi0 (EXTZ)
+[     1.038447] acpitz2: levels: critical 128.0 C, passive cooling
+[     1.038447] acpitz3 at acpi0 (LOCZ)
+[     1.038447] acpitz3: levels: critical 128.0 C, passive cooling
+[     1.038447] acpitz4 at acpi0 (BATZ): cpu0
+[     1.038447] acpitz4: levels: critical 128.0 C, passive 55.0 C, passive cooling
+[     1.038447] acpitz5 at acpi0 (PCHZ)
+[     1.038447] acpitz5: levels: critical 128.0 C, passive cooling
+[     1.038447] ACPI: Enabled 5 GPEs in block 00 to 7F
+[     1.038447] pckbd0 at pckbc1 (kbd slot)
+[     1.038447] pckbc1: using irq 1 for kbd slot
+[     1.038447] wskbd0 at pckbd0: console keyboard
+[     1.038447] pms0 at pckbc1 (aux slot)
+[     1.038447] pckbc1: using irq 12 for aux slot
+[     1.038447] wsmouse0 at pms0 mux 0
+[     1.038447] pci0 at mainbus0 bus 0: configuration mode 1
+[     1.038447] pci0: i/o space, memory space enabled, rd/line, rd/mult, wr/inv ok
+[     1.038447] pchb0 at pci0 dev 0 function 0: Intel Core 5G Host Bridge (rev. 0x09)
+[     1.038447] i915drmkms0 at pci0 dev 2 function 0: Intel HD Graphics 5500 (rev. 0x09)
+[     1.038447] hdaudio0 at pci0 dev 3 function 0: HD Audio Controller
+[     1.038447] hdaudio0: interrupting at msi0 vec 0
+[     1.038447] hdaudio0: HDA ver. 1.0, OSS 3, ISS 0, BSS 0, SDO 1, 64-bit
+[     1.038447] hdafg0 at hdaudio0: Intel HDMI/DP
+[     1.038447] hdafg0: DP00 8ch: Digital Out [Jack]
+[     1.038447] hdafg0: 8ch/0ch 48000Hz PCM16*
+[     1.038447] audio0 at hdafg0: playback
+[     1.038447] audio0: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+[     1.038447] spkr0 at audio0: PC Speaker (synthesized)
+[     1.038447] wsbell at spkr0 not configured
+[     1.038447] xhci0 at pci0 dev 20 function 0: Intel Core 5G (mobile) USB xHCI (rev. 0x03)
+[     1.038447] xhci0: 64-bit DMA
+[     1.038447] xhci0: interrupting at msi1 vec 0
+[     1.038447] xhci0: xHCI version 1.0
+[     1.038447] usb0 at xhci0: USB revision 3.0
+[     1.038447] usb1 at xhci0: USB revision 2.0
+[     1.038447] Intel Core 5G (mobile) ME Interface (miscellaneous communications, revision 0x03) at pci0 dev 22 function 0 not configured
+[     1.038447] wm0 at pci0 dev 25 function 0, 64-bit DMA: I218 LM Ethernet Connection (rev. 0x03)
+[     1.038447] wm0: interrupting at msi2 vec 0
+[     1.038447] wm0: PCI-Express bus
+[     1.038447] wm0: 2048 words FLASH, version 0.2.4
+[     1.038447] wm0: RX packet buffer size: 26KB
+[     1.038447] wm0: Ethernet address fc:3f:db:86:97:8a
+[     1.038447] wm0: 0x6a4080<FLASH,PCIE,ASF_FIRM,AMT,WOL,EEE>
+[     1.038447] ihphy0 at wm0 phy 2: i217 10/100/1000 media interface, rev. 5
+[     1.038447] ihphy0: 10baseT, 10baseT-FDX, 100baseTX, 100baseTX-FDX, 1000baseT, 1000baseT-FDX, auto
+[     1.038447] hdaudio1 at pci0 dev 27 function 0: HD Audio Controller
+[     1.038447] hdaudio1: interrupting at msi3 vec 0
+[     1.038447] hdaudio1: HDA ver. 1.0, OSS 4, ISS 4, BSS 0, SDO 1, 64-bit
+[     1.038447] hdafg1 at hdaudio1: Realtek ALC280
+[     1.038447] hdafg1: DAC00 2ch: Speaker [Built-In], HP Out [Jack]
+[     1.038447] hdafg1: ADC01 2ch: Mic In [Jack]
+[     1.038447] hdafg1: ADC02 2ch: Mic In [Built-In]
+[     1.038447] hdafg1: 2ch/2ch 32000Hz 44100Hz 48000Hz 88200Hz 96000Hz 192000Hz PCM16 PCM20 PCM24 AC3
+[     1.038447] audio1 at hdafg1: playback, capture, full duplex, independent
+[     1.038447] audio1: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for playback
+[     1.038447] audio1: slinear_le:16 2ch 48000Hz, blk 1920 bytes (10ms) for recording
+[     1.038447] spkr1 at audio1: PC Speaker (synthesized)
+[     1.038447] wsbell at spkr1 not configured
+[     1.038447] ppb0 at pci0 dev 28 function 0: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038447] ppb0: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+[     1.038447] pci1 at ppb0 bus 1
+[     1.038447] pci1: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038447] ppb1 at pci0 dev 28 function 1: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038447] ppb1: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+[     1.038447] ppb1: link is x1 @ 2.5GT/s
+[     1.038447] pci2 at ppb1 bus 2
+[     1.038447] pci2: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038447] rtsx0 at pci2 dev 0 function 0: Realtek Semiconductor RTS5227 PCI-E Card Reader (rev. 0x01)
+[     1.038447] rtsx0: interrupting at msi4 vec 0
+[     1.038447] sdmmc0 at rtsx0
+[     1.038447] ppb2 at pci0 dev 28 function 3: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038447] ppb2: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x1 @ 5.0GT/s
+[     1.038447] ppb2: link is x1 @ 2.5GT/s
+[     1.038447] pci3 at ppb2 bus 3
+[     1.038447] pci3: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038447] iwm0 at pci3 dev 0 function 0: Intel Dual Band Wireless AC 7265 (rev. 0x48)
+[     1.038447] iwm0: interrupting at msi5 vec 0
+[     1.038447] ppb3 at pci0 dev 28 function 4: Intel Core 5G (mobile) PCIe (rev. 0xe3)
+[     1.038447] ppb3: PCI Express capability version 2 <Root Port of PCI-E Root Complex> x4 @ 5.0GT/s
+[     1.038447] pci4 at ppb3 bus 4
+[     1.038447] pci4: i/o space, memory space enabled, rd/line, wr/inv ok
+[     1.038447] radeon0 at pci4 dev 0 function 0: ATI Technologies Radeon R7 M265/M365X/M465 (rev. 0x00)
+[     1.038447] ehci0 at pci0 dev 29 function 0: Intel Core 5G (mobile) USB EHCI (rev. 0x03)
+[     1.038447] ehci0: 64-bit DMA
+[     1.038447] ehci0: interrupting at ioapic0 pin 17
+[     1.038447] ehci0: EHCI version 1.0
+[     1.038447] ehci0: Using DMA subregion for control data structures
+[     1.038447] usb2 at ehci0: USB revision 2.0
+[     1.038447] pcib0 at pci0 dev 31 function 0: Intel Core 5G (mobile) LPC (rev. 0x03)
+[     1.038447] ahcisata0 at pci0 dev 31 function 2: Intel Core 5G (mobile) SATA Controller (AHCI) (rev. 0x03)
+[     1.038447] ahcisata0: 64-bit DMA
+[     1.038447] ahcisata0: AHCI revision 1.30, 2 ports, 32 slots, CAP 0xc734ff01<PSC,SSC,PMD,SAM,ISS=0x3=Gen3,SCLO,SAL,SALP,SNCQ,S64A>
+[     1.038447] ahcisata0: interrupting at msi6 vec 0
+[     1.038447] atabus0 at ahcisata0 channel 1
+[     1.038447] ichsmb0 at pci0 dev 31 function 3: Intel Core 5G (mobile) SMBus (rev. 0x03)
+[     1.038447] ichsmb0: interrupting at ioapic0 pin 18
+[     1.038447] iic0 at ichsmb0: I2C bus
+[     1.038447] isa0 at pcib0
+[     1.038447] pcppi0 at isa0 port 0x61
+[     1.038447] spkr2 at pcppi0: PC Speaker
+[     1.038447] wsbell at spkr2 not configured
+[     1.038447] midi0 at pcppi0: PC speaker
+[     1.038447] sysbeep0 at pcppi0
+[     1.038447] attimer1: attached to pcppi0
+[     1.038447] acpicpu0 at cpu0: ACPI CPU
+[     1.038447] acpicpu0: C1: FFH, lat   1 us, pow  1000 mW
+[     1.038447] acpicpu0: C2: FFH, lat 230 us, pow   200 mW
+[     1.038447] acpicpu0: C3: FFH, lat 506 us, pow   200 mW
+[     1.038447] acpicpu0: P0: FFH, lat  10 us, pow 15000 mW, 2301 MHz, turbo boost
+[     1.038447] acpicpu0: P1: FFH, lat  10 us, pow 15000 mW, 2300 MHz
+[     1.038447] acpicpu0: P2: FFH, lat  10 us, pow 14088 mW, 2200 MHz
+[     1.038447] acpicpu0: P3: FFH, lat  10 us, pow 12462 mW, 2000 MHz
+[     1.038447] acpicpu0: P4: FFH, lat  10 us, pow 11745 mW, 1900 MHz
+[     1.038447] acpicpu0: P5: FFH, lat  10 us, pow 11042 mW, 1800 MHz
+[     1.038447] acpicpu0: P6: FFH, lat  10 us, pow 10215 mW, 1700 MHz
+[     1.038447] acpicpu0: P7: FFH, lat  10 us, pow  8882 mW, 1500 MHz
+[     1.038447] acpicpu0: P8: FFH, lat  10 us, pow  8101 mW, 1400 MHz
+[     1.038447] acpicpu0: P9: FFH, lat  10 us, pow  7471 mW, 1300 MHz
+[     1.038447] acpicpu0: P10: FFH, lat  10 us, pow  6121 mW, 1100 MHz
+[     1.038447] acpicpu0: P11: FFH, lat  10 us, pow  5531 mW, 1000 MHz
+[     1.038447] acpicpu0: P12: FFH, lat  10 us, pow  4955 mW,  900 MHz
+[     1.038447] acpicpu0: P13: FFH, lat  10 us, pow  4267 mW,  800 MHz
+[     1.038447] acpicpu0: P14: FFH, lat  10 us, pow  3182 mW,  600 MHz
+[     1.038447] acpicpu0: P15: FFH, lat  10 us, pow  2538 mW,  500 MHz
+[     1.038447] acpicpu0: T0: I/O, lat   1 us, pow     0 mW, 100 %
+[     1.038447] acpicpu0: T1: I/O, lat   1 us, pow     0 mW,  88 %
+[     1.038447] acpicpu0: T2: I/O, lat   1 us, pow     0 mW,  76 %
+[     1.038447] acpicpu0: T3: I/O, lat   1 us, pow     0 mW,  64 %
+[     1.038447] acpicpu0: T4: I/O, lat   1 us, pow     0 mW,  52 %
+[     1.038447] acpicpu0: T5: I/O, lat   1 us, pow     0 mW,  40 %
+[     1.038447] acpicpu0: T6: I/O, lat   1 us, pow     0 mW,  28 %
+[     1.038447] acpicpu0: T7: I/O, lat   1 us, pow     0 mW,  16 %
+[     1.038447] coretemp0 at cpu0: thermal sensor, 1 C resolution, Tjmax=105
+[     1.038447] acpicpu1 at cpu1: ACPI CPU
+[     1.038447] acpicpu2 at cpu2: ACPI CPU
+[     1.038447] coretemp1 at cpu2: thermal sensor, 1 C resolution, Tjmax=105
+[     1.038447] acpicpu3 at cpu3: ACPI CPU
+[     1.038447] timecounter: Timecounter "clockinterrupt" frequency 100 Hz quality 0
+[     1.038447] timecounter: Timecounter "TSC" frequency 2294690000 Hz quality 3000
+[     1.168229] acpiacad0: AC adapter online.
+[     1.168229] uhub0 at usb0: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 3.00/1.00, addr 0
+[     1.203810] uhub0: 4 ports with 4 removable, self powered
+[     1.203810] uhub1 at usb1: NetBSD (0x0000) xHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 0
+[     1.243810] uhub1: 11 ports with 11 removable, self powered
+[     1.243810] IPsec: Initialized Security Association Processing.
+[     1.253823] uhub2 at usb2: NetBSD (0x0000) EHCI root hub (0x0000), class 9/0, rev 2.00/1.00, addr 1
+[     1.273810] tpm0: read 8 bytes, expected 10
+[     1.273810] uhub2: 3 ports with 3 removable, self powered
+[     1.291158] tpm0: deactivating entropy source
+[     1.303810] acpibat0: Hewlett-Packard LIon rechargeable battery
+[     1.333810] acpibat0: granularity: low->warn 0.100 Ah, warn->full 0.100 Ah
+[     1.343812] ahcisata0 port 1: device present, speed: 6.0Gb/s
+[     1.733812] uhub3 at uhub1 port 3: SMSC (0x0424) USB2134B (0x2134), class 9/0, rev 2.10/60.82, addr 1
+[     1.733812] uhub3: multiple transaction translators
+[     1.733812] uhub3: 4 ports with 3 removable, self powered
+[     1.753812] uhub4 at uhub0 port 3: SMSC (0x0424) USB5534B (0x5534), class 9/0, rev 3.00/60.82, addr 2
+[     1.783810] uhub4: 4 ports with 3 removable, self powered
+[     2.353811] uhub5 at uhub2 port 1: vendor 8087 (0x8087) product 8001 (0x8001), class 9/0, rev 2.00/0.03, addr 2
+[     2.353811] uhub5: single transaction translator
+[     2.353811] uhub5: 8 ports with 8 removable, self powered
+[     2.553810] ubt0 at uhub1 port 4
+[     2.553810] ubt0: vendor 8087 (0x8087) product 0a2a (0x0a2a), rev 2.01/0.01, addr 3
+[     2.873810] wd0 at atabus0 drive 0
+[     2.873810] wd0: <LITEON CV3-DE128>
+[     2.873810] wd0: drive supports 1-sector PIO transfers, LBA48 addressing
+[     2.873810] wd0: 119 GB, 248085 cyl, 16 head, 63 sec, 512 bytes/sect x 250069680 sectors
+[     2.873810] wd0: GPT GUID: abdef7c1-11a4-4b05-88ba-5d3cd586902c
+[     2.873810] dk0 at wd0: "EFI System Partition", 262144 blocks at 64, type: msdos
+[     2.873810] dk1 at wd0: "f32c8105-b3af-4c2a-85ec-62e3d62b65b9", 216506944 blocks at 262208, type: ffs
+[     2.873810] dk2 at wd0: "9998d1be-9aa8-485c-a529-4eb1e349fe57", 33300480 blocks at 216769152, type: swap
+[     2.873810] wd0: drive supports PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133), NCQ (32 tags)
+[     2.873810] wd0(ahcisata0:1:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 6 (Ultra/133) (using DMA), NCQ (31 tags)
+[     5.383807] sdmmc0: autoconfiguration error: couldn't enable card: 60
+[     5.413805] swwdog0: software watchdog initialized
+[     5.423805] WARNING: 1 error while detecting hardware; check system log.
+[     5.423805] boot device: wd0
+[     5.423805] root on dk1 dumps on dk2
+[     5.423805] root file system type: ffs
+[     5.423805] kern.module.path=/stand/amd64/11.0/modules
+[     5.428332] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     6.963802] [drm] ACPI BIOS requests an excessive sleep of 5000 ms, using 1500 ms instead
+[     7.003802] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[     7.043802] [drm] Driver supports precise vblank timestamp query.
+[     7.083815] i915drmkms0: interrupting at msi7 vec 0 (i915drmkms0)
+[     7.143854] iwm0: hw rev 0x180, fw ver 17.352738.0, address 64:80:99:d7:28:6e
+[     7.143854] [drm] initializing kernel modesetting (OLAND 0x1002:0x6604 0x103C:0x8006 0x00).
+[     7.143854] [drm] register mmio base: 0xc1000000
+[     7.143854] [drm] register mmio size: 262144
+[     7.153814] ATOM BIOS: IEC/HP
+[     7.153814] [drm] GPU not posted. posting now...
+[     7.163803] radeon0: VRAM: 1024M 0x0000000000000000 - 0x000000003FFFFFFF (1024M used)
+[     7.163803] radeon0: GTT: 2048M 0x0000000040000000 - 0x00000000BFFFFFFF
+[     7.163803] [drm] Detected VRAM RAM=400M, BAR=256M
+[     7.163803] [drm] RAM width 128bits DDR
+[     7.163803] Zone  kernel: Available graphics memory: 9007199252883958 KiB
+[     7.163803] Zone   dma32: Available graphics memory: 2097152 KiB
+[     7.163803] [drm] radeon: 1024M of VRAM memory ready
+[     7.163803] [drm] radeon: 2048M of GTT memory ready.
+[     7.173858] [drm] Loading oland Microcode
+[     7.173858] [drm] Internal thermal controller with fan control
+[     7.183803] [drm] radeon: dpm initialized
+[     7.183803] [drm] Initialized i915 1.6.0 20200114 for i915drmkms0 on minor 0
+[     7.223802] [drm] Found VCE firmware/feedback version 50.0.1 / 17!
+[     7.223802] [drm] GART: num cpu pages 524288, num gpu pages 524288
+[     7.223802] [drm] PCIE gen 2 link speeds already enabled
+[     7.233803] [drm] PCIE GART of 2048M enabled (table at 0x00000000001D6000).
+[     7.233803] radeon0: WB enabled
+[     7.244056] radeon0: fence driver on ring 0 use gpu addr 0x0000000040000c00 and cpu addr 0x0xffff8633e487ac00
+[     7.244056] radeon0: fence driver on ring 1 use gpu addr 0x0000000040000c04 and cpu addr 0x0xffff8633e487ac04
+[     7.244056] radeon0: fence driver on ring 2 use gpu addr 0x0000000040000c08 and cpu addr 0x0xffff8633e487ac08
+[     7.244056] radeon0: fence driver on ring 3 use gpu addr 0x0000000040000c0c and cpu addr 0x0xffff8633e487ac0c
+[     7.244056] radeon0: fence driver on ring 4 use gpu addr 0x0000000040000c10 and cpu addr 0x0xffff8633e487ac10
+[     7.244056] radeon0: fence driver on ring 5 use gpu addr 0x0000000000075a18 and cpu addr 0x0xffffaf84ba60aa18
+[     7.343801] radeon0: autoconfiguration error: error: failed VCE resume (-60).
+[     7.343801] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[     7.343801] [drm] Driver supports precise vblank timestamp query.
+[     7.343801] radeon0: radeon: MSI limited to 32-bit
+[     7.343801] radeon0: radeon: using MSI.
+[     7.343801] radeon0: interrupting at msi8 vec 0 (radeon0)
+[     7.354066] [drm] radeon: irq initialized.
+[     7.583801] [drm] ring test on 0 succeeded in 1 usecs
+[     7.583801] [drm] ring test on 1 succeeded in 1 usecs
+[     7.583801] [drm] ring test on 2 succeeded in 1 usecs
+[     7.583801] [drm] ring test on 3 succeeded in 4 usecs
+[     7.583801] [drm] ring test on 4 succeeded in 4 usecs
+[     7.763801] [drm] ring test on 5 succeeded in 2 usecs
+[     7.763801] [drm] UVD initialized successfully.
+[     7.763801] [drm] ib test on ring 0 succeeded in 0 usecs
+[     7.763801] [drm] ib test on ring 1 succeeded in 0 usecs
+[     7.774278] [drm] ib test on ring 2 succeeded in 0 usecs
+[     7.774278] [drm] ib test on ring 3 succeeded in 0 usecs
+[     7.774278] [drm] ib test on ring 4 succeeded in 0 usecs
+[     7.933802] intelfb0 at i915drmkms0
+[     7.963801] [drm] DRM_I915_DEBUG enabled
+[     7.963801] [drm] DRM_I915_DEBUG_GEM enabled
+[     7.963801] intelfb0: framebuffer at 0xb0001000, size 1920x1080, depth 32, stride 7680
+[     8.423802] [drm] ib test on ring 5 succeeded
+[     8.423802] [drm] Radeon Display Connectors
+[     8.423802] [drm] Initialized radeon 2.50.0 20080528 for radeon0 on minor 1
+[     9.073800] wsdisplay0 at intelfb0 kbdmux 1: console (default, vt100 emulation), using wskbd0
+[     9.073800] wsmux1: connecting to wsdisplay0
+[    10.123799] wsdisplay0: screen 1 added (default, vt100 emulation)
+[    10.123799] wsdisplay0: screen 2 added (default, vt100 emulation)
+[    10.123799] wsdisplay0: screen 3 added (default, vt100 emulation)
+[    10.173798] wsdisplay0: screen 4 added (default, vt100 emulation)
+[    11.163797] sdmmc0: autoconfiguration error: couldn't enable card: 60
+[    38.853762] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[    41.853758] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[    44.853755] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[    47.853751] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[   701.402488] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[   703.022484] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[   704.402481] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[   706.022476] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[   709.012469] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
+[   712.012461] audio0(hdafg0): audio_drain: device timeout, seq=0, usrbuf=7056/H7056, outbuf=1920/1920
