@@ -1,0 +1,4 @@
+# NetBSD wscons keyboard setting.
+# Merge this line into /etc/wscons.conf.
+# NetBSD may report this Swedish/Finnish console map as "fi".
+encoding sv
