@@ -13,8 +13,8 @@ ftp -4 -o bootstrap.sh \
 sh bootstrap.sh
 ```
 
-The bootstrap script installs `pkgin`, basic tools, and the GNOME components
-available in the NetBSD binary package repository.
+The bootstrap script installs `pkgin`, basic tools, ConsoleKit, and the GNOME
+components available in the NetBSD binary package repository.
 
 ## Configure GNOME for XDM
 
@@ -37,12 +37,20 @@ The setup script:
 
 - enables the system D-Bus daemon;
 - enables XDM;
+- verifies that ConsoleKit's `ck-launch-session` is installed;
 - installs `netbsd/xsession` as the user's `~/.xsession`;
 - configures the X11 keyboard as Swedish;
 - starts D-Bus immediately when needed.
 
-The NetBSD GNOME documentation requires the system-wide D-Bus daemon before
-starting a GNOME session and uses `exec gnome-session` for the X11 session.
+GNOME on NetBSD runs under Xorg.  The session file launches GNOME as:
+
+```sh
+exec ck-launch-session gnome-session
+```
+
+This registers the graphical session with ConsoleKit.  Without that wrapper,
+`gnome-session` can emit `GetSessionForUnixProcess failed` and the GNOME
+Shell session may fall back to the "Oh no! Something has gone wrong" screen.
 
 ## Configuration fragments
 
