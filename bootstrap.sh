@@ -45,7 +45,11 @@ pkgin -y install mc git
 # The pkgsrc source tree still has a GNOME meta-package, but the NetBSD 11
 # x86_64 binary repository currently does not publish a package named "gnome".
 # Install the available core GNOME desktop components explicitly instead.
+#
+# ConsoleKit is explicit because GNOME on NetBSD uses it to identify the
+# graphical login session/seat in place of systemd-logind.
 pkgin -y install \
+    consolekit \
     gnome-shell \
     gnome-session \
     gnome-settings-daemon \
