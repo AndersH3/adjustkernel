@@ -1,0 +1,62 @@
+_IceTransmkdir: ERROR: euid != 0,directory /tmp/.ICE-unix will not be created.
+gnome-session-binary[1325]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Rfkill.desktop or it references a not found TryExec binary
+
+gnome-session-binary[1325]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Smartcard.desktop or it references a not found TryExec binary
+
+gnome-session-binary[1325]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Wacom.desktop or it references a not found TryExec binary
+
+gnome-session-binary[1325]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Rfkill.desktop or it references a not found TryExec binary
+
+gnome-session-binary[1325]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Smartcard.desktop or it references a not found TryExec binary
+
+gnome-session-binary[1325]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Wacom.desktop or it references a not found TryExec binary
+
+gnome-session-binary[1325]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Wwan.desktop or it references a not found TryExec binary
+
+Hit MOZ_CRASH([unhandlable oom] ExecutableAllocator::reprotectPool) at /pbulk/work/lang/mozjs128/work/firefox-128.14.0/js/src/vm/JSContext.cpp:1342
+gnome-session-binary[1325]: WARNING: Application 'org.gnome.Shell.desktop' killed by signal 11
+
+Hit MOZ_CRASH([unhandlable oom] ExecutableAllocator::reprotectPool) at /pbulk/work/lang/mozjs128/work/firefox-128.14.0/js/src/vm/JSContext.cpp:1342
+gnome-session-binary[1325]: WARNING: Application 'org.gnome.Shell.desktop' killed by signal 11
+
+gnome-session-binary[1325]: WARNING: App 'org.gnome.Shell.desktop' respawning too quickly
+
+
+(gsd-usb-protection:2555): usb-protection-plugin-WARNING **: 23:30:59.941: Failed to get screen saver status: Cannot invoke method; proxy is for the well-known name org.gnome.ScreenSaver without an owner, and proxy was constructed with the G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START flag
+
+(gsd-usb-protection:2555): usb-protection-plugin-WARNING **: 23:30:59.944: Failed to fetch USBGuard parameters: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.usbguard1 was not provided by any .service files
+
+(gsd-xsettings:1672): xsettings-plugin-WARNING **: 23:30:59.986: Failed to get current display configuration state: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Name "org.gnome.Mutter.DisplayConfig" does not exist
+
+(gsd-media-keys:2110): media-keys-plugin-WARNING **: 23:31:00.065: Unable to inhibit keypresses: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.login1 was not provided by any .service files
+
+(gsd-media-keys:2110): media-keys-plugin-WARNING **: 23:31:00.066: Unable to inhibit suspend: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.login1 was not provided by any .service files
+W: [(null)] caps.c: Normally all extra capabilities would be dropped now, but that's impossible because PulseAudio was built without capabilities support.
+
+(gsd-color:1526): color-plugin-WARNING **: 23:31:00.209: failed to connect to colord: Error calling StartServiceByName for org.freedesktop.ColorManager: Launch helper exited with unknown return code 1
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.307: Unable to get XDG user directory path for special directory &DOCUMENTS. Ignoring this location.
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.307: Unable to get XDG user directory path for special directory &MUSIC. Ignoring this location.
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.307: Unable to get XDG user directory path for special directory &PICTURES. Ignoring this location.
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.307: Unable to get XDG user directory path for special directory &VIDEOS. Ignoring this location.
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.308: Unable to get XDG user directory path for special directory &DOWNLOAD. Ignoring this location.
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.308: Unable to get XDG user directory path for special directory &DOCUMENTS. Ignoring this location.
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.308: Unable to get XDG user directory path for special directory &MUSIC. Ignoring this location.
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.308: Unable to get XDG user directory path for special directory &PICTURES. Ignoring this location.
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.308: Unable to get XDG user directory path for special directory &VIDEOS. Ignoring this location.
+Tracker-Message: 23:31:00.311: tracker-miner-fs-3 running as org.freedesktop.Tracker3.Miner.Files
+
+(tracker-miner-fs-3:1580): Tracker-WARNING **: 23:31:00.313: Locale 'LANG' is not set, defaulting to C locale
+Failed to play sound: File or data not found
+Tracker-Message: 23:31:00.684: Running on AC power
+
+(tracker-miner-fs-3:1580): Tracker-CRITICAL **: 23:31:00.697:   Empty locale file found at '/home/anonymous/.cache/tracker3/files/locale-for-miner-apps.txt'
+Tracker-Message: 23:31:00.777: Running on AC power
