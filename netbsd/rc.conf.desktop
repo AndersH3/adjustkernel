@@ -1,0 +1,5 @@
+# NetBSD rc.conf fragment for the GNOME/XDM desktop setup.
+# Merge these assignments into /etc/rc.conf; do not source this file directly.
+
+dbus=YES
+xdm=YES
