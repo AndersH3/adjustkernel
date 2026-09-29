@@ -23,13 +23,17 @@ if ! id "${USER_NAME}" >/dev/null 2>&1; then
     exit 1
 fi
 
+if [ ! -x /usr/pkg/bin/ck-launch-session ]; then
+    echo "ConsoleKit is required; install it with: pkgin install consolekit" >&2
+    exit 1
+fi
+
 set_rc_var()
 {
     key=$1
     value=$2
 
     if grep -q "^[[:space:]]*${key}=" /etc/rc.conf; then
-        # Replace the active assignment, preserving one canonical setting.
         sed "s|^[[:space:]]*${key}=.*|${key}=${value}|" /etc/rc.conf > /etc/rc.conf.new
         mv /etc/rc.conf.new /etc/rc.conf
     else
@@ -50,7 +54,6 @@ fi
 set_rc_var dbus YES
 set_rc_var xdm YES
 
-# Install the repository-maintained XDM session for the requested user.
 HOME_DIR=$(getent passwd "${USER_NAME}" | awk -F: '{print $6}')
 if [ -z "${HOME_DIR}" ] || [ ! -d "${HOME_DIR}" ]; then
     echo "Cannot determine home directory for ${USER_NAME}." >&2
@@ -60,10 +63,10 @@ fi
 install -c -m 755 "${SCRIPT_DIR}/xsession" "${HOME_DIR}/.xsession"
 chown "${USER_NAME}" "${HOME_DIR}/.xsession"
 
-# Start D-Bus now if it is not already running.
 if ! service dbus status >/dev/null 2>&1; then
     service dbus start
 fi
 
 echo "GNOME/XDM setup complete for ${USER_NAME}."
+echo "The session will be launched through ConsoleKit (ck-launch-session)."
 echo "Reboot, or restart XDM, then log in as ${USER_NAME}."
