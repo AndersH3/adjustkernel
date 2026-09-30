@@ -34,3 +34,9 @@ coverage.xml
 # Project-generated files
 *.bak
 *.adjustkernel.json
+
+# Runtime lock files
+*.lock
+
+# Keep the reviewed machine-specific audit report in this repository.
+!netbsd/ADJUSTED.adjustkernel.json
