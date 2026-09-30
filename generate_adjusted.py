@@ -17,7 +17,8 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent
-ADJUST = REPO / ".venv" / "bin" / "adjustkernel"
+VENV_PYTHON = REPO / ".venv" / "bin" / "python"
+SOURCE_LAUNCHER = REPO / "adjustkernel.py"
 GENERIC = Path("/usr/src/sys/arch/amd64/conf/GENERIC")
 SRCDIR = Path("/usr/src/sys")
 
@@ -38,13 +39,19 @@ def main() -> int:
         return fail(f"NetBSD GENERIC config not found: {GENERIC}")
     if not SRCDIR.is_dir():
         return fail(f"NetBSD source tree not found: {SRCDIR}")
-    if not ADJUST.is_file():
+    if not VENV_PYTHON.is_file():
         return fail(
-            f"{ADJUST} not found. Create the venv and run 'python -m pip install .' first."
+            f"{VENV_PYTHON} not found. Create the venv and install dependencies first."
         )
+    if not SOURCE_LAUNCHER.is_file():
+        return fail(f"Source launcher not found: {SOURCE_LAUNCHER}")
 
+    # Run the checkout directly with the venv Python.  This keeps the wrapper
+    # in sync with newly pulled source changes without requiring a reinstall
+    # of the package after every Git update.
     cmd = [
-        str(ADJUST),
+        str(VENV_PYTHON),
+        str(SOURCE_LAUNCHER),
         str(GENERIC),
         "--style",
         "overlay",
