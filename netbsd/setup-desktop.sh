@@ -127,7 +127,13 @@ fix_gnome40_keybindings_schema
 # binary gnome-shell package.
 OVERLAY_SRC="${SCRIPT_DIR}/gnome-shell-overlay"
 OVERLAY_DST="/usr/pkg/share/adjustkernel/gnome-shell-overlay"
-for overlay_file in     misc/parentalControlsManager.js     misc/weather.js     ui/appFavorites.js     ui/appDisplay.js
+
+# Only these two overlays are intentional.  Earlier experimental
+# appFavorites.js/weather.js overlays used Shell.App.get_app_info(), which is
+# not exposed by the installed GNOME Shell 40 typelib and makes the shell abort.
+for overlay_file in \
+    misc/parentalControlsManager.js \
+    ui/appDisplay.js
 do
     if [ ! -f "${OVERLAY_SRC}/${overlay_file}" ]; then
         echo "GNOME Shell compatibility overlay file missing: ${overlay_file}" >&2
@@ -135,10 +141,18 @@ do
     fi
 done
 
-install -d -m 755 "${OVERLAY_DST}" "${OVERLAY_DST}/misc" "${OVERLAY_DST}/ui"
-for overlay_file in     misc/parentalControlsManager.js     misc/weather.js     ui/appFavorites.js     ui/appDisplay.js
+# Rebuild the installed overlay from scratch so stale files from previous
+# experiments cannot continue shadowing resources embedded in gnome-shell.
+rm -rf "${OVERLAY_DST}"
+install -d -m 755 "${OVERLAY_DST}/misc" "${OVERLAY_DST}/ui"
+
+for overlay_file in \
+    misc/parentalControlsManager.js \
+    ui/appDisplay.js
 do
-    install -c -m 644         "${OVERLAY_SRC}/${overlay_file}"         "${OVERLAY_DST}/${overlay_file}"
+    install -c -m 644 \
+        "${OVERLAY_SRC}/${overlay_file}" \
+        "${OVERLAY_DST}/${overlay_file}"
 done
 
 HOME_DIR=$(getent passwd "${USER_NAME}" | awk -F: '{print $6}')
