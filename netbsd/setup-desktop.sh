@@ -127,12 +127,19 @@ fix_gnome40_keybindings_schema
 # binary gnome-shell package.
 OVERLAY_SRC="${SCRIPT_DIR}/gnome-shell-overlay"
 OVERLAY_DST="/usr/pkg/share/adjustkernel/gnome-shell-overlay"
-if [ ! -f "${OVERLAY_SRC}/misc/parentalControlsManager.js" ]; then
-    echo "GNOME Shell compatibility overlay is missing from the repository." >&2
-    exit 1
-fi
-install -d -m 755 "${OVERLAY_DST}" "${OVERLAY_DST}/misc"
-install -c -m 644     "${OVERLAY_SRC}/misc/parentalControlsManager.js"     "${OVERLAY_DST}/misc/parentalControlsManager.js"
+for overlay_file in     misc/parentalControlsManager.js     misc/weather.js     ui/appFavorites.js     ui/appDisplay.js
+do
+    if [ ! -f "${OVERLAY_SRC}/${overlay_file}" ]; then
+        echo "GNOME Shell compatibility overlay file missing: ${overlay_file}" >&2
+        exit 1
+    fi
+done
+
+install -d -m 755 "${OVERLAY_DST}" "${OVERLAY_DST}/misc" "${OVERLAY_DST}/ui"
+for overlay_file in     misc/parentalControlsManager.js     misc/weather.js     ui/appFavorites.js     ui/appDisplay.js
+do
+    install -c -m 644         "${OVERLAY_SRC}/${overlay_file}"         "${OVERLAY_DST}/${overlay_file}"
+done
 
 HOME_DIR=$(getent passwd "${USER_NAME}" | awk -F: '{print $6}')
 if [ -z "${HOME_DIR}" ] || [ ! -d "${HOME_DIR}" ]; then
