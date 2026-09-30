@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import hashlib
 import os
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -68,6 +69,10 @@ def main() -> int:
         print("NetBSD config(1) or make(1) is missing.", file=sys.stderr)
         return 2
 
+    # Reconfigure from a clean build tree so changed kernel options cannot
+    # leave stale generated headers or object files from a previous attempt.
+    if BUILDDIR.exists():
+        shutil.rmtree(BUILDDIR)
     BUILDDIR.mkdir(parents=True, exist_ok=True)
 
     with LOG.open("w", encoding="utf-8") as log:
