@@ -27,7 +27,7 @@ OUT = REPO / "netbsd" / "ADJUSTED"
 REPORT = REPO / "netbsd" / "ADJUSTED.adjustkernel.json"
 LOG = REPO / "netbsd" / "adjustkernel_run.log"
 
-KEEP = ["umass", "sd", "cd", "ukbd", "ums", "uhid"]
+KEEP = ["umass", "sd", "cd", "ukbd", "ums", "uhid", "agp"]
 
 # This machine uses a Swedish physical keyboard.  Keep the wscons map built
 # into the kernel as well as configuring it later from /etc/wscons.conf.
