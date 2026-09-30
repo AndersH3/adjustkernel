@@ -245,7 +245,23 @@ def collect_report(pw: pwd.struct_passwd, actions: list[str]) -> Path:
         rc, out = run([str(WSCONSCTL), "-k", "encoding"])
         if rc != 0:
             rc, out = run([str(WSCONSCTL), "encoding"])
-        sections.append(f"LIVE WSCONS\n===========\nexit={rc}\n{out.strip()}")
+        live = out.strip()
+        note = ""
+        # On NetBSD, KB_FI and KB_SV intentionally share encoding value
+        # 0x0900. wsconsctl prints the first symbolic name for that value,
+        # which is "fi", even when "encoding sv" was successfully requested.
+        # The Swedish and Finnish PC layouts are therefore reported through
+        # the same wscons encoding value; X11 still uses the explicit "se"
+        # layout configured separately below.
+        if live in {"encoding=fi", "encoding -> fi"}:
+            note = (
+                "\nNOTE: NetBSD aliases KB_SV and KB_FI to the same wscons "
+                "encoding value (0x0900), so a successful Swedish setting may "
+                "be displayed as 'fi'."
+            )
+        sections.append(
+            f"LIVE WSCONS\n===========\nexit={rc}\n{live}{note}"
+        )
 
     if GSETTINGS.exists():
         env = {
