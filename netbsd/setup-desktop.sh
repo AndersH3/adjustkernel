@@ -119,8 +119,20 @@ fi
 set_rc_var dbus YES
 set_rc_var xdm YES
 
-# Apply the compatibility fix before starting/restarting the desktop session.
+# Apply the schema compatibility fix before starting/restarting the desktop.
 fix_gnome40_keybindings_schema
+
+# Install the GNOME Shell resource overlay.  GLib's G_RESOURCE_OVERLAYS lets
+# us replace selected embedded JavaScript resources without rebuilding the
+# binary gnome-shell package.
+OVERLAY_SRC="${SCRIPT_DIR}/gnome-shell-overlay"
+OVERLAY_DST="/usr/pkg/share/adjustkernel/gnome-shell-overlay"
+if [ ! -f "${OVERLAY_SRC}/misc/parentalControlsManager.js" ]; then
+    echo "GNOME Shell compatibility overlay is missing from the repository." >&2
+    exit 1
+fi
+install -d -m 755 "${OVERLAY_DST}" "${OVERLAY_DST}/misc"
+install -c -m 644     "${OVERLAY_SRC}/misc/parentalControlsManager.js"     "${OVERLAY_DST}/misc/parentalControlsManager.js"
 
 HOME_DIR=$(getent passwd "${USER_NAME}" | awk -F: '{print $6}')
 if [ -z "${HOME_DIR}" ] || [ ! -d "${HOME_DIR}" ]; then
@@ -136,5 +148,6 @@ if ! service dbus status >/dev/null 2>&1; then
 fi
 
 echo "GNOME/XDM setup complete for ${USER_NAME}."
+echo "GNOME Shell compatibility overlay installed in ${OVERLAY_DST}."
 echo "The session will be launched through ConsoleKit (ck-launch-session)."
 echo "Restart XDM or reboot, then log in as ${USER_NAME}."
