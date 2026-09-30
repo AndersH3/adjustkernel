@@ -1,0 +1,263 @@
+GLib-GIO-Message: 01:31:41.121: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+_IceTransmkdir: Owner of /tmp/.ICE-unix should be set to root
+gnome-session-binary[2303]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Rfkill.desktop or it references a not found TryExec binary
+
+gnome-session-binary[2303]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Smartcard.desktop or it references a not found TryExec binary
+
+gnome-session-binary[2303]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Wacom.desktop or it references a not found TryExec binary
+
+gnome-session-binary[2303]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Rfkill.desktop or it references a not found TryExec binary
+
+gnome-session-binary[2303]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Smartcard.desktop or it references a not found TryExec binary
+
+gnome-session-binary[2303]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Wacom.desktop or it references a not found TryExec binary
+
+gnome-session-binary[2303]: WARNING: Could not parse desktop file org.gnome.SettingsDaemon.Wwan.desktop or it references a not found TryExec binary
+
+GLib-GIO-Message: 01:31:41.509: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+
+** (gnome-shell:2529): WARNING **: 01:31:41.521: ATK Bridge is disabled but a11y has already been enabled.
+GLib-GIO-Message: 01:31:41.668: Opened file '/usr/pkg/share/adjustkernel/gnome-shell-overlay/ui/appDisplay.js' as a resource overlay
+GLib-GIO-Message: 01:31:41.671: Opened file '/usr/pkg/share/adjustkernel/gnome-shell-overlay/ui/appFavorites.js' as a resource overlay
+GLib-GIO-Message: 01:31:41.672: Opened file '/usr/pkg/share/adjustkernel/gnome-shell-overlay/misc/parentalControlsManager.js' as a resource overlay
+GLib-GIO-Message: 01:31:41.727: Opened file '/usr/pkg/share/adjustkernel/gnome-shell-overlay/misc/weather.js' as a resource overlay
+GNOME Shell-Message: 01:31:41.766: Skipping parental controls support as it’s disabled
+W: [(null)] caps.c: Normally all extra capabilities would be dropped now, but that's impossible because PulseAudio was built without capabilities support.
+GNOME Shell-Message: 01:31:42.218: Missing required core component Settings, expect trouble…
+GNOME Shell-Message: 01:31:42.270: Telepathy is not available, chat integration will be disabled.
+
+(gnome-shell:2529): Gjs-CRITICAL **: 01:31:42.298: JS ERROR: TypeError: app.get_app_info is not a function
+reload/apps<@resource:///org/gnome/shell/ui/appFavorites.js:110:102
+reload@resource:///org/gnome/shell/ui/appFavorites.js:110:24
+AppFavorites@resource:///org/gnome/shell/ui/appFavorites.js:82:14
+getAppFavorites@resource:///org/gnome/shell/ui/appFavorites.js:212:32
+_init@resource:///org/gnome/shell/ui/dash.js:376:22
+Dash@resource:///org/gnome/shell/ui/dash.js:307:4
+_init@resource:///org/gnome/shell/ui/overviewControls.js:317:21
+ControlsManager@resource:///org/gnome/shell/ui/overviewControls.js:290:1
+_init@resource:///org/gnome/shell/ui/overview.js:88:26
+OverviewActor@resource:///org/gnome/shell/ui/overview.js:76:1
+init@resource:///org/gnome/shell/ui/overview.js:216:26
+_initializeUI@resource:///org/gnome/shell/ui/main.js:234:14
+start@resource:///org/gnome/shell/ui/main.js:166:5
+@<main>:1:47
+
+** Message: 01:31:42.298: Execution of main.js threw exception: Script <main> threw an exception
+
+(gnome-shell:2529): Gjs-CRITICAL **: 01:31:42.306: Attempting to run a JS callback during garbage collection. This is most likely caused by destroying a Clutter actor or GTK widget with ::destroy signal connected, or using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked.
+The offending callback was set_actor(), a vfunc.
+== Stack trace for context 0x7492bb8acc00 ==
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.306: Attempting to freeze the notification queue for object ClutterText[0x7492a69dc880]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.306: Attempting to thaw the notification queue for object ClutterText[0x7492a69dc880]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.306: Attempting to freeze the notification queue for object ClutterText[0x7492a69dd280]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.306: Attempting to thaw the notification queue for object ClutterText[0x7492a69dd280]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): Gjs-CRITICAL **: 01:31:42.314: Attempting to call back into JSAPI during the sweeping phase of GC. This is most likely caused by not destroying a Clutter actor or Gtk+ widget with ::destroy signals connected, but can also be caused by using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked and the JS callback not invoked.
+== Stack trace for context 0x7492bb8acc00 ==
+The offending signal was destroy on StWidget 0x7492a69de610.
+
+(gnome-shell:2529): Gjs-CRITICAL **: 01:31:42.314: Attempting to call back into JSAPI during the sweeping phase of GC. This is most likely caused by not destroying a Clutter actor or Gtk+ widget with ::destroy signals connected, but can also be caused by using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked and the JS callback not invoked.
+== Stack trace for context 0x7492bb8acc00 ==
+The offending signal was destroy on Gjs_ui_dash_ShowAppsIcon 0x7492a69deb10.
+
+(gnome-shell:2529): Gjs-CRITICAL **: 01:31:42.314: Attempting to call back into JSAPI during the sweeping phase of GC. This is most likely caused by not destroying a Clutter actor or Gtk+ widget with ::destroy signals connected, but can also be caused by using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked and the JS callback not invoked.
+== Stack trace for context 0x7492bb8acc00 ==
+The offending signal was destroy on StButton 0x7492a69dff40.
+
+(gnome-shell:2529): Gjs-CRITICAL **: 01:31:42.314: Attempting to call back into JSAPI during the sweeping phase of GC. This is most likely caused by not destroying a Clutter actor or Gtk+ widget with ::destroy signals connected, but can also be caused by using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked and the JS callback not invoked.
+== Stack trace for context 0x7492bb8acc00 ==
+The offending signal was destroy on Gjs_ui_iconGrid_BaseIcon 0x7492a693a420.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to freeze the notification queue for object ClutterText[0x7492ab5f0480]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to thaw the notification queue for object ClutterText[0x7492ab5f0480]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to freeze the notification queue for object ClutterText[0x7492ab5f3180]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to thaw the notification queue for object ClutterText[0x7492ab5f3180]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to freeze the notification queue for object ClutterText[0x7492aafe1e80]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to thaw the notification queue for object ClutterText[0x7492aafe1e80]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to freeze the notification queue for object ClutterText[0x7492aafe4b80]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to thaw the notification queue for object ClutterText[0x7492aafe4b80]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to freeze the notification queue for object ClutterText[0x7492aafcd880]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to thaw the notification queue for object ClutterText[0x7492aafcd880]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to freeze the notification queue for object ClutterText[0x7492aafd0580]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to thaw the notification queue for object ClutterText[0x7492aafd0580]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to freeze the notification queue for object ClutterText[0x7492aafbd280]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to thaw the notification queue for object ClutterText[0x7492aafbd280]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.315: Attempting to freeze the notification queue for object ClutterText[0x7492aafbff80]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.316: Attempting to thaw the notification queue for object ClutterText[0x7492aafbff80]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.316: Attempting to freeze the notification queue for object ClutterText[0x7492aafb2c80]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.316: Attempting to thaw the notification queue for object ClutterText[0x7492aafb2c80]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.316: Attempting to freeze the notification queue for object ClutterText[0x7492aafa6980]; Property notification does not work during instance finalization.
+
+(gnome-shell:2529): GLib-GObject-CRITICAL **: 01:31:42.316: Attempting to thaw the notification queue for object ClutterText[0x7492aafa6980]; Property notification does not work during instance finalization.
+gnome-session-binary[2303]: WARNING: App 'org.gnome.Shell.desktop' exited with code 1
+
+GLib-GIO-Message: 01:31:42.769: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+
+** (gnome-shell:3267): WARNING **: 01:31:42.785: ATK Bridge is disabled but a11y has already been enabled.
+GLib-GIO-Message: 01:31:42.936: Opened file '/usr/pkg/share/adjustkernel/gnome-shell-overlay/ui/appDisplay.js' as a resource overlay
+GLib-GIO-Message: 01:31:42.939: Opened file '/usr/pkg/share/adjustkernel/gnome-shell-overlay/ui/appFavorites.js' as a resource overlay
+GLib-GIO-Message: 01:31:42.940: Opened file '/usr/pkg/share/adjustkernel/gnome-shell-overlay/misc/parentalControlsManager.js' as a resource overlay
+GLib-GIO-Message: 01:31:42.998: Opened file '/usr/pkg/share/adjustkernel/gnome-shell-overlay/misc/weather.js' as a resource overlay
+GNOME Shell-Message: 01:31:43.038: Skipping parental controls support as it’s disabled
+current session already has an ibus-daemon.
+GNOME Shell-Message: 01:31:43.383: Missing required core component Settings, expect trouble…
+GNOME Shell-Message: 01:31:43.420: Telepathy is not available, chat integration will be disabled.
+
+(gnome-shell:3267): Gjs-CRITICAL **: 01:31:43.437: JS ERROR: TypeError: app.get_app_info is not a function
+reload/apps<@resource:///org/gnome/shell/ui/appFavorites.js:110:102
+reload@resource:///org/gnome/shell/ui/appFavorites.js:110:24
+AppFavorites@resource:///org/gnome/shell/ui/appFavorites.js:82:14
+getAppFavorites@resource:///org/gnome/shell/ui/appFavorites.js:212:32
+_init@resource:///org/gnome/shell/ui/dash.js:376:22
+Dash@resource:///org/gnome/shell/ui/dash.js:307:4
+_init@resource:///org/gnome/shell/ui/overviewControls.js:317:21
+ControlsManager@resource:///org/gnome/shell/ui/overviewControls.js:290:1
+_init@resource:///org/gnome/shell/ui/overview.js:88:26
+OverviewActor@resource:///org/gnome/shell/ui/overview.js:76:1
+init@resource:///org/gnome/shell/ui/overview.js:216:26
+_initializeUI@resource:///org/gnome/shell/ui/main.js:234:14
+start@resource:///org/gnome/shell/ui/main.js:166:5
+@<main>:1:47
+
+** Message: 01:31:43.437: Execution of main.js threw exception: Script <main> threw an exception
+
+(gnome-shell:3267): Gjs-CRITICAL **: 01:31:43.442: Attempting to run a JS callback during garbage collection. This is most likely caused by destroying a Clutter actor or GTK widget with ::destroy signal connected, or using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked.
+The offending callback was set_actor(), a vfunc.
+== Stack trace for context 0x77fce4b3ec00 ==
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.442: Attempting to freeze the notification queue for object ClutterText[0x77fccfc86880]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.442: Attempting to thaw the notification queue for object ClutterText[0x77fccfc86880]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.442: Attempting to freeze the notification queue for object ClutterText[0x77fccfc87280]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.442: Attempting to thaw the notification queue for object ClutterText[0x77fccfc87280]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): Gjs-CRITICAL **: 01:31:43.447: Attempting to call back into JSAPI during the sweeping phase of GC. This is most likely caused by not destroying a Clutter actor or Gtk+ widget with ::destroy signals connected, but can also be caused by using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked and the JS callback not invoked.
+== Stack trace for context 0x77fce4b3ec00 ==
+The offending signal was destroy on StWidget 0x77fccfc88610.
+
+(gnome-shell:3267): Gjs-CRITICAL **: 01:31:43.447: Attempting to call back into JSAPI during the sweeping phase of GC. This is most likely caused by not destroying a Clutter actor or Gtk+ widget with ::destroy signals connected, but can also be caused by using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked and the JS callback not invoked.
+== Stack trace for context 0x77fce4b3ec00 ==
+The offending signal was destroy on Gjs_ui_dash_ShowAppsIcon 0x77fccfc88b10.
+
+(gnome-shell:3267): Gjs-CRITICAL **: 01:31:43.447: Attempting to call back into JSAPI during the sweeping phase of GC. This is most likely caused by not destroying a Clutter actor or Gtk+ widget with ::destroy signals connected, but can also be caused by using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked and the JS callback not invoked.
+== Stack trace for context 0x77fce4b3ec00 ==
+The offending signal was destroy on StButton 0x77fccfc89f40.
+
+(gnome-shell:3267): Gjs-CRITICAL **: 01:31:43.447: Attempting to call back into JSAPI during the sweeping phase of GC. This is most likely caused by not destroying a Clutter actor or Gtk+ widget with ::destroy signals connected, but can also be caused by using the destroy(), dispose(), or remove() vfuncs. Because it would crash the application, it has been blocked and the JS callback not invoked.
+== Stack trace for context 0x77fce4b3ec00 ==
+The offending signal was destroy on Gjs_ui_iconGrid_BaseIcon 0x77fccfbe3420.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to freeze the notification queue for object ClutterText[0x77fcd427f480]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to thaw the notification queue for object ClutterText[0x77fcd427f480]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to freeze the notification queue for object ClutterText[0x77fcd4282180]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to thaw the notification queue for object ClutterText[0x77fcd4282180]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to freeze the notification queue for object ClutterText[0x77fcd426ee80]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to thaw the notification queue for object ClutterText[0x77fcd426ee80]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to freeze the notification queue for object ClutterText[0x77fcd4271b80]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to thaw the notification queue for object ClutterText[0x77fcd4271b80]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to freeze the notification queue for object ClutterText[0x77fcd4260880]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.447: Attempting to thaw the notification queue for object ClutterText[0x77fcd4260880]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to freeze the notification queue for object ClutterText[0x77fcd4263580]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to thaw the notification queue for object ClutterText[0x77fcd4263580]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to freeze the notification queue for object ClutterText[0x77fcd4253280]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to thaw the notification queue for object ClutterText[0x77fcd4253280]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to freeze the notification queue for object ClutterText[0x77fcd4255f80]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to thaw the notification queue for object ClutterText[0x77fcd4255f80]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to freeze the notification queue for object ClutterText[0x77fcd4248c80]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to thaw the notification queue for object ClutterText[0x77fcd4248c80]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to freeze the notification queue for object ClutterText[0x77fcd4237980]; Property notification does not work during instance finalization.
+
+(gnome-shell:3267): GLib-GObject-CRITICAL **: 01:31:43.448: Attempting to thaw the notification queue for object ClutterText[0x77fcd4237980]; Property notification does not work during instance finalization.
+gnome-session-binary[2303]: WARNING: App 'org.gnome.Shell.desktop' exited with code 1
+
+gnome-session-binary[2303]: WARNING: App 'org.gnome.Shell.desktop' respawning too quickly
+
+GLib-GIO-Message: 01:31:43.579: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+
+(gsd-usb-protection:2127): usb-protection-plugin-WARNING **: 01:31:43.702: Failed to get screen saver status: Cannot invoke method; proxy is for the well-known name org.gnome.ScreenSaver without an owner, and proxy was constructed with the G_DBUS_PROXY_FLAGS_DO_NOT_AUTO_START flag
+
+(gsd-usb-protection:2127): usb-protection-plugin-WARNING **: 01:31:43.758: Failed to fetch USBGuard parameters: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.usbguard1 was not provided by any .service files
+
+(gsd-xsettings:1384): xsettings-plugin-WARNING **: 01:31:43.777: Failed to get current display configuration state: GDBus.Error:org.freedesktop.DBus.Error.NameHasNoOwner: Name "org.gnome.Mutter.DisplayConfig" does not exist
+GLib-GIO-Message: 01:31:43.792: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+GLib-GIO-Message: 01:31:43.792: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+GLib-GIO-Message: 01:31:43.798: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+GLib-GIO-Message: 01:31:43.804: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+
+(gsd-color:2137): color-plugin-WARNING **: 01:31:43.843: failed to connect to colord: Error calling StartServiceByName for org.freedesktop.ColorManager: Launch helper exited with unknown return code 1
+GLib-GIO-Message: 01:31:43.918: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.958: Unable to get XDG user directory path for special directory &DOCUMENTS. Ignoring this location.
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.959: Unable to get XDG user directory path for special directory &MUSIC. Ignoring this location.
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.959: Unable to get XDG user directory path for special directory &PICTURES. Ignoring this location.
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.959: Unable to get XDG user directory path for special directory &VIDEOS. Ignoring this location.
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.959: Unable to get XDG user directory path for special directory &DOWNLOAD. Ignoring this location.
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.959: Unable to get XDG user directory path for special directory &DOCUMENTS. Ignoring this location.
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.959: Unable to get XDG user directory path for special directory &MUSIC. Ignoring this location.
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.959: Unable to get XDG user directory path for special directory &PICTURES. Ignoring this location.
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.959: Unable to get XDG user directory path for special directory &VIDEOS. Ignoring this location.
+Tracker-Message: 01:31:43.959: tracker-miner-fs-3 running as org.freedesktop.Tracker3.Miner.Files
+
+(tracker-miner-fs-3:2120): Tracker-WARNING **: 01:31:43.959: Locale 'LANG' is not set, defaulting to C locale
+
+(gsd-media-keys:2092): media-keys-plugin-WARNING **: 01:31:43.964: Unable to inhibit keypresses: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.login1 was not provided by any .service files
+
+(gsd-media-keys:2092): media-keys-plugin-WARNING **: 01:31:43.964: Unable to inhibit suspend: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.login1 was not provided by any .service files
+GLib-GIO-Message: 01:31:44.011: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+Failed to play sound: File or data not found
+GLib-GIO-Message: 01:31:44.133: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+GLib-GIO-Message: 01:31:44.164: Adding GResources overlay '/org/gnome/shell=/usr/pkg/share/adjustkernel/gnome-shell-overlay'
+Tracker-Message: 01:31:44.391: Running on AC power
+
+(tracker-miner-fs-3:2120): Tracker-CRITICAL **: 01:31:44.392:   Empty locale file found at '/home/anonymous/.cache/tracker3/files/locale-for-miner-apps.txt'
+Tracker-Message: 01:31:44.452: Running on AC power
