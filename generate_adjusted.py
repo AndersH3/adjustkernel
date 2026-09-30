@@ -29,9 +29,15 @@ LOG = REPO / "netbsd" / "adjustkernel_run.log"
 
 KEEP = ["umass", "sd", "cd", "ukbd", "ums", "uhid", "agp"]
 
-# This machine uses a Swedish physical keyboard.  Keep the wscons map built
-# into the kernel as well as configuring it later from /etc/wscons.conf.
-EXTRA_OPTIONS = ["PCKBD_LAYOUT=KB_SV"]
+# Machine-local config lines intentionally kept outside the runtime
+# device-tree decision engine.  The keyboard layout is built into the kernel;
+# the sleep-button and lid-switch ACPI devices are deliberately disabled
+# because this machine will not use suspend/lid-triggered power management.
+EXTRA_CONFIG_LINES = [
+    "options PCKBD_LAYOUT=KB_SV",
+    "no acpibut* at acpi?",
+    "no acpilid* at acpi?",
+]
 
 
 def fail(message: str) -> int:
@@ -40,12 +46,12 @@ def fail(message: str) -> int:
 
 
 def add_local_options(text: str) -> str:
-    """Add machine-local kernel options after the GENERIC include."""
+    """Add machine-local kernel configuration after the GENERIC include."""
 
     additions = [
-        f"options {option}"
-        for option in EXTRA_OPTIONS
-        if f"options {option}" not in text
+        line
+        for line in EXTRA_CONFIG_LINES
+        if line not in text
     ]
     if not additions:
         return text
@@ -59,7 +65,7 @@ def add_local_options(text: str) -> str:
 
     block = [
         "",
-        "# Machine-local options added by generate_adjusted.py.",
+        "# Machine-local configuration added by generate_adjusted.py.",
         *additions,
         "",
     ]
