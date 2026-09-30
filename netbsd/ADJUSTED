@@ -80,7 +80,7 @@ no ichlpcib* at pci?
 no fwhrng* at ichlpcib?
 no tco* at tcoichbus?
 no aapic* at pci?
-no agp* at pchb?
+# Keep agp* at pchb?: i915drmkms links against agp_i810 support.
 no isa0 at ichlpcib?
 no cbb* at pci?
 no cardslot* at cbb?
