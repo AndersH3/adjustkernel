@@ -1,0 +1,47 @@
+ACTIONS
+=======
+Set /etc/wscons.conf: encoding sv
+
+Set /etc/rc.conf: wscons=YES
+
+Applied console map immediately: exit=0
+encoding -> fi
+
+Updated /home/anonymous/.xsession to run setxkbmap se at X11 login.
+
+/usr/pkg/bin/gsettings set org.gnome.desktop.input-sources sources [('xkb', 'se')]
+exit=0
+dbus-daemon[3061]: [session uid=1000 pid=3061] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=3478 comm="/usr/pkg/bin/gsettings set org.gnome.desktop.input")
+dbus-daemon[3061]: [session uid=1000 pid=3061] Successfully activated service 'ca.desrt.dconf'
+
+/usr/pkg/bin/gsettings set org.gnome.desktop.input-sources xkb-options []
+exit=0
+dbus-daemon[2468]: [session uid=1000 pid=2468] Activating service name='ca.desrt.dconf' requested by ':1.0' (uid=1000 pid=2931 comm="/usr/pkg/bin/gsettings set org.gnome.desktop.input")
+dbus-daemon[2468]: [session uid=1000 pid=2468] Successfully activated service 'ca.desrt.dconf'
+
+WSCONS.CONF
+===========
+keyboard	auto
+encoding sv
+#encoding us.swapctrlcaps
+
+RC.CONF
+=======
+wscons=YES
+
+LIVE WSCONS
+===========
+exit=0
+encoding=fi
+
+GNOME INPUT SOURCES
+===================
+exit=0
+[('xkb', 'se')]
+
+XSESSION KEYBOARD LINES
+=======================
+# BEGIN adjustkernel Swedish keyboard
+if [ -x /usr/X11R7/bin/setxkbmap ]; then
+    /usr/X11R7/bin/setxkbmap se
+# END adjustkernel Swedish keyboard
