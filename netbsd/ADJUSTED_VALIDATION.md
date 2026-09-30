@@ -25,7 +25,7 @@ NetBSD 11.0 (build-ADJUSTED) #0
 - Console wscons accepts `encoding sv`. NetBSD reports the resulting encoding symbolically as `fi` because KB_SV and KB_FI share encoding value 0x0900.
 - ACPI battery reporting works: battery present, AC adapter connected, 97.31% charge reported.
 - ACPI thermal and WMI sensors are visible through `envstat`.
-- ACPI reports support for S0, S3, S4 and S5. The first S3 suspend attempt was issued as the unprivileged user and correctly failed with `Operation not permitted`; suspend/resume therefore remains untested.
+- ACPI reports support for S0, S3, S4 and S5. The first S3 suspend attempt was issued as the unprivileged user and correctly failed with `Operation not permitted`; the later suspend attempt did not return to the same ADJUSTED kernel; the machine was subsequently running stock GENERIC, so suspend/resume remains unresolved.
 - Kernel identity re-confirmed as `NetBSD 11.0 (build-ADJUSTED)`.
 
 ## Expected / pre-existing warnings
