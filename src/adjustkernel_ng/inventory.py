@@ -103,13 +103,21 @@ def inventory_from_drvctl(program: str = "drvctl") -> tuple[list[DeviceEdge], nx
     if not executable:
         raise InventoryError(f"{program!r} was not found")
 
+    # First try drvctl's compact tree presentation.  Parsing may succeed while
+    # topology validation still exposes a presentation ambiguity (for example,
+    # the same USB hub instance appearing beneath more than one displayed
+    # branch).  In that case retry using the documented per-device child-list
+    # interface before abandoning drvctl entirely.
     try:
-        edges = parse_drvctl_tree(_run([executable, "-t", "-l"]))
+        tree_edges = parse_drvctl_tree(_run([executable, "-t", "-l"]))
+        if not tree_edges:
+            raise InventoryError("drvctl returned an empty device tree")
+        return tree_edges, build_graph(tree_edges)
     except (InventoryError, ValueError):
         edges = _inventory_from_drvctl_recursive(executable)
 
     if not edges:
-        raise InventoryError("drvctl returned an empty device tree")
+        raise InventoryError("drvctl recursive inventory returned an empty device tree")
     return edges, build_graph(edges)
 
 
