@@ -35,6 +35,20 @@ KEEP = ["umass", "sd", "cd", "ukbd", "ums", "uhid", "agp"]
 # because this machine will not use suspend/lid-triggered power management.
 EXTRA_CONFIG_LINES = [
     "options PCKBD_LAYOUT=KB_SV",
+    # User-reviewed machine-local removals.  Keep these here so regenerating
+    # netbsd/ADJUSTED does not silently discard the hand-edited policy layer.
+    "no options COMPAT_NETBSD32",
+    "no options EXEC_ELF32",
+    "no options XENPVHVM",
+    "no options XEN",
+    "no options DKWEDGE_METHOD_APPLE",
+    "no options INET6",
+    "no pseudo-device stf",
+    "no options NETATALK",
+    "no options PPP_BSDCOMP",
+    "no options PPP_DEFLATE",
+    "no options PPP_FILTER",
+    "no options NFS_BOOT_DHCP,NFS_BOOT_BOOTPARAM",
     "no acpibut* at acpi?",
     "no acpilid* at acpi?",
 ]
