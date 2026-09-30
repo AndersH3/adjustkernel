@@ -20,6 +20,8 @@ no options PPP_BSDCOMP		# BSD-Compress compression support for PPP
 no options PPP_DEFLATE		# Deflate compression support for PPP
 no options PPP_FILTER
 no options NFS_BOOT_DHCP,NFS_BOOT_BOOTPARAM
+no acpibut* at acpi?		# sleep button intentionally unused
+no acpilid* at acpi?		# lid switch/power events intentionally unused
 
 
 
