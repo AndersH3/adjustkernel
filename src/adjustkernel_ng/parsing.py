@@ -47,6 +47,9 @@ _DMESG_EDGE_RE = re.compile(
     r"^([A-Za-z_][A-Za-z0-9_]*\d+)\s+at\s+"
     r"([A-Za-z_][A-Za-z0-9_]*\d+)\b"
 )
+_DMESG_DETACH_RE = re.compile(
+    r"^([A-Za-z_][A-Za-z0-9_]*\d+):\s+detached\b"
+)
 
 
 def split_instance_token(token: str) -> tuple[str, str] | None:
@@ -168,27 +171,52 @@ def parse_drvctl_tree(text: str) -> list[DeviceEdge]:
 
 
 def parse_dmesg_edges(text: str) -> list[DeviceEdge]:
-    """Parse the stable leading portion of NetBSD autoconfiguration messages."""
+    """Parse NetBSD autoconfiguration messages into the latest known topology.
 
-    edges: list[DeviceEdge] = []
+    dmesg input is a history, not necessarily a snapshot.  A device instance
+    can be detached and later reattached, and saved logs can even contain more
+    than one boot.  Feeding every historical attachment into a graph therefore
+    fabricates impossible multiple-parent devices.  Track the most recent
+    attachment for each concrete child and discard it on an explicit detach.
+
+    This remains conservative: only the stable leading forms already accepted
+    by the parser are interpreted; all other text is ignored.
+    """
+
+    latest: dict[str, DeviceEdge] = {}
+    order: dict[str, int] = {}
+    sequence = 0
+
     for raw in text.splitlines():
         line = _DMESG_TS_RE.sub("", raw)
 
+        detach_match = _DMESG_DETACH_RE.match(line)
+        if detach_match:
+            child = detach_match.group(1)
+            latest.pop(child, None)
+            order.pop(child, None)
+            continue
+
         root_match = _DMESG_ROOT_RE.match(line)
         if root_match:
-            edges.append(
-                DeviceEdge(parent="root", child=root_match.group(1), source="dmesg", raw=raw)
+            child = root_match.group(1)
+            latest[child] = DeviceEdge(
+                parent="root", child=child, source="dmesg", raw=raw
             )
+            order[child] = sequence
+            sequence += 1
             continue
 
         edge_match = _DMESG_EDGE_RE.match(line)
         if edge_match:
-            edges.append(
-                DeviceEdge(
-                    parent=edge_match.group(2),
-                    child=edge_match.group(1),
-                    source="dmesg",
-                    raw=raw,
-                )
+            child = edge_match.group(1)
+            latest[child] = DeviceEdge(
+                parent=edge_match.group(2),
+                child=child,
+                source="dmesg",
+                raw=raw,
             )
-    return edges
+            order[child] = sequence
+            sequence += 1
+
+    return sorted(latest.values(), key=lambda edge: order[edge.child])
