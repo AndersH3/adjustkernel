@@ -880,3 +880,10 @@
 
 config(1) validation passed.
 wrote /home/anonymous/src/adjustkernel/netbsd/ADJUSTED
+
+
+=== final overlay validation ===
+Build directory is /tmp/adjustkernel-final-sezo0gro/build
+Don't forget to run "make depend"
+
+Final overlay validation: PASSED

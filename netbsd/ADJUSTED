@@ -4,6 +4,10 @@
 
 include "arch/amd64/conf/GENERIC"
 
+# Machine-local options added by generate_adjusted.py.
+options PCKBD_LAYOUT=KB_SV
+
+
 # Attachment rules absent from the observed runtime device tree.
 no est0 at cpu0
 no hyperv0 at cpu0

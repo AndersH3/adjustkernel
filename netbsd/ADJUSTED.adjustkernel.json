@@ -1,0 +1,4654 @@
+{
+  "decisions": [
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "cpu?",
+        "instance": "acpicpu*",
+        "line_no": 86,
+        "original_line": "acpicpu*\tat cpu?\t\t# ACPI CPU (including frequency scaling)\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "cpu?",
+        "instance": "coretemp*",
+        "line_no": 87,
+        "original_line": "coretemp*\tat cpu?\t\t# Intel on-die thermal sensor\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cpu0",
+        "instance": "est0",
+        "line_no": 88,
+        "original_line": "est0\t\tat cpu0\t\t# Intel Enhanced SpeedStep (non-ACPI)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cpu0",
+        "instance": "hyperv0",
+        "line_no": 89,
+        "original_line": "hyperv0 \tat cpu0\t\t# Microsoft Hyper-V\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cpu0",
+        "instance": "powernow0",
+        "line_no": 91,
+        "original_line": "powernow0\tat cpu0\t\t# AMD PowerNow! and Cool'n'Quiet (non-ACPI)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cpu?",
+        "instance": "viac7temp*",
+        "line_no": 92,
+        "original_line": "viac7temp*\tat cpu?\t\t# VIA C7, Nano and Zhaoxin temperature sensor\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cpu0",
+        "instance": "vmt0",
+        "line_no": 93,
+        "original_line": "vmt0\t\tat cpu0\t\t# VMware Tools\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mainbus?",
+        "instance": "hypervisor*",
+        "line_no": 98,
+        "original_line": "hypervisor*\tat mainbus?\t\t# Xen hypervisor\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "hypervisor?",
+        "instance": "xenbus*",
+        "line_no": 99,
+        "original_line": "xenbus*\t \tat hypervisor?\t\t# Xen virtual bus\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "hypervisor?",
+        "instance": "xencons*",
+        "line_no": 100,
+        "original_line": "xencons*\tat hypervisor?\t\t# Xen virtual console\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "xenbus?",
+        "instance": "xennet*",
+        "line_no": 101,
+        "original_line": "xennet*  \tat xenbus?\t\t# Xen virtual network interface\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "xenbus?",
+        "instance": "xbd*",
+        "line_no": 102,
+        "original_line": "xbd*\t\tat xenbus?\t\t# Xen virtual block device\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mainbus?",
+        "instance": "ipmi0",
+        "line_no": 314,
+        "original_line": "ipmi0\t\tat mainbus?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "ipmi_acpi*",
+        "line_no": 315,
+        "original_line": "ipmi_acpi*\tat acpi?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "ipmi_acpi?",
+        "instance": "ipmi0",
+        "line_no": 316,
+        "original_line": "ipmi0\t\tat ipmi_acpi?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "mainbus0",
+        "instance": "acpi0",
+        "line_no": 319,
+        "original_line": "acpi0\t\tat mainbus0\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpiacad*",
+        "line_no": 331,
+        "original_line": "acpiacad*\tat acpi?\t\t# ACPI AC Adapter\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpibat*",
+        "line_no": 332,
+        "original_line": "acpibat*\tat acpi?\t\t# ACPI Battery\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpibut*",
+        "line_no": 333,
+        "original_line": "acpibut*\tat acpi?\t\t# ACPI Button\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpidalb*",
+        "line_no": 334,
+        "original_line": "acpidalb*\tat acpi?\t\t# ACPI Direct Application Launch Button\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpiec*",
+        "line_no": 335,
+        "original_line": "acpiec* \tat acpi?\t\t# ACPI Embedded Controller (late)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpiecdt*",
+        "line_no": 336,
+        "original_line": "acpiecdt*\tat acpi?\t\t# ACPI Embedded Controller (early)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpifan*",
+        "line_no": 337,
+        "original_line": "acpifan*\tat acpi?\t\t# ACPI Fan\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpihed*",
+        "line_no": 338,
+        "original_line": "acpihed*\tat acpi?\t\t# ACPI Hardware Error Device\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpilid*",
+        "line_no": 339,
+        "original_line": "acpilid*\tat acpi?\t\t# ACPI Lid Switch\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpitz*",
+        "line_no": 342,
+        "original_line": "acpitz* \tat acpi?\t\t# ACPI Thermal Zone\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpivga*",
+        "line_no": 343,
+        "original_line": "acpivga*\tat acpi?\t\t# ACPI Display Adapter\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpivga?",
+        "instance": "acpiout*",
+        "line_no": 344,
+        "original_line": "acpiout*\tat acpivga?\t\t# ACPI Display Output Device\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpivmgenid*",
+        "line_no": 345,
+        "original_line": "acpivmgenid*\tat acpi?\t\t# ACPI Virtual Machine Generation ID\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpiwdrt*",
+        "line_no": 346,
+        "original_line": "acpiwdrt*\tat acpi?\t\t# ACPI Watchdog Resource Table\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "acpiwmi*",
+        "line_no": 347,
+        "original_line": "acpiwmi*\tat acpi?\t\t# ACPI WMI Mapper\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "apeibus?",
+        "instance": "apei*",
+        "line_no": 348,
+        "original_line": "apei*\t\tat apeibus?\t\t# ACPI Platform Error Interfaces\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "aibs*",
+        "line_no": 351,
+        "original_line": "aibs*\t\tat acpi?\t\t# ASUSTeK AI Booster hardware monitor\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "asus*",
+        "line_no": 352,
+        "original_line": "asus*\t\tat acpi?\t\t# ASUS hotkeys\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "attimer*",
+        "line_no": 353,
+        "original_line": "attimer*\tat acpi?\t\t# AT Timer\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "com0",
+        "line_no": 354,
+        "original_line": "com0\t\tat acpi?\t\t# Serial communications interface\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "com1",
+        "line_no": 355,
+        "original_line": "com1\t\tat acpi?\t\t# Serial communications interface\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "com*",
+        "line_no": 356,
+        "original_line": "com*\t\tat acpi?\t\t# Serial communications interface\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "fdc*",
+        "line_no": 357,
+        "original_line": "fdc*\t\tat acpi?\t\t# Floppy disk controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "fdc?",
+        "instance": "fd*",
+        "line_no": 358,
+        "original_line": "fd*\t\tat fdc? drive ?\t\t# the drives themselves\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "fujbp*",
+        "line_no": 359,
+        "original_line": "fujbp*\t\tat acpi?\t\t# Fujitsu Brightness & Pointer\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "fujhk*",
+        "line_no": 360,
+        "original_line": "fujhk*\t\tat acpi?\t\t# Fujitsu Hotkeys\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "acpihpetbus?",
+        "instance": "hpet*",
+        "line_no": 363,
+        "original_line": "hpet*\t\tat acpihpetbus?\t\t# High Precision Event Timer (table)\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "acpinodebus?",
+        "instance": "hpet*",
+        "line_no": 364,
+        "original_line": "hpet*\t\tat acpinodebus?\t\t# High Precision Event Timer (device)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "joy*",
+        "line_no": 365,
+        "original_line": "joy*\t\tat acpi?\t\t# Joystick/Game port\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "lpt0",
+        "line_no": 366,
+        "original_line": "lpt0\t\tat acpi?\t\t# Parallel port\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "lpt1",
+        "line_no": 367,
+        "original_line": "lpt1\t\tat acpi?\t\t# Parallel port\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "lpt*",
+        "line_no": 368,
+        "original_line": "lpt*\t\tat acpi?\t\t# Parallel port\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "mpu*",
+        "line_no": 369,
+        "original_line": "mpu*\t\tat acpi?\t\t# Roland MPU-401 MIDI UART\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "pckbc*",
+        "line_no": 370,
+        "original_line": "pckbc*\t\tat acpi?\t\t# PC keyboard controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "pcppi*",
+        "line_no": 371,
+        "original_line": "pcppi*\t\tat acpi?\t\t# AT-style speaker sound\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "qemufwcfg*",
+        "line_no": 372,
+        "original_line": "qemufwcfg*\tat acpi?\t\t# QEMU Firmware Configuration device\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "sdhc*",
+        "line_no": 373,
+        "original_line": "sdhc*\t\tat acpi?\t\t# SD Host Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "sony*",
+        "line_no": 374,
+        "original_line": "sony*\t\tat acpi?\t\t# Sony Notebook Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "spic*",
+        "line_no": 375,
+        "original_line": "spic*\t\tat acpi?\t\t# Sony Programmable I/O Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "spic?",
+        "instance": "wsmouse*",
+        "line_no": 376,
+        "original_line": "wsmouse*\tat spic?\t\t# mouse\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "thinkpad*",
+        "line_no": 377,
+        "original_line": "thinkpad*\tat acpi?\t\t# IBM/Lenovo Thinkpad hotkeys\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "tpm*",
+        "line_no": 378,
+        "original_line": "tpm*\t\tat acpi?\t\t# ACPI TPM (Experimental)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "ug*",
+        "line_no": 379,
+        "original_line": "ug*\t\tat acpi?\t\t# Abit uGuru Hardware monitor\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "valz*",
+        "line_no": 380,
+        "original_line": "valz*\t\tat acpi?\t\t# Toshiba Dynabook hotkeys\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "wb*",
+        "line_no": 381,
+        "original_line": "wb*\t\tat acpi?\t\t# Winbond W83L518D SD/MMC reader\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "wb?",
+        "instance": "sdmmc*",
+        "line_no": 382,
+        "original_line": "sdmmc*\t\tat wb?\t\t\t# SD/MMC bus\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpiwmibus?",
+        "instance": "wmidell*",
+        "line_no": 383,
+        "original_line": "wmidell*\tat acpiwmibus?\t\t# Dell WMI mappings\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpiwmibus?",
+        "instance": "wmieeepc*",
+        "line_no": 384,
+        "original_line": "wmieeepc*\tat acpiwmibus?\t\t# Asus Eee PC WMI mappings\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "acpiwmibus?",
+        "instance": "wmihp*",
+        "line_no": 385,
+        "original_line": "wmihp*\t\tat acpiwmibus?\t\t# HP WMI mappings\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpiwmibus?",
+        "instance": "wmimsi*",
+        "line_no": 386,
+        "original_line": "wmimsi* \tat acpiwmibus?\t\t# MSI WMI mappings\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "mainbus?",
+        "instance": "pci*",
+        "line_no": 391,
+        "original_line": "pci*\tat mainbus? bus ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "pchb?",
+        "instance": "pci*",
+        "line_no": 392,
+        "original_line": "pci*\tat pchb? bus ?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "ppb?",
+        "instance": "pci*",
+        "line_no": 393,
+        "original_line": "pci*\tat ppb? bus ?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "pchb*",
+        "line_no": 396,
+        "original_line": "pchb*\tat pci? dev ? function ?\t# PCI-Host bridges\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "pcib*",
+        "line_no": 398,
+        "original_line": "pcib*\tat pci? dev ? function ?\t# PCI-ISA bridges\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ppb*",
+        "line_no": 399,
+        "original_line": "ppb*\tat pci? dev ? function ?\t# PCI-PCI bridges\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "puc*",
+        "line_no": 401,
+        "original_line": "puc*\tat pci? dev ? function ?\t# PCI \"universal\" comm. cards\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "amdpcib*",
+        "line_no": 403,
+        "original_line": "amdpcib* at pci? dev ? function ?\t# AMD 8111 PCI-ISA w/ HPET\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "amdpcib?",
+        "instance": "hpet*",
+        "line_no": 404,
+        "original_line": "hpet*\tat amdpcib?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "pwdog*",
+        "line_no": 406,
+        "original_line": "pwdog*\tat pci? dev ? function ?\t# QUANCOM PWDOG1\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ichlpcib*",
+        "line_no": 408,
+        "original_line": "ichlpcib* at pci? dev ? function ?\t# Intel ICH PCI-LPC w/ timecounter,\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "ichlpcib?",
+        "instance": "fwhrng*",
+        "line_no": 410,
+        "original_line": "fwhrng* at ichlpcib?\t\t# Intel 82802 FWH Random Number Generator\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "tcoichbus?",
+        "instance": "tco*",
+        "line_no": 412,
+        "original_line": "tco*\tat tcoichbus?\t\t# TCO watch dog timer\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "aapic*",
+        "line_no": 414,
+        "original_line": "aapic*\tat pci? dev ? function ?\t# AMD 8131 IO apic\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pchb?",
+        "instance": "agp*",
+        "line_no": 416,
+        "original_line": "agp*\tat pchb?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "mainbus?",
+        "instance": "isa0",
+        "line_no": 419,
+        "original_line": "isa0\tat mainbus?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pcib?",
+        "instance": "isa0",
+        "line_no": 420,
+        "original_line": "isa0\tat pcib?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "ichlpcib?",
+        "instance": "isa0",
+        "line_no": 422,
+        "original_line": "isa0\tat ichlpcib?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "cbb*",
+        "line_no": 425,
+        "original_line": "cbb*\t\tat pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cbb?",
+        "instance": "cardslot*",
+        "line_no": 426,
+        "original_line": "cardslot*\tat cbb?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardslot?",
+        "instance": "cardbus*",
+        "line_no": 429,
+        "original_line": "cardbus*\tat cardslot?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardslot?",
+        "instance": "pcmcia*",
+        "line_no": 430,
+        "original_line": "pcmcia* \tat cardslot?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "pckbc0",
+        "line_no": 435,
+        "original_line": "pckbc0\t\tat isa?\t\t\t# pc keyboard controller\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pckbc?",
+        "instance": "pckbd*",
+        "line_no": 436,
+        "original_line": "pckbd*\t\tat pckbc?\t\t# PC keyboard\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pckbc?",
+        "instance": "pms*",
+        "line_no": 437,
+        "original_line": "pms*\t\tat pckbc?\t\t# PS/2 mouse for wsmouse\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "vga*",
+        "line_no": 442,
+        "original_line": "vga*\t\tat pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "genfb*",
+        "line_no": 443,
+        "original_line": "genfb*\t\tat pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "vga?",
+        "instance": "wsdisplay*",
+        "line_no": 445,
+        "original_line": "wsdisplay*\tat vga? console ?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "wsemuldisplaydev?",
+        "instance": "wsdisplay*",
+        "line_no": 446,
+        "original_line": "wsdisplay*\tat wsemuldisplaydev?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pckbd?",
+        "instance": "wskbd*",
+        "line_no": 447,
+        "original_line": "wskbd*\t\tat pckbd? console ?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pms?",
+        "instance": "wsmouse*",
+        "line_no": 448,
+        "original_line": "wsmouse*\tat pms? mux 0\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "wsmousedev?",
+        "instance": "wsmouse*",
+        "line_no": 449,
+        "original_line": "wsmouse*\tat wsmousedev?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "attimer0",
+        "line_no": 451,
+        "original_line": "attimer0\tat isa?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "pcppi0",
+        "line_no": 452,
+        "original_line": "pcppi0\t\tat isa?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pcppi?",
+        "instance": "sysbeep0",
+        "line_no": 453,
+        "original_line": "sysbeep0\tat pcppi?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "i915drmkms*",
+        "line_no": 466,
+        "original_line": "i915drmkms*\tat pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "intelfbbus?",
+        "instance": "intelfb*",
+        "line_no": 467,
+        "original_line": "intelfb*\tat intelfbbus?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "radeon*",
+        "line_no": 469,
+        "original_line": "radeon* \tat pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "radeonfbbus?",
+        "instance": "radeondrmkmsfb*",
+        "line_no": 470,
+        "original_line": "radeondrmkmsfb* at radeonfbbus?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "nouveau*",
+        "line_no": 475,
+        "original_line": "nouveau*\tat pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "nouveaufbbus?",
+        "instance": "nouveaufb*",
+        "line_no": 476,
+        "original_line": "nouveaufb*\tat nouveaufbbus?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "amdccp*",
+        "line_no": 488,
+        "original_line": "amdccp*\tat pci? dev ? function ?\t# AMD Cryptographic Coprocessor\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "hifn*",
+        "line_no": 489,
+        "original_line": "hifn*\tat pci? dev ? function ?\t# Hifn 7755/7811/795x\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ubsec*",
+        "line_no": 491,
+        "original_line": "ubsec*\tat pci? dev ? function ?\t# Broadcom 5501/5601/580x/582x\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "tpm*",
+        "line_no": 494,
+        "original_line": "tpm*\tat isa? iomem 0xfed40000 irq 7\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "puc?",
+        "instance": "com*",
+        "line_no": 499,
+        "original_line": "com*\tat puc? port ?\t\t\t# 16x50s on \"universal\" comm boards\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "cy*",
+        "line_no": 500,
+        "original_line": "cy*\tat pci? dev ? function ?\t# Cyclades Cyclom-Y serial boards\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "cz*",
+        "line_no": 501,
+        "original_line": "cz*\tat pci? dev ? function ?\t# Cyclades-Z multi-port serial boards\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "com*",
+        "line_no": 504,
+        "original_line": "com*\tat pcmcia? function ?\t\t# Modems and serial cards\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "pcmcom*",
+        "line_no": 506,
+        "original_line": "pcmcom* at pcmcia? function ?\t\t# PCMCIA multi-port serial cards\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcom?",
+        "instance": "com*",
+        "line_no": 507,
+        "original_line": "com*\tat pcmcom? slave ?\t\t# ...and the slave devices\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "com*",
+        "line_no": 510,
+        "original_line": "com*\tat cardbus? function ?\t# Modems and serial cards\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "com0",
+        "line_no": 514,
+        "original_line": "com0\tat isa? port 0x3f8 irq 4\t# Standard PC serial ports\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "com1",
+        "line_no": 515,
+        "original_line": "com1\tat isa? port 0x2f8 irq 3\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "puc?",
+        "instance": "lpt*",
+        "line_no": 520,
+        "original_line": "lpt*\tat puc? port ?\t\t\t# || ports on \"universal\" comm boards\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "lpt0",
+        "line_no": 523,
+        "original_line": "lpt0\tat isa? port 0x378 irq 7\t# standard PC parallel ports\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "lpt1",
+        "line_no": 524,
+        "original_line": "lpt1\tat isa? port 0x278\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "amdnb_misc*",
+        "line_no": 528,
+        "original_line": "amdnb_misc* at pci?\t\t\t# AMD NB Misc Configuration\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "amdnb_misc?",
+        "instance": "amdtemp*",
+        "line_no": 529,
+        "original_line": "amdtemp* at amdnb_misc?  \t\t# AMD CPU Temperature sensors\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "amdsmn*",
+        "line_no": 531,
+        "original_line": "amdsmn* at pci?\t\t\t\t# AMD SMN Configuration\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "amdsmnbus?",
+        "instance": "amdzentemp*",
+        "line_no": 532,
+        "original_line": "amdzentemp* at amdsmnbus?\t\t# AMD Ryzen Family 17h CPU temp sensors\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "amdpm*",
+        "line_no": 554,
+        "original_line": "amdpm*\tat pci? dev ? function ?\t# RNG and SMBus 1.0 interface\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "nfsmbc*",
+        "line_no": 558,
+        "original_line": "nfsmbc* at pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "nfsmbc?",
+        "instance": "nfsmb*",
+        "line_no": 559,
+        "original_line": "nfsmb*\tat nfsmbc?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "nfsmb?",
+        "instance": "iic*",
+        "line_no": 560,
+        "original_line": "iic*\tat nfsmb?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "piixpm*",
+        "line_no": 563,
+        "original_line": "piixpm* at pci? dev ? function ?\t# PIIX4 compatible PM controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "piixpm?",
+        "instance": "iic*",
+        "line_no": 564,
+        "original_line": "iic*\tat piixpm?\t\t\t# SMBus on PIIX4\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ichsmb*",
+        "line_no": 567,
+        "original_line": "ichsmb* at pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "ichsmb?",
+        "instance": "iic*",
+        "line_no": 568,
+        "original_line": "iic*\tat ichsmb?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ismt*",
+        "line_no": 571,
+        "original_line": "ismt* at pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "ismt?",
+        "instance": "iic*",
+        "line_no": 572,
+        "original_line": "iic*\tat ismt?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "dwiic*",
+        "line_no": 575,
+        "original_line": "dwiic*\t\tat acpi?\t\t# DesignWare I2C controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "dwiic*",
+        "line_no": 576,
+        "original_line": "dwiic*\t\tat pci?\t\t\t# DesignWare I2C controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "dwiic?",
+        "instance": "iic*",
+        "line_no": 577,
+        "original_line": "iic*\t\tat dwiic?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "igpio*",
+        "line_no": 615,
+        "original_line": "igpio*         at acpi? \n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "iic?",
+        "instance": "ihidev*",
+        "line_no": 618,
+        "original_line": "ihidev* at iic?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "ihidev?",
+        "instance": "ims*",
+        "line_no": 621,
+        "original_line": "ims*\tat ihidev? reportid ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "ims?",
+        "instance": "wsmouse*",
+        "line_no": 622,
+        "original_line": "wsmouse* at ims? mux 0\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "iop*",
+        "line_no": 625,
+        "original_line": "iop*\tat pci? dev ? function ?\t# I/O processor\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "iop?",
+        "instance": "iopsp*",
+        "line_no": 626,
+        "original_line": "iopsp*\tat iop? tid ?\t\t\t# SCSI/FC-AL ports\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "iop?",
+        "instance": "ld*",
+        "line_no": 627,
+        "original_line": "ld*\tat iop? tid ?\t\t\t# block devices\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "gpiobus?",
+        "instance": "gpio*",
+        "line_no": 632,
+        "original_line": "gpio*\t\tat gpiobus?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "gpio?",
+        "instance": "gpioow*",
+        "line_no": 636,
+        "original_line": "gpioow* \tat gpio?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "gpioow?",
+        "instance": "onewire*",
+        "line_no": 637,
+        "original_line": "onewire*\tat gpioow?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "onewire?",
+        "instance": "owtemp*",
+        "line_no": 640,
+        "original_line": "owtemp* \tat onewire?\t\t\t# Temperature sensors\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "nct0",
+        "line_no": 656,
+        "original_line": "nct0\t\tat isa? port ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "adv*",
+        "line_no": 661,
+        "original_line": "adv*\tat pci? dev ? function ?\t# AdvanSys 1200[A,B], 9xx[U,UA] SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "adw*",
+        "line_no": 662,
+        "original_line": "adw*\tat pci? dev ? function ?\t# AdvanSys 9x0UW[D], 3940U[2,3]W SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ahc*",
+        "line_no": 663,
+        "original_line": "ahc*\tat pci? dev ? function ?\t# Adaptec [23]94x, aic78x0 SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ahd*",
+        "line_no": 664,
+        "original_line": "ahd*\tat pci? dev ? function ?\t# Adaptec aic790x SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "bha*",
+        "line_no": 665,
+        "original_line": "bha*\tat pci? dev ? function ?\t# BusLogic 9xx SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "dpt*",
+        "line_no": 666,
+        "original_line": "dpt*\tat pci? dev ? function ?\t# DPT SmartCache/SmartRAID\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "iha*",
+        "line_no": 667,
+        "original_line": "iha*\tat pci? dev ? function ?\t# Initio INIC-940/950 SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "isp*",
+        "line_no": 668,
+        "original_line": "isp*\tat pci? dev ? function ?\t# Qlogic ISP [12]0x0 SCSI/FibreChannel\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mfi*",
+        "line_no": 669,
+        "original_line": "mfi*\tat pci? dev ? function ?\t# LSI MegaRAID SAS\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mfii*",
+        "line_no": 670,
+        "original_line": "mfii*\tat pci? dev ? function ?\t# LSI MegaRAID SAS (Fusion and newer)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mly*",
+        "line_no": 671,
+        "original_line": "mly*\tat pci? dev ? function ?\t# Mylex AcceleRAID and eXtremeRAID\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mpt*",
+        "line_no": 672,
+        "original_line": "mpt*\tat pci? dev ? function ?\t# LSILogic 9x9 and 53c1030 (Fusion-MPT)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mpii*",
+        "line_no": 673,
+        "original_line": "mpii*\tat pci? dev ? function ?\t# LSI Logic Fusion-MPT II\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "njs*",
+        "line_no": 674,
+        "original_line": "njs*\tat pci? dev ? function ?\t# Workbit NinjaSCSI-32\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "pcscp*",
+        "line_no": 675,
+        "original_line": "pcscp*\tat pci? dev ? function ?\t# AMD 53c974 PCscsi-PCI SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "siop*",
+        "line_no": 676,
+        "original_line": "siop*\tat pci? dev ? function ?\t# Symbios 53c8xx SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "esiop*",
+        "line_no": 677,
+        "original_line": "esiop*\tat pci? dev ? function ?\t# Symbios 53c875 and newer SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "trm*",
+        "line_no": 679,
+        "original_line": "trm*\tat pci? dev ? function ?\t# Tekram DC-395U/UW/F, DC-315/U SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "aic*",
+        "line_no": 682,
+        "original_line": "aic*\tat pcmcia? function ?\t\t# Adaptec APA-1460 SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "esp*",
+        "line_no": 683,
+        "original_line": "esp*\tat pcmcia? function ?\t\t# Qlogic ESP406/FAS408 SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "spc*",
+        "line_no": 684,
+        "original_line": "spc*\tat pcmcia? function ?\t\t# Fujitsu MB87030/MB89352 SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "adv*",
+        "line_no": 687,
+        "original_line": "adv*\tat cardbus? function ?\t# AdvanSys 1200[A,B], 9xx[U,UA] SCSI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "ahc*",
+        "line_no": 688,
+        "original_line": "ahc*\tat cardbus? function ?\t# Adaptec ADP-1480\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "njs*",
+        "line_no": 689,
+        "original_line": "njs*\tat cardbus? function ?\t# Workbit NinjaSCSI-32\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "scsi?",
+        "instance": "scsibus*",
+        "line_no": 692,
+        "original_line": "scsibus* at scsi?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "explicit --keep",
+      "rule": {
+        "attachment": "scsibus?",
+        "instance": "sd*",
+        "line_no": 695,
+        "original_line": "sd*\tat scsibus? target ? lun ?\t# SCSI disk drives\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "scsibus?",
+        "instance": "st*",
+        "line_no": 696,
+        "original_line": "st*\tat scsibus? target ? lun ?\t# SCSI tape drives\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "explicit --keep",
+      "rule": {
+        "attachment": "scsibus?",
+        "instance": "cd*",
+        "line_no": 697,
+        "original_line": "cd*\tat scsibus? target ? lun ?\t# SCSI CD-ROM drives\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "scsibus?",
+        "instance": "ch*",
+        "line_no": 698,
+        "original_line": "ch*\tat scsibus? target ? lun ?\t# SCSI autochangers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "scsibus?",
+        "instance": "ses*",
+        "line_no": 699,
+        "original_line": "ses*\tat scsibus? target ? lun ?\t# SCSI Enclosure Services devices\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "scsibus?",
+        "instance": "ss*",
+        "line_no": 700,
+        "original_line": "ss*\tat scsibus? target ? lun ?\t# SCSI scanners\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "scsibus?",
+        "instance": "uk*",
+        "line_no": 701,
+        "original_line": "uk*\tat scsibus? target ? lun ?\t# SCSI unknown\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "aac*",
+        "line_no": 705,
+        "original_line": "aac*\tat pci? dev ? function ?\t# Adaptec AAC family\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "amr*",
+        "line_no": 706,
+        "original_line": "amr*\tat pci? dev ? function ?\t# AMI/LSI Logic MegaRAID\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "arcmsr*",
+        "line_no": 707,
+        "original_line": "arcmsr* at pci? dev ? function ?\t# Areca SATA RAID controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "cac*",
+        "line_no": 708,
+        "original_line": "cac*\tat pci? dev ? function ?\t# Compaq PCI array controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ciss*",
+        "line_no": 709,
+        "original_line": "ciss*\tat pci? dev ? function ?\t# HP Smart Array controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "icp*",
+        "line_no": 710,
+        "original_line": "icp*\tat pci? dev ? function ?\t# ICP-Vortex GDT & Intel RAID\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mlx*",
+        "line_no": 711,
+        "original_line": "mlx*\tat pci? dev ? function ?\t# Mylex DAC960 & DEC SWXCR family\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "twe*",
+        "line_no": 712,
+        "original_line": "twe*\tat pci? dev ? function ?\t# 3ware Escalade RAID controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "twa*",
+        "line_no": 713,
+        "original_line": "twa*\tat pci? dev ? function ?\t# 3ware Escalade 9xxx RAID controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "aac?",
+        "instance": "ld*",
+        "line_no": 715,
+        "original_line": "ld*\tat aac? unit ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "amr?",
+        "instance": "ld*",
+        "line_no": 716,
+        "original_line": "ld*\tat amr? unit ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cac?",
+        "instance": "ld*",
+        "line_no": 717,
+        "original_line": "ld*\tat cac? unit ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "icp?",
+        "instance": "ld*",
+        "line_no": 718,
+        "original_line": "ld*\tat icp? unit ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "twe?",
+        "instance": "ld*",
+        "line_no": 719,
+        "original_line": "ld*\tat twe? unit ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "twa?",
+        "instance": "ld*",
+        "line_no": 720,
+        "original_line": "ld*\tat twa? unit ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mlx?",
+        "instance": "ld*",
+        "line_no": 721,
+        "original_line": "ld*\tat mlx? unit ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "icp?",
+        "instance": "icpsp*",
+        "line_no": 723,
+        "original_line": "icpsp*\tat icp? unit ?\t\t\t# SCSI pass-through\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "pciide*",
+        "line_no": 730,
+        "original_line": "pciide* at pci? dev ? function ? flags 0x0000\t# GENERIC pciide driver\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "acardide*",
+        "line_no": 731,
+        "original_line": "acardide* at pci? dev ? function ?\t# Acard IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "aceride*",
+        "line_no": 732,
+        "original_line": "aceride* at pci? dev ? function ?\t# Acer Lab IDE controllers\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ahcisata*",
+        "line_no": 733,
+        "original_line": "ahcisata* at pci? dev ? function ?\t# AHCI SATA controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "artsata*",
+        "line_no": 734,
+        "original_line": "artsata* at pci? dev ? function ?\t# Intel i31244 SATA controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "cmdide*",
+        "line_no": 735,
+        "original_line": "cmdide* at pci? dev ? function ?\t# CMD tech IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "cypide*",
+        "line_no": 736,
+        "original_line": "cypide* at pci? dev ? function ?\t# Cypress IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "hptide*",
+        "line_no": 737,
+        "original_line": "hptide* at pci? dev ? function ?\t# Triones/HighPoint IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "iteide*",
+        "line_no": 738,
+        "original_line": "iteide* at pci? dev ? function ?\t# IT Express IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ixpide*",
+        "line_no": 739,
+        "original_line": "ixpide* at pci? dev ? function ?\t# ATI IXP IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "jmide*",
+        "line_no": 740,
+        "original_line": "jmide*\tat pci? dev ? function ?\t# JMicron PCI-e PATA/SATA controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "jmide?",
+        "instance": "ahcisata*",
+        "line_no": 741,
+        "original_line": "ahcisata* at jmide?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mvsata*",
+        "line_no": 742,
+        "original_line": "mvsata* at pci? dev ? function ?\t# Marvell Hercules-I/II\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "optiide*",
+        "line_no": 743,
+        "original_line": "optiide* at pci? dev ? function ?\t# Opti IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "piixide*",
+        "line_no": 744,
+        "original_line": "piixide* at pci? dev ? function ?\t# Intel IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "pdcide*",
+        "line_no": 745,
+        "original_line": "pdcide* at pci? dev ? function ?\t# Promise IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "pdcsata*",
+        "line_no": 746,
+        "original_line": "pdcsata* at pci? dev ? function ?\t# Promise SATA150 controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "satalink*",
+        "line_no": 747,
+        "original_line": "satalink* at pci? dev ? function ?\t# SiI SATALink controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "siisata*",
+        "line_no": 748,
+        "original_line": "siisata* at pci? dev ? function ?\t# SiI SteelVine controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "siside*",
+        "line_no": 749,
+        "original_line": "siside* at pci? dev ? function ?\t# SiS IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "slide*",
+        "line_no": 750,
+        "original_line": "slide*\tat pci? dev ? function ?\t# Symphony Labs IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "svwsata*",
+        "line_no": 751,
+        "original_line": "svwsata* at pci? dev ? function ?\t# ServerWorks SATA controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "toshide*",
+        "line_no": 752,
+        "original_line": "toshide* at pci? dev ? function ?\t# TOSHIBA PICCOLO controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "viaide*",
+        "line_no": 753,
+        "original_line": "viaide* at pci? dev ? function ?\t# VIA/AMD/Nvidia IDE controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "wdc*",
+        "line_no": 756,
+        "original_line": "wdc*\tat pcmcia? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "njata*",
+        "line_no": 759,
+        "original_line": "njata*\tat cardbus? function ? flags 0x01\t# Workbit NinjaATA-32\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "siisata*",
+        "line_no": 760,
+        "original_line": "siisata* at cardbus? function ? \t# SiI SteelVine controllers\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "wdc0",
+        "line_no": 766,
+        "original_line": "wdc0\tat isa? port 0x1f0 irq 14 flags 0x00\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "isa?",
+        "instance": "wdc1",
+        "line_no": 767,
+        "original_line": "wdc1\tat isa? port 0x170 irq 15 flags 0x00\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "ata?",
+        "instance": "atabus*",
+        "line_no": 770,
+        "original_line": "atabus* at ata?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "atabus?",
+        "instance": "wd*",
+        "line_no": 784,
+        "original_line": "wd*\tat atabus? drive ? flags 0x0000\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "atapi?",
+        "instance": "atapibus*",
+        "line_no": 787,
+        "original_line": "atapibus* at atapi?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "ataraid?",
+        "instance": "ld*",
+        "line_no": 792,
+        "original_line": "ld*\tat ataraid? vendtype ? unit ?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "explicit --keep",
+      "rule": {
+        "attachment": "atapibus?",
+        "instance": "cd*",
+        "line_no": 796,
+        "original_line": "cd*\tat atapibus? drive ? flags 0x0000\t# ATAPI CD-ROM drives\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "explicit --keep",
+      "rule": {
+        "attachment": "atapibus?",
+        "instance": "sd*",
+        "line_no": 797,
+        "original_line": "sd*\tat atapibus? drive ? flags 0x0000\t# ATAPI disk drives\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "atapibus?",
+        "instance": "st*",
+        "line_no": 798,
+        "original_line": "st*\tat atapibus? drive ? flags 0x0000\t# ATAPI tape drives\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "atapibus?",
+        "instance": "uk*",
+        "line_no": 799,
+        "original_line": "uk*\tat atapibus? drive ? flags 0x0000\t# ATAPI unknown\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "nvme*",
+        "line_no": 803,
+        "original_line": "nvme*\tat pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "nvme?",
+        "instance": "ld*",
+        "line_no": 804,
+        "original_line": "ld*\tat nvme? nsid ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "age*",
+        "line_no": 816,
+        "original_line": "age*\tat pci? dev ? function ?\t# Attansic/Atheros L1 Gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "alc*",
+        "line_no": 817,
+        "original_line": "alc*\tat pci? dev ? function ?\t# Attansic/Atheros L1C/L2C Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ale*",
+        "line_no": 818,
+        "original_line": "ale*\tat pci? dev ? function ?\t# Attansic/Atheros L1E Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "an*",
+        "line_no": 819,
+        "original_line": "an*\tat pci? dev ? function ?\t# Aironet PC4500/PC4800 (802.11)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "aq*",
+        "line_no": 820,
+        "original_line": "aq*\tat pci? dev ? function ?\t# Aquantia AQC 10 gigabit\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ath*",
+        "line_no": 821,
+        "original_line": "ath*\tat pci? dev ? function ?\t# Atheros 5210/5211/5212 802.11\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "athn*",
+        "line_no": 822,
+        "original_line": "athn*\tat pci? dev ? function ?\t# Atheros AR9k (802.11a/g/n)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "atw*",
+        "line_no": 823,
+        "original_line": "atw*\tat pci? dev ? function ?\t# ADMtek ADM8211 (802.11)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "bce*",
+        "line_no": 824,
+        "original_line": "bce*\tat pci? dev ? function ?\t# Broadcom 440x 10/100 Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "bge*",
+        "line_no": 825,
+        "original_line": "bge*\tat pci? dev ? function ?\t# Broadcom 570x gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "bnx*",
+        "line_no": 826,
+        "original_line": "bnx*\tat pci? dev ? function ?\t# Broadcom NetXtremeII gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "bwi*",
+        "line_no": 827,
+        "original_line": "bwi*\tat pci? dev ? function ?\t# Broadcom BCM43xx wireless\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "bwfm*",
+        "line_no": 828,
+        "original_line": "bwfm*\tat pci? dev ? function ?\t# Broadcom FullMAC\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "cas*",
+        "line_no": 829,
+        "original_line": "cas*\tat pci? dev ? function ?\t# Sun Cassini/Cassini+ Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "dge*",
+        "line_no": 830,
+        "original_line": "dge*\tat pci? dev ? function ?\t# Intel 82597 10GbE LR\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ena*",
+        "line_no": 831,
+        "original_line": "ena*\tat pci? dev ? function ?\t# Amazon.com Elastic Network Adapter\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ep*",
+        "line_no": 832,
+        "original_line": "ep*\tat pci? dev ? function ?\t# 3Com 3c59x\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "epic*",
+        "line_no": 833,
+        "original_line": "epic*\tat pci? dev ? function ?\t# SMC EPIC/100 Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "et*",
+        "line_no": 835,
+        "original_line": "et*\tat pci? dev ? function ?\t# Agere/LSI ET1310/ET1301 Gigabit\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ex*",
+        "line_no": 836,
+        "original_line": "ex*\tat pci? dev ? function ?\t# 3Com 90x[BC]\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "fxp*",
+        "line_no": 837,
+        "original_line": "fxp*\tat pci? dev ? function ?\t# Intel EtherExpress PRO 10+/100B\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "gem*",
+        "line_no": 838,
+        "original_line": "gem*\tat pci? dev ? function ?\t# Apple GMAC and Sun ERI gigabit enet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "gsip*",
+        "line_no": 839,
+        "original_line": "gsip*\tat pci? dev ? function ?\t# NS83820 Gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "hme*",
+        "line_no": 840,
+        "original_line": "hme*\tat pci? dev ? function ?\t# Sun Microelectronics STP2002-STQ\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "iavf*",
+        "line_no": 841,
+        "original_line": "iavf*\tat pci? dev ? function ?\t# Intel Adaptive Virtual Function\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "igc*",
+        "line_no": 842,
+        "original_line": "igc*\tat pci? dev ? function ?\t# Intel I225 2.5 gigabit\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ipw*",
+        "line_no": 843,
+        "original_line": "ipw*\tat pci? dev ? function ?\t# Intel PRO/Wireless 2100\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "iwi*",
+        "line_no": 844,
+        "original_line": "iwi*\tat pci? dev ? function ?\t# Intel PRO/Wireless 2200BG\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "iwm*",
+        "line_no": 845,
+        "original_line": "iwm*\tat pci? dev ? function ?\t# Intel Centrino 7260\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "iwn*",
+        "line_no": 846,
+        "original_line": "iwn*\tat pci? dev ? function ?\t# Intel PRO/Wireless 4965AGN\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ixg*",
+        "line_no": 847,
+        "original_line": "ixg*\tat pci? dev ? function ?\t# Intel 8259x 10 gigabit\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ixl*",
+        "line_no": 848,
+        "original_line": "ixl*\tat pci? dev ? function ?\t# Intel Ethernet 700 Series\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ixv*",
+        "line_no": 849,
+        "original_line": "ixv*\tat pci? dev ? function ?\t# Intel 8259x 10G virtual function\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "jme*",
+        "line_no": 850,
+        "original_line": "jme*\tat pci? dev ? function ?\t# JMicron JMC2[56]0 ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "kse*",
+        "line_no": 851,
+        "original_line": "kse*\tat pci? dev ? function ?\t# Micrel KSZ8841/8842 ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "lii*",
+        "line_no": 852,
+        "original_line": "lii*\tat pci? dev ? function ?\t# Atheros L2 Fast-Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "malo*",
+        "line_no": 853,
+        "original_line": "malo*\tat pci? dev ? function ?\t# Marvell Libertas Wireless\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mcx*",
+        "line_no": 854,
+        "original_line": "mcx*\tat pci? dev ? function ?\t# Mellanox 5th generation Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mskc*",
+        "line_no": 855,
+        "original_line": "mskc*\tat pci? dev ? function ?\t# Marvell Yukon 2 Gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mskc?",
+        "instance": "msk*",
+        "line_no": 856,
+        "original_line": "msk*\tat mskc?\t\t\t# Marvell Yukon 2 Gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "mtd*",
+        "line_no": 857,
+        "original_line": "mtd*\tat pci? dev ? function ?\t# Myson MTD803 3-in-1 Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ne*",
+        "line_no": 858,
+        "original_line": "ne*\tat pci? dev ? function ?\t# NE2000-compatible Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "nfe*",
+        "line_no": 859,
+        "original_line": "nfe*\tat pci?\tdev ? function ?\t# NVIDIA nForce Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ntwoc*",
+        "line_no": 860,
+        "original_line": "ntwoc*\tat pci? dev ? function ?\t# Riscom/N2 PCI Sync Serial\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "pcn*",
+        "line_no": 861,
+        "original_line": "pcn*\tat pci? dev ? function ?\t# AMD PCnet-PCI Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ral*",
+        "line_no": 862,
+        "original_line": "ral*\tat pci? dev ? function ?\t# Ralink Technology RT25x0 802.11a/b/g\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "re*",
+        "line_no": 863,
+        "original_line": "re*\tat pci? dev ? function ?\t# Realtek 8139C+/8169/8169S/8110S\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "rge*",
+        "line_no": 864,
+        "original_line": "rge*\tat pci? dev ? function ?\t# Realtek 8125\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "rtk*",
+        "line_no": 865,
+        "original_line": "rtk*\tat pci? dev ? function ?\t# Realtek 8129/8139\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "rtw*",
+        "line_no": 866,
+        "original_line": "rtw*\tat pci? dev ? function ?\t# Realtek 8180L (802.11)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "rtwn*",
+        "line_no": 867,
+        "original_line": "rtwn*\tat pci? dev ? function ?\t# Realtek 8188CE/8192CE 802.11b/g/n\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "sf*",
+        "line_no": 868,
+        "original_line": "sf*\tat pci? dev ? function ?\t# Adaptec AIC-6915 Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "sip*",
+        "line_no": 869,
+        "original_line": "sip*\tat pci? dev ? function ?\t# SiS 900/DP83815 Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "skc*",
+        "line_no": 870,
+        "original_line": "skc*\tat pci? dev ? function ?\t# SysKonnect SK9821 Gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "skc?",
+        "instance": "sk*",
+        "line_no": 871,
+        "original_line": "sk*\tat skc?\t\t\t\t# SysKonnect SK9821 Gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ste*",
+        "line_no": 872,
+        "original_line": "ste*\tat pci? dev ? function ?\t# Sundance ST-201 Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "stge*",
+        "line_no": 873,
+        "original_line": "stge*\tat pci? dev ? function ?\t# Sundance/Tamarack TC9021 Gigabit\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ti*",
+        "line_no": 874,
+        "original_line": "ti*\tat pci? dev ? function ?\t# Alteon ACEnic gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "tl*",
+        "line_no": 875,
+        "original_line": "tl*\tat pci? dev ? function ?\t# ThunderLAN-based Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "tlp*",
+        "line_no": 876,
+        "original_line": "tlp*\tat pci? dev ? function ?\t# DECchip 21x4x and clones\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "txp*",
+        "line_no": 877,
+        "original_line": "txp*\tat pci? dev ? function ?\t# 3com 3cr990\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "vge*",
+        "line_no": 878,
+        "original_line": "vge*\tat pci? dev ? function ?\t# VIATech VT612X Gigabit Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "vmx*",
+        "line_no": 879,
+        "original_line": "vmx*\tat pci? dev ? function ?\t# VMware VMXNET3\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "vr*",
+        "line_no": 880,
+        "original_line": "vr*\tat pci? dev ? function ?\t# VIA Rhine Fast Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "wi*",
+        "line_no": 881,
+        "original_line": "wi*\tat pci? dev ? function ?\t# Intersil Prism Mini-PCI (802.11b)\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "wm*",
+        "line_no": 882,
+        "original_line": "wm*\tat pci? dev ? function ?\t# Intel 82543/82544 gigabit\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "wpi*",
+        "line_no": 883,
+        "original_line": "wpi*\tat pci? dev ? function ?\t# Intel PRO/Wireless 3945ABG\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "xge*",
+        "line_no": 884,
+        "original_line": "xge*\tat pci? dev ? function ?\t# Neterion (S2io) Xframe-I 10GbE\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "an*",
+        "line_no": 887,
+        "original_line": "an*\tat pcmcia? function ?\t\t# Aironet PC4500/PC4800 (802.11)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "awi*",
+        "line_no": 888,
+        "original_line": "awi*\tat pcmcia? function ?\t\t# BayStack 650/660 (802.11FH/DS)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "cnw*",
+        "line_no": 889,
+        "original_line": "cnw*\tat pcmcia? function ?\t\t# Xircom/Netwave AirSurfer\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "cs*",
+        "line_no": 890,
+        "original_line": "cs*\tat pcmcia? function ?\t\t# CS89xx Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "ep*",
+        "line_no": 891,
+        "original_line": "ep*\tat pcmcia? function ?\t\t# 3Com 3c589 and 3c562 Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "malo*",
+        "line_no": 892,
+        "original_line": "malo*\tat pcmcia? function ?\t\t# Marvell Libertas\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "mbe*",
+        "line_no": 893,
+        "original_line": "mbe*\tat pcmcia? function ?\t\t# MB8696x based Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "ne*",
+        "line_no": 894,
+        "original_line": "ne*\tat pcmcia? function ?\t\t# NE2000-compatible Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "ray*",
+        "line_no": 895,
+        "original_line": "ray*\tat pcmcia? function ?\t\t# Raytheon Raylink (802.11)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "sm*",
+        "line_no": 896,
+        "original_line": "sm*\tat pcmcia? function ?\t\t# Megahertz Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "wi*",
+        "line_no": 897,
+        "original_line": "wi*\tat pcmcia? function ?\t\t# Lucent/Intersil WaveLan IEEE (802.11)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "xirc*",
+        "line_no": 898,
+        "original_line": "xirc*\tat pcmcia? function ?\t\t# Xircom CreditCard Ethernet\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "xirc?",
+        "instance": "com*",
+        "line_no": 899,
+        "original_line": "com*\tat xirc?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "xirc?",
+        "instance": "xi*",
+        "line_no": 900,
+        "original_line": "xi*\tat xirc?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "mhzc*",
+        "line_no": 902,
+        "original_line": "mhzc*\tat pcmcia? function ?\t\t# Megahertz Ethernet/Modem combo cards\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mhzc?",
+        "instance": "com*",
+        "line_no": 903,
+        "original_line": "com*\tat mhzc?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mhzc?",
+        "instance": "sm*",
+        "line_no": 904,
+        "original_line": "sm*\tat mhzc?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "ath*",
+        "line_no": 907,
+        "original_line": "ath*\tat cardbus? function ?\t# Atheros 5210/5211/5212 802.11\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "athn*",
+        "line_no": 908,
+        "original_line": "athn*\tat cardbus? function ?\t# Atheros AR9k (802.11a/g/n) - UNTESTED\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "atw*",
+        "line_no": 909,
+        "original_line": "atw*\tat cardbus? function ?\t# ADMtek ADM8211 (802.11)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "ex*",
+        "line_no": 910,
+        "original_line": "ex*\tat cardbus? function ?\t# 3Com 3C575TX\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "fxp*",
+        "line_no": 911,
+        "original_line": "fxp*\tat cardbus? function ?\t# Intel i8255x\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "malo*",
+        "line_no": 912,
+        "original_line": "malo*\tat cardbus? function ?\t# Marvell Libertas Wireless\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "ral*",
+        "line_no": 913,
+        "original_line": "ral*\tat cardbus? function ?\t# Ralink Technology RT25x0 802.11a/b/g\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "re*",
+        "line_no": 914,
+        "original_line": "re*\tat cardbus? function ?\t# Realtek 8139C+/8169/8169S/8110S\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "rtk*",
+        "line_no": 915,
+        "original_line": "rtk*\tat cardbus? function ?\t# Realtek 8129/8139\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "rtw*",
+        "line_no": 916,
+        "original_line": "rtw*\tat cardbus? function ?\t# Realtek 8180L (802.11)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "tlp*",
+        "line_no": 917,
+        "original_line": "tlp*\tat cardbus? function ?\t# DECchip 21143\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "acphy*",
+        "line_no": 920,
+        "original_line": "acphy*\tat mii? phy ?\t\t\t# DAltima AC101 and AMD Am79c874 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "amhphy*",
+        "line_no": 921,
+        "original_line": "amhphy* at mii? phy ?\t\t\t# AMD 79c901 Ethernet PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "atphy*",
+        "line_no": 922,
+        "original_line": "atphy*\tat mii?\tphy ?\t\t\t# Attansic/Atheros PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "bmtphy*",
+        "line_no": 923,
+        "original_line": "bmtphy* at mii? phy ?\t\t\t# Broadcom BCM5201 and BCM5202 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "brgphy*",
+        "line_no": 924,
+        "original_line": "brgphy* at mii? phy ?\t\t\t# Broadcom BCM5400-family PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "ciphy*",
+        "line_no": 925,
+        "original_line": "ciphy*\tat mii? phy ?\t\t\t# Cicada CS8201 Gig-E PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "dmphy*",
+        "line_no": 926,
+        "original_line": "dmphy*\tat mii? phy ?\t\t\t# Davicom DM9101 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "etphy*",
+        "line_no": 927,
+        "original_line": "etphy*\tat mii? phy ?\t\t\t# Agere/LSI ET1011 TruePHY Gig-E PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "exphy*",
+        "line_no": 928,
+        "original_line": "exphy*\tat mii? phy ?\t\t\t# 3Com internal PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "gentbi*",
+        "line_no": 929,
+        "original_line": "gentbi* at mii? phy ?\t\t\t# Generic Ten-Bit 1000BASE-[CLS]X PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "glxtphy*",
+        "line_no": 930,
+        "original_line": "glxtphy* at mii? phy ?\t\t\t# Level One LXT-1000 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "gphyter*",
+        "line_no": 931,
+        "original_line": "gphyter* at mii? phy ?\t\t\t# NS83861 Gig-E PHY\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "icsphy*",
+        "line_no": 932,
+        "original_line": "icsphy* at mii? phy ?\t\t\t# Integrated Circuit Systems ICS189x\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "igphy*",
+        "line_no": 933,
+        "original_line": "igphy*\tat mii? phy ?\t\t\t# Intel IGP01E1000\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "ihphy*",
+        "line_no": 934,
+        "original_line": "ihphy*\tat mii? phy ?\t\t\t# Intel 82577 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "ikphy*",
+        "line_no": 935,
+        "original_line": "ikphy*\tat mii? phy ?\t\t\t# Intel 82563 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "inphy*",
+        "line_no": 936,
+        "original_line": "inphy*\tat mii? phy ?\t\t\t# Intel 82555 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "iophy*",
+        "line_no": 937,
+        "original_line": "iophy*\tat mii? phy ?\t\t\t# Intel 82553 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "ipgphy*",
+        "line_no": 938,
+        "original_line": "ipgphy* at mii? phy ?\t\t\t# IC PLUS IP1000A/IP1001 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "jmphy*",
+        "line_no": 939,
+        "original_line": "jmphy*\tat mii? phy ?\t\t\t# Jmicron JMP202/211 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "lxtphy*",
+        "line_no": 940,
+        "original_line": "lxtphy* at mii? phy ?\t\t\t# Level One LXT-970 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "makphy*",
+        "line_no": 941,
+        "original_line": "makphy* at mii? phy ?\t\t\t# Marvell Semiconductor 88E1000 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "micphy*",
+        "line_no": 942,
+        "original_line": "micphy* at mii? phy ?\t\t\t# Micrel KSZ[89]xxx PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "nsphy*",
+        "line_no": 943,
+        "original_line": "nsphy*\tat mii? phy ?\t\t\t# NS83840 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "nsphyter*",
+        "line_no": 944,
+        "original_line": "nsphyter* at mii? phy ? \t\t# NS83843 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "pnaphy*",
+        "line_no": 945,
+        "original_line": "pnaphy* at mii? phy ?\t\t\t# generic HomePNA PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "qsphy*",
+        "line_no": 946,
+        "original_line": "qsphy*\tat mii? phy ?\t\t\t# Quality Semiconductor QS6612 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "rgephy*",
+        "line_no": 947,
+        "original_line": "rgephy* at mii? phy ?\t\t\t# Realtek 8169S/8110 internal PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "rlphy*",
+        "line_no": 948,
+        "original_line": "rlphy*\tat mii? phy ?\t\t\t# Realtek 8139/8201L PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "smscphy*",
+        "line_no": 949,
+        "original_line": "smscphy* at mii? phy ?\t\t\t# SMSC LAN87xx PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "sqphy*",
+        "line_no": 950,
+        "original_line": "sqphy*\tat mii? phy ?\t\t\t# Seeq 80220/80221/80223 PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "tlphy*",
+        "line_no": 951,
+        "original_line": "tlphy*\tat mii? phy ?\t\t\t# ThunderLAN PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "tqphy*",
+        "line_no": 952,
+        "original_line": "tqphy*\tat mii? phy ?\t\t\t# TDK Semiconductor PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "ukphy*",
+        "line_no": 953,
+        "original_line": "ukphy*\tat mii? phy ?\t\t\t# generic unknown PHYs\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "mii?",
+        "instance": "urlphy*",
+        "line_no": 954,
+        "original_line": "urlphy* at mii? phy ?\t\t\t# Realtek RTL8150L internal PHYs\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "xhci*",
+        "line_no": 963,
+        "original_line": "xhci*\tat pci?\tdev ? function ?\t# eXtensible Host Controller\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ehci*",
+        "line_no": 964,
+        "original_line": "ehci*\tat pci?\tdev ? function ?\t# Enhanced Host Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "ohci*",
+        "line_no": 965,
+        "original_line": "ohci*\tat pci?\tdev ? function ?\t# Open Host Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "uhci*",
+        "line_no": 966,
+        "original_line": "uhci*\tat pci?\tdev ? function ?\t# Universal Host Controller (Intel)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "ehci*",
+        "line_no": 969,
+        "original_line": "ehci*\tat cardbus? function ?\t# Enhanced Host Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "ohci*",
+        "line_no": 970,
+        "original_line": "ohci*\tat cardbus? function ?\t# Open Host Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "uhci*",
+        "line_no": 971,
+        "original_line": "uhci*\tat cardbus? function ?\t\t# Universal Host Controller (Intel)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "slhci*",
+        "line_no": 977,
+        "original_line": "slhci*\tat pcmcia? function ?\t\t# ScanLogic SL811HS\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "xhci?",
+        "instance": "usb*",
+        "line_no": 981,
+        "original_line": "usb*\tat xhci?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "ehci?",
+        "instance": "usb*",
+        "line_no": 982,
+        "original_line": "usb*\tat ehci?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "ohci?",
+        "instance": "usb*",
+        "line_no": 983,
+        "original_line": "usb*\tat ohci?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "uhci?",
+        "instance": "usb*",
+        "line_no": 984,
+        "original_line": "usb*\tat uhci?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "slhci?",
+        "instance": "usb*",
+        "line_no": 985,
+        "original_line": "usb*\tat slhci?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "fwohci*",
+        "line_no": 990,
+        "original_line": "fwohci* at pci? dev ? function ?\t# IEEE1394 Open Host Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "fwohci*",
+        "line_no": 993,
+        "original_line": "fwohci* at cardbus? function ?\t\t# IEEE1394 Open Host Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "fwohci?",
+        "instance": "ieee1394if*",
+        "line_no": 995,
+        "original_line": "ieee1394if* at fwohci?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "ieee1394if?",
+        "instance": "fwip*",
+        "line_no": 996,
+        "original_line": "fwip*\tat ieee1394if?\t\t\t# IP over IEEE1394\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "ieee1394if?",
+        "instance": "sbp*",
+        "line_no": 997,
+        "original_line": "sbp*\tat ieee1394if? euihi ? euilo ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "auacer*",
+        "line_no": 1002,
+        "original_line": "auacer* at pci? dev ? function ?\t# ALi M5455 integrated AC'97 Audio\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "auich*",
+        "line_no": 1003,
+        "original_line": "auich*\tat pci? dev ? function ?\t# Intel/AMD/nVidia AC'97 Audio\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "auixp*",
+        "line_no": 1004,
+        "original_line": "auixp*\tat pci? dev ? function ?\t# ATI IXP AC'97 Audio\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "autri*",
+        "line_no": 1005,
+        "original_line": "autri*\tat pci? dev ? function ?\t# Trident 4DWAVE based AC'97 Audio\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "auvia*",
+        "line_no": 1006,
+        "original_line": "auvia*\tat pci? dev ? function ?\t# VIA AC'97 audio\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "clcs*",
+        "line_no": 1007,
+        "original_line": "clcs*\tat pci? dev ? function ?\t# Cirrus Logic CS4280\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "clct*",
+        "line_no": 1008,
+        "original_line": "clct*\tat pci? dev ? function ?\t# Cirrus Logic CS4281\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "cmpci*",
+        "line_no": 1009,
+        "original_line": "cmpci*\tat pci? dev ? function ?\t# C-Media CMI8338/8738\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "eap*",
+        "line_no": 1010,
+        "original_line": "eap*\tat pci? dev ? function ?\t# Ensoniq AudioPCI\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "emuxki*",
+        "line_no": 1011,
+        "original_line": "emuxki* at pci? dev ? function ?\t# Creative SBLive! and PCI512\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "esa*",
+        "line_no": 1012,
+        "original_line": "esa*\tat pci? dev ? function ?\t# ESS Allegro-1 / Maestro-3 PCI Audio\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "esm*",
+        "line_no": 1013,
+        "original_line": "esm*\tat pci? dev ? function ?\t# ESS Maestro-1/2/2e PCI Audio Accelerator\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "eso*",
+        "line_no": 1014,
+        "original_line": "eso*\tat pci? dev ? function ?\t# ESS Solo-1 PCI AudioDrive\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "fms*",
+        "line_no": 1015,
+        "original_line": "fms*\tat pci? dev ? function ?\t# Forte Media FM801\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "neo*",
+        "line_no": 1016,
+        "original_line": "neo*\tat pci? dev ? function ?\t# NeoMagic 256 AC'97 Audio\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "sv*",
+        "line_no": 1017,
+        "original_line": "sv*\tat pci? dev ? function ?\t# S3 SonicVibes\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "yds*",
+        "line_no": 1018,
+        "original_line": "yds*\tat pci? dev ? function ?\t# Yamaha DS-1 PCI Audio\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cmpci?",
+        "instance": "opl*",
+        "line_no": 1022,
+        "original_line": "opl*\tat cmpci? flags 1\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "eso?",
+        "instance": "opl*",
+        "line_no": 1023,
+        "original_line": "opl*\tat eso?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "fms?",
+        "instance": "opl*",
+        "line_no": 1024,
+        "original_line": "opl*\tat fms?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "sv?",
+        "instance": "opl*",
+        "line_no": 1025,
+        "original_line": "opl*\tat sv?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "hdaudio*",
+        "line_no": 1028,
+        "original_line": "hdaudio*\tat pci? dev ? function ?\t# High Definition Audio\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "hdaudiobus?",
+        "instance": "hdafg*",
+        "line_no": 1029,
+        "original_line": "hdafg*\t\tat hdaudiobus?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "audiobus?",
+        "instance": "audio*",
+        "line_no": 1032,
+        "original_line": "audio*\tat audiobus?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pcppi?",
+        "instance": "spkr*",
+        "line_no": 1035,
+        "original_line": "spkr*\tat pcppi?\t\t# PC speaker\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "audio?",
+        "instance": "spkr*",
+        "line_no": 1036,
+        "original_line": "spkr*\tat audio?\t\t# PC speaker (synthesized)\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cmpci?",
+        "instance": "mpu*",
+        "line_no": 1041,
+        "original_line": "mpu*\tat cmpci?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "eso?",
+        "instance": "mpu*",
+        "line_no": 1042,
+        "original_line": "mpu*\tat eso?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "yds?",
+        "instance": "mpu*",
+        "line_no": 1043,
+        "original_line": "mpu*\tat yds?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "midibus?",
+        "instance": "midi*",
+        "line_no": 1046,
+        "original_line": "midi*\tat midibus?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pcppi?",
+        "instance": "midi*",
+        "line_no": 1047,
+        "original_line": "midi*\tat pcppi?\t\t# MIDI interface to the PC speaker\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "coram*",
+        "line_no": 1059,
+        "original_line": "coram*\tat pci? dev ? function ?\t# Conexant CX23885 PCI-E TV\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "cxdtv*",
+        "line_no": 1060,
+        "original_line": "cxdtv*\tat pci? dev ? function ?\t# Conexant CX2388[0-3] PCI TV\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "videobus?",
+        "instance": "video*",
+        "line_no": 1062,
+        "original_line": "video*\tat videobus?\t\t\t# Analog capture interface\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "dtvbus?",
+        "instance": "dtv*",
+        "line_no": 1063,
+        "original_line": "dtv*\tat dtvbus?\t\t\t# Digital capture interface\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "bktr*",
+        "line_no": 1069,
+        "original_line": "bktr* at pci? dev ? function ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "bktr?",
+        "instance": "radio*",
+        "line_no": 1070,
+        "original_line": "radio* at bktr?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "bt3c*",
+        "line_no": 1076,
+        "original_line": "bt3c* at pcmcia? function ?\t\t# 3Com 3CRWB6096-A\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pcmcia?",
+        "instance": "btbc*",
+        "line_no": 1077,
+        "original_line": "btbc* at pcmcia? function ?\t\t# AnyCom BlueCard LSE041/039/139\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "sdmmc?",
+        "instance": "sbt*",
+        "line_no": 1080,
+        "original_line": "sbt* at sdmmc?\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "observed child via interface/unknown attachment",
+      "rule": {
+        "attachment": "uhub?",
+        "instance": "ubt*",
+        "line_no": 1083,
+        "original_line": "ubt* at uhub? port ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "uhub?",
+        "instance": "aubtfwl*",
+        "line_no": 1084,
+        "original_line": "aubtfwl* at uhub? port ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "bcsp?",
+        "instance": "bthub*",
+        "line_no": 1087,
+        "original_line": "bthub* at bcsp?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "bt3c?",
+        "instance": "bthub*",
+        "line_no": 1088,
+        "original_line": "bthub* at bt3c?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "btbc?",
+        "instance": "bthub*",
+        "line_no": 1089,
+        "original_line": "bthub* at btbc?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "btuart?",
+        "instance": "bthub*",
+        "line_no": 1090,
+        "original_line": "bthub* at btuart?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "sbt?",
+        "instance": "bthub*",
+        "line_no": 1091,
+        "original_line": "bthub* at sbt?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "ubt?",
+        "instance": "bthub*",
+        "line_no": 1092,
+        "original_line": "bthub* at ubt?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "bthub?",
+        "instance": "bthidev*",
+        "line_no": 1095,
+        "original_line": "bthidev* at bthub?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "bthidev?",
+        "instance": "btms*",
+        "line_no": 1098,
+        "original_line": "btms* at bthidev? reportid ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "btms?",
+        "instance": "wsmouse*",
+        "line_no": 1099,
+        "original_line": "wsmouse* at btms? mux 0\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "bthidev?",
+        "instance": "btkbd*",
+        "line_no": 1102,
+        "original_line": "btkbd* at bthidev? reportid ?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "btkbd?",
+        "instance": "wskbd*",
+        "line_no": 1103,
+        "original_line": "wskbd* at btkbd? console ? mux 1\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "bthub?",
+        "instance": "btmagic*",
+        "line_no": 1106,
+        "original_line": "btmagic* at bthub?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "btmagic?",
+        "instance": "wsmouse*",
+        "line_no": 1107,
+        "original_line": "wsmouse* at btmagic? mux 0\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "bthub?",
+        "instance": "btsco*",
+        "line_no": 1110,
+        "original_line": "btsco* at bthub?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "sdhc*",
+        "line_no": 1116,
+        "original_line": "sdhc*\tat pci?\t\t# SD Host Controller\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "rtsx*",
+        "line_no": 1117,
+        "original_line": "rtsx*\tat pci?\t\t# Realtek RTS5209/RTS5229 Card Reader\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "cardbus?",
+        "instance": "sdhc*",
+        "line_no": 1118,
+        "original_line": "sdhc*\tat cardbus?\t# SD Host Controller\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "sdhc?",
+        "instance": "sdmmc*",
+        "line_no": 1119,
+        "original_line": "sdmmc*\tat sdhc?\t# SD/MMC bus\n"
+      }
+    },
+    {
+      "action": "keep",
+      "reason": "runtime child/parent edge matched",
+      "rule": {
+        "attachment": "rtsx?",
+        "instance": "sdmmc*",
+        "line_no": 1120,
+        "original_line": "sdmmc*\tat rtsx?\t# SD/MMC bus\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "sdmmc?",
+        "instance": "ld*",
+        "line_no": 1122,
+        "original_line": "ld*\tat sdmmc?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "weasel*",
+        "line_no": 1127,
+        "original_line": "weasel* at pci?\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "virtio*",
+        "line_no": 1130,
+        "original_line": "virtio* at pci? dev ? function ?\t# Virtio PCI device\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "acpi?",
+        "instance": "vmbus*",
+        "line_no": 1135,
+        "original_line": "vmbus*\t\tat acpi?\t\t# Hyper-V VMBus\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "vmbus?",
+        "instance": "genfb*",
+        "line_no": 1136,
+        "original_line": "genfb*\t\tat vmbus?\t\t# Hyper-V Synthetic Video Framebuffer\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "vmbus?",
+        "instance": "hvkbd*",
+        "line_no": 1137,
+        "original_line": "hvkbd*\t\tat vmbus?\t\t# Hyper-V Synthetic Keyboard\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "child exists only on another concrete attachment",
+      "rule": {
+        "attachment": "hvkbd?",
+        "instance": "wskbd*",
+        "line_no": 1138,
+        "original_line": "wskbd*\t\tat hvkbd? console ? mux 1\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "vmbus?",
+        "instance": "hvn*",
+        "line_no": 1139,
+        "original_line": "hvn*\t\tat vmbus?\t\t# Hyper-V NetVSC\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "vmbus?",
+        "instance": "hvs*",
+        "line_no": 1140,
+        "original_line": "hvs*\t\tat vmbus?\t\t# Hyper-V StorVSC\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "vmbus?",
+        "instance": "hvheartbeat*",
+        "line_no": 1141,
+        "original_line": "hvheartbeat*\tat vmbus?\t\t# Hyper-V Heartbeat Service\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "vmbus?",
+        "instance": "hvshutdown*",
+        "line_no": 1142,
+        "original_line": "hvshutdown*\tat vmbus?\t\t# Hyper-V Guest Shutdown Service\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "vmbus?",
+        "instance": "hvtimesync*",
+        "line_no": 1143,
+        "original_line": "hvtimesync*\tat vmbus?\t\t# Hyper-V Time Synchronization Service\n"
+      }
+    },
+    {
+      "action": "disable",
+      "reason": "no matching runtime child instance",
+      "rule": {
+        "attachment": "pci?",
+        "instance": "pvscsi*",
+        "line_no": 1147,
+        "original_line": "pvscsi* \tat pci? dev ? function?\t# PV SCSI device\n"
+      }
+    }
+  ],
+  "disabled_count": 401,
+  "edge_count": 106,
+  "inventory_source": "dmesg",
+  "kept_count": 62,
+  "rule_count": 463,
+  "validation": {
+    "attempted": true,
+    "command": [
+      "/usr/bin/config",
+      "-s",
+      "/usr/src/sys",
+      "-b",
+      "/tmp/adjustkernel-config-r6qasza7/build",
+      "/tmp/adjustkernel-config-r6qasza7/GENERIC"
+    ],
+    "ok": true,
+    "stderr": "",
+    "stdout": "Build directory is /tmp/adjustkernel-config-r6qasza7/build\nDon't forget to run \"make depend\"\n"
+  },
+  "version": "3.0.0"
+}
