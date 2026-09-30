@@ -102,11 +102,11 @@ var ParentalControlsManager = GObject.registerClass({
     }
 
     shouldShowApp(appInfo) {
-        // NetBSD/pkgsrc compatibility: do not crash if an old Shell.App object
-        // does not expose app_info through the newer GJS/introspection stack.
-        // Filtering the unusable entry is preferable to aborting GNOME Shell.
+        // NetBSD/pkgsrc compatibility: newer GJS can fail to expose the old
+        // Shell.App app_info property.  Parental controls are disabled on this
+        // build, so a missing appInfo must not hide or break the application.
         if (appInfo === null || appInfo === undefined)
-            return false;
+            return true;
 
         if (!appInfo.should_show())
             return false;
