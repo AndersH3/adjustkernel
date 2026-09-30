@@ -40,3 +40,6 @@ coverage.xml
 
 # Keep the reviewed machine-specific audit report in this repository.
 !netbsd/ADJUSTED.adjustkernel.json
+
+# NetBSD kernel build tree
+netbsd/build-ADJUSTED/
