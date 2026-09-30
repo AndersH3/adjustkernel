@@ -41,6 +41,71 @@ set_rc_var()
     fi
 }
 
+fix_gnome40_keybindings_schema()
+{
+    schema_dir=/usr/pkg/share/glib-2.0/schemas
+    schema="${schema_dir}/org.gnome.desktop.wm.keybindings.gschema.xml"
+    backup="${schema}.pre-adjustkernel"
+
+    # GNOME Shell/Mutter 40 still reads the toggle-shaded key.  Upstream
+    # gsettings-desktop-schemas removed it in GNOME 45.  Current pkgsrc can
+    # therefore combine an old gnome-shell/mutter with a much newer schemas
+    # package, causing gnome-shell to abort at login with:
+    #
+    #   Settings schema 'org.gnome.desktop.wm.keybindings'
+    #   does not contain a key named 'toggle-shaded'
+    #
+    # Only patch the compatibility key when it is actually absent.
+    if /usr/pkg/bin/gsettings list-keys org.gnome.desktop.wm.keybindings 2>/dev/null |
+        grep -qx 'toggle-shaded'; then
+        return 0
+    fi
+
+    if [ ! -f "${schema}" ]; then
+        echo "GNOME keybindings schema not found: ${schema}" >&2
+        exit 1
+    fi
+
+    echo "Adding GNOME 40 compatibility key toggle-shaded to GSettings schema."
+
+    if [ ! -f "${backup}" ]; then
+        cp -p "${schema}" "${backup}"
+    fi
+
+    tmp="${schema}.tmp.$$"
+    if ! awk '
+        BEGIN { inserted = 0 }
+        /<\/schema>/ && inserted == 0 {
+            print "    <key name=\"toggle-shaded\" type=\"as\">"
+            print "      <default>[]</default>"
+            print "      <summary>Toggle shaded state</summary>"
+            print "    </key>"
+            inserted = 1
+        }
+        { print }
+        END { if (inserted == 0) exit 1 }
+    ' "${schema}" > "${tmp}"; then
+        rm -f "${tmp}"
+        echo "Could not patch ${schema}." >&2
+        exit 1
+    fi
+
+    mv "${tmp}" "${schema}"
+
+    if ! /usr/pkg/bin/glib-compile-schemas "${schema_dir}"; then
+        echo "Schema compilation failed; restoring original file." >&2
+        cp -p "${backup}" "${schema}"
+        /usr/pkg/bin/glib-compile-schemas "${schema_dir}" || true
+        exit 1
+    fi
+
+    if ! /usr/pkg/bin/gsettings list-keys org.gnome.desktop.wm.keybindings |
+        grep -qx 'toggle-shaded'; then
+        echo "toggle-shaded is still missing after schema compilation." >&2
+        exit 1
+    fi
+}
+
 # GNOME requires a system-wide D-Bus daemon.
 if [ ! -x /etc/rc.d/dbus ]; then
     if [ ! -f /usr/pkg/share/examples/rc.d/dbus ]; then
@@ -53,6 +118,9 @@ fi
 
 set_rc_var dbus YES
 set_rc_var xdm YES
+
+# Apply the compatibility fix before starting/restarting the desktop session.
+fix_gnome40_keybindings_schema
 
 HOME_DIR=$(getent passwd "${USER_NAME}" | awk -F: '{print $6}')
 if [ -z "${HOME_DIR}" ] || [ ! -d "${HOME_DIR}" ]; then
@@ -69,4 +137,4 @@ fi
 
 echo "GNOME/XDM setup complete for ${USER_NAME}."
 echo "The session will be launched through ConsoleKit (ck-launch-session)."
-echo "Reboot, or restart XDM, then log in as ${USER_NAME}."
+echo "Restart XDM or reboot, then log in as ${USER_NAME}."
