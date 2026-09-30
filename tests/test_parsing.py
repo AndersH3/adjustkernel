@@ -33,3 +33,36 @@ def test_config_recognizer_only_takes_active_attachment_lines() -> None:
     text = "# wm* at pci?\nno re* at pci?\nwm* at pci? dev ? function ?\noptions INET\n"
     rules = parse_config_rules(text)
     assert [(r.instance, r.attachment) for r in rules] == [("wm*", "pci?")]
+
+
+def test_dmesg_reattach_keeps_latest_parent() -> None:
+    text = (
+        "[ 1.0] uhub3 at uhub0 port 3: first attachment\n"
+        "[ 2.0] uhub3: detached\n"
+        "[ 3.0] uhub3 at uhub1 port 3: reattached\n"
+    )
+    edges = parse_dmesg_edges(text)
+    matching = [e for e in edges if e.child == "uhub3"]
+    assert len(matching) == 1
+    assert matching[0].parent == "uhub1"
+
+
+def test_dmesg_repeated_boot_last_attachment_wins() -> None:
+    text = (
+        "[ 1.0] mainbus0 (root)\n"
+        "[ 2.0] uhub4 at uhub1 port 3: old boot\n"
+        "[ 1.0] mainbus0 (root)\n"
+        "[ 2.0] uhub4 at uhub0 port 3: new boot\n"
+    )
+    edges = parse_dmesg_edges(text)
+    matching = [e for e in edges if e.child == "uhub4"]
+    assert len(matching) == 1
+    assert matching[0].parent == "uhub0"
+
+
+def test_dmesg_detached_device_is_not_current_inventory() -> None:
+    text = (
+        "[ 1.0] uhub3 at uhub0 port 3: attachment\n"
+        "[ 2.0] uhub3: detached\n"
+    )
+    assert all(e.child != "uhub3" for e in parse_dmesg_edges(text))
