@@ -10,6 +10,8 @@ options PCKBD_LAYOUT=KB_SV
 # Anders adds
 no options COMPAT_NETBSD32
 no options EXEC_ELF32
+no options XENPVHVM
+no options XEN
 no options DKWEDGE_METHOD_APPLE
 no options INET6
 no options NETATALK		# AppleTalk networking protocols
