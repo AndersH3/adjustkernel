@@ -150,6 +150,13 @@ fi
 install -c -m 755 "${SCRIPT_DIR}/xsession" "${HOME_DIR}/.xsession"
 chown "${USER_NAME}" "${HOME_DIR}/.xsession"
 
+# X11/ICE socket directories must be root-owned and sticky.  XDM or a failed
+# session can otherwise leave .ICE-unix owned by the user, which causes
+# _IceTransmkdir warnings on the next login.
+mkdir -p /tmp/.ICE-unix /tmp/.X11-unix
+chown root:wheel /tmp/.ICE-unix /tmp/.X11-unix
+chmod 1777 /tmp/.ICE-unix /tmp/.X11-unix
+
 if ! service dbus status >/dev/null 2>&1; then
     service dbus start
 fi
