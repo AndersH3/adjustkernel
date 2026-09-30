@@ -7,16 +7,16 @@ include "arch/amd64/conf/GENERIC"
 # Machine-local options added by generate_adjusted.py.
 options PCKBD_LAYOUT=KB_SV
 
-#Anders adds
-no COMPAT_NETBSD32
-no EXEC_ELF32
-no DKWEDGE_METHOD_APPLE
-no INET6
-no options 	NETATALK	# AppleTalk networking protocols
-nooptions 	PPP_BSDCOMP	# BSD-Compress compression support for PPP
-no options 	PPP_DEFLATE	# Deflate compression support for PPP
-no options 	PPP_FILTER
-no NFS_BOOT_DHCP,NFS_BOOT_BOOTPARAM
+# Anders adds
+no options COMPAT_NETBSD32
+no options EXEC_ELF32
+no options DKWEDGE_METHOD_APPLE
+no options INET6
+no options NETATALK		# AppleTalk networking protocols
+no options PPP_BSDCOMP		# BSD-Compress compression support for PPP
+no options PPP_DEFLATE		# Deflate compression support for PPP
+no options PPP_FILTER
+no options NFS_BOOT_DHCP,NFS_BOOT_BOOTPARAM
 
 
 
