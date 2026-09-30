@@ -1,6 +1,4 @@
-// NetBSD/pkgsrc compatibility overlay: newer GJS no longer exposes
-// Shell.App.app_info reliably as a JS property; use the introspected
-// shell_app_get_app_info() method explicitly.
+// NetBSD/pkgsrc compatibility overlay for GNOME Shell 40.2.
 // -*- mode: js; js-indent-level: 4; indent-tabs-mode: nil -*-
 /* exported AppDisplay, AppSearchProvider */
 
@@ -97,6 +95,38 @@ function _getViewFromIcon(icon) {
         if (parent instanceof BaseAppView)
             return parent;
     }
+    return null;
+}
+
+// NetBSD/pkgsrc compatibility: Shell.App.activate() from GNOME Shell 40 can
+// fail to launch applications correctly with the much newer GJS/GLib stack.
+// Resolve the corresponding Gio.AppInfo by desktop ID and use Gio for the
+// initial launch.  Running apps still use Shell.App.activate().
+function _lookupGioAppInfo(app) {
+    if (!app)
+        return null;
+
+    let id = null;
+    try {
+        id = app.get_id();
+    } catch (e) {
+        logError(e, 'Could not obtain Shell.App desktop ID');
+        return null;
+    }
+
+    if (!id)
+        return null;
+
+    try {
+        let infos = Gio.AppInfo.get_all();
+        for (let info of infos) {
+            if (info.get_id() === id)
+                return info;
+        }
+    } catch (e) {
+        logError(e, `Could not resolve Gio.AppInfo for ${id}`);
+    }
+
     return null;
 }
 
@@ -1945,7 +1975,7 @@ var AppSearchProvider = class AppSearchProvider {
         groups.forEach(group => {
             group = group.filter(appID => {
                 const app = this._appSys.lookup_app(appID);
-                return app && this._parentalControlsManager.shouldShowApp(app.get_app_info());
+                return app && this._parentalControlsManager.shouldShowApp(app.app_info);
             });
             results = results.concat(group.sort(
                 (a, b) => usage.compare(a, b)));
@@ -3301,10 +3331,25 @@ var AppIcon = GObject.registerClass({
         if (this.app.state == Shell.AppState.STOPPED || openNewWindow)
             this.animateLaunch();
 
-        if (openNewWindow)
+        if (openNewWindow) {
             this.app.open_new_window(-1);
-        else
+        } else if (this.app.state == Shell.AppState.STOPPED) {
+            // On this NetBSD/pkgsrc combination Shell.App.activate() can be a
+            // no-op for a stopped app.  Launch its desktop entry through Gio.
+            let appInfo = _lookupGioAppInfo(this.app);
+            if (appInfo) {
+                try {
+                    appInfo.launch([], null);
+                } catch (e) {
+                    logError(e, `Gio launch failed for ${this.app.get_id()}`);
+                    this.app.activate();
+                }
+            } else {
+                this.app.activate();
+            }
+        } else {
             this.app.activate();
+        }
 
         Main.overview.hide();
     }
@@ -3510,7 +3555,7 @@ var AppIconMenu = class AppIconMenu extends PopupMenu.PopupMenu {
             }
 
             let canFavorite = global.settings.is_writable('favorite-apps') &&
-                              this._parentalControlsManager.shouldShowApp(this._source.app.get_app_info());
+                              this._parentalControlsManager.shouldShowApp(this._source.app.app_info);
 
             if (canFavorite) {
                 this._appendSeparator();
