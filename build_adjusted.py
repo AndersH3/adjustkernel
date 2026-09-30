@@ -55,6 +55,22 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def preflight_config(text: str) -> list[str]:
+    """Catch a few known link-time-invalid manual option combinations."""
+
+    errors: list[str] = []
+    if "no options INET6" in text and "no pseudo-device stf" not in text:
+        errors.append(
+            "INET6 is disabled but pseudo-device stf is still inherited; "
+            "stf(4) requires INET6."
+        )
+    if "no hypervisor* at mainbus?" in text and "no options XEN" not in text:
+        errors.append(
+            "Xen hypervisor attachment is removed but options XEN is still enabled."
+        )
+    return errors
+
+
 def main() -> int:
     if os.geteuid() == 0:
         print("Do not build as root; run this as the normal user.", file=sys.stderr)
@@ -67,6 +83,14 @@ def main() -> int:
         return 2
     if not CONFIG_TOOL.is_file() or not MAKE.is_file():
         print("NetBSD config(1) or make(1) is missing.", file=sys.stderr)
+        return 2
+
+    config_text = CONFIG.read_text(encoding="utf-8", errors="replace")
+    preflight_errors = preflight_config(config_text)
+    if preflight_errors:
+        print("Kernel configuration preflight failed:", file=sys.stderr)
+        for problem in preflight_errors:
+            print(f"  - {problem}", file=sys.stderr)
         return 2
 
     # Reconfigure from a clean build tree so changed kernel options cannot
