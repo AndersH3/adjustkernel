@@ -20,9 +20,12 @@ NetBSD 11.0 (build-ADJUSTED) #0
 - Intel Wi-Fi `iwm0` is present; association was not tested in this run because Ethernet was in use.
 - USB mass storage works: a Kanguru FlashBlu device attached through `umass0` / `sd0` and its partitions were detected.
 - Realtek ALC280 (`audio1`) playback test completed on both channels.
-- Realtek ALC280 was selected as the default audio device.
+- Realtek ALC280 remains selected as the default audio device after subsequent checks.
 - X11 keyboard layout reports `se,us`, with Swedish first.
 - Console wscons accepts `encoding sv`. NetBSD reports the resulting encoding symbolically as `fi` because KB_SV and KB_FI share encoding value 0x0900.
+- ACPI battery reporting works: battery present, AC adapter connected, 97.31% charge reported.
+- ACPI thermal and WMI sensors are visible through `envstat`.
+- Kernel identity re-confirmed as `NetBSD 11.0 (build-ADJUSTED)`.
 
 ## Expected / pre-existing warnings
 
@@ -38,8 +41,8 @@ The Realtek ALC280 is the intended built-in analog audio device and is now the d
 
 Before replacing the normal `/netbsd` kernel permanently:
 
-- Associate `iwm0` with a Wi-Fi network and verify traffic.
+- Associate `iwm0` with a Wi-Fi network and verify traffic; the interface is present and RUNNING but currently has no SSID and reports `status: no network`.
 - Confirm audible speaker/headphone playback and microphone capture on the Realtek codec.
 - Test suspend/resume and then re-check graphics, network, keyboard, USB and audio.
-- Optionally test lid-close / reopen behaviour and battery reporting.
+- Optionally test lid-close / reopen behaviour. Battery and ACPI sensor reporting have already been verified.
 - Keep `/netbsd.GENERIC` as a recovery kernel even after making ADJUSTED the default.
