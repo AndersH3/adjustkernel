@@ -38,6 +38,12 @@ These were also observed with GENERIC and are not currently attributed to the ad
 
 The Realtek ALC280 is the intended built-in analog audio device and is now the default.
 
+## Installation status
+
+- The rebuilt ADJUSTED kernel (SHA256 `d2529c24c507ed0ffe22e38a46b1cd0684fcdb26a3ba06cf8de1f76930dc9741`) has been installed as `/netbsd` for normal boot testing.
+- `/netbsd.GENERIC` and `/netbsd.pre-adjusted` are retained as recovery kernels.
+- A normal reboot and post-boot identity check are still required before this installation is counted as verified.
+
 ## Remaining checks
 
 Before replacing the normal `/netbsd` kernel permanently:
