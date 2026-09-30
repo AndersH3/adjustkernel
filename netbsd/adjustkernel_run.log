@@ -1,1 +1,882 @@
-inventory error: runtime inventory gives multiple parents for: uhub3, uhub4
+                                       adjustkernel-ng decisions                                       
+┏━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Line ┃ Action  ┃ Rule                            ┃ Reason                                           ┃
+┡━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   86 │ keep    │ acpicpu* at cpu?                │ observed child via interface/unknown attachment  │
+│   87 │ keep    │ coretemp* at cpu?               │ observed child via interface/unknown attachment  │
+│   88 │ disable │ est0 at cpu0                    │ no matching runtime child instance               │
+│   89 │ disable │ hyperv0 at cpu0                 │ no matching runtime child instance               │
+│   91 │ disable │ powernow0 at cpu0               │ no matching runtime child instance               │
+│   92 │ disable │ viac7temp* at cpu?              │ no matching runtime child instance               │
+│   93 │ disable │ vmt0 at cpu0                    │ no matching runtime child instance               │
+│   98 │ disable │ hypervisor* at mainbus?         │ no matching runtime child instance               │
+│   99 │ disable │ xenbus* at hypervisor?          │ no matching runtime child instance               │
+│  100 │ disable │ xencons* at hypervisor?         │ no matching runtime child instance               │
+│  101 │ disable │ xennet* at xenbus?              │ no matching runtime child instance               │
+│  102 │ disable │ xbd* at xenbus?                 │ no matching runtime child instance               │
+│  314 │ disable │ ipmi0 at mainbus?               │ no matching runtime child instance               │
+│  315 │ disable │ ipmi_acpi* at acpi?             │ no matching runtime child instance               │
+│  316 │ disable │ ipmi0 at ipmi_acpi?             │ no matching runtime child instance               │
+│  319 │ keep    │ acpi0 at mainbus0               │ observed child via interface/unknown attachment  │
+│  331 │ keep    │ acpiacad* at acpi?              │ runtime child/parent edge matched                │
+│  332 │ keep    │ acpibat* at acpi?               │ runtime child/parent edge matched                │
+│  333 │ keep    │ acpibut* at acpi?               │ runtime child/parent edge matched                │
+│  334 │ disable │ acpidalb* at acpi?              │ no matching runtime child instance               │
+│  335 │ keep    │ acpiec* at acpi?                │ runtime child/parent edge matched                │
+│  336 │ disable │ acpiecdt* at acpi?              │ no matching runtime child instance               │
+│  337 │ disable │ acpifan* at acpi?               │ no matching runtime child instance               │
+│  338 │ disable │ acpihed* at acpi?               │ no matching runtime child instance               │
+│  339 │ keep    │ acpilid* at acpi?               │ runtime child/parent edge matched                │
+│  342 │ keep    │ acpitz* at acpi?                │ runtime child/parent edge matched                │
+│  343 │ keep    │ acpivga* at acpi?               │ runtime child/parent edge matched                │
+│  344 │ keep    │ acpiout* at acpivga?            │ runtime child/parent edge matched                │
+│  345 │ disable │ acpivmgenid* at acpi?           │ no matching runtime child instance               │
+│  346 │ disable │ acpiwdrt* at acpi?              │ no matching runtime child instance               │
+│  347 │ keep    │ acpiwmi* at acpi?               │ runtime child/parent edge matched                │
+│  348 │ disable │ apei* at apeibus?               │ no matching runtime child instance               │
+│  351 │ disable │ aibs* at acpi?                  │ no matching runtime child instance               │
+│  352 │ disable │ asus* at acpi?                  │ no matching runtime child instance               │
+│  353 │ keep    │ attimer* at acpi?               │ runtime child/parent edge matched                │
+│  354 │ disable │ com0 at acpi?                   │ no matching runtime child instance               │
+│  355 │ disable │ com1 at acpi?                   │ no matching runtime child instance               │
+│  356 │ disable │ com* at acpi?                   │ no matching runtime child instance               │
+│  357 │ disable │ fdc* at acpi?                   │ no matching runtime child instance               │
+│  358 │ disable │ fd* at fdc?                     │ no matching runtime child instance               │
+│  359 │ disable │ fujbp* at acpi?                 │ no matching runtime child instance               │
+│  360 │ disable │ fujhk* at acpi?                 │ no matching runtime child instance               │
+│  363 │ keep    │ hpet* at acpihpetbus?           │ observed child via interface/unknown attachment  │
+│  364 │ keep    │ hpet* at acpinodebus?           │ observed child via interface/unknown attachment  │
+│  365 │ disable │ joy* at acpi?                   │ no matching runtime child instance               │
+│  366 │ disable │ lpt0 at acpi?                   │ no matching runtime child instance               │
+│  367 │ disable │ lpt1 at acpi?                   │ no matching runtime child instance               │
+│  368 │ disable │ lpt* at acpi?                   │ no matching runtime child instance               │
+│  369 │ disable │ mpu* at acpi?                   │ no matching runtime child instance               │
+│  370 │ keep    │ pckbc* at acpi?                 │ runtime child/parent edge matched                │
+│  371 │ disable │ pcppi* at acpi?                 │ child exists only on another concrete attachment │
+│  372 │ disable │ qemufwcfg* at acpi?             │ no matching runtime child instance               │
+│  373 │ disable │ sdhc* at acpi?                  │ no matching runtime child instance               │
+│  374 │ disable │ sony* at acpi?                  │ no matching runtime child instance               │
+│  375 │ disable │ spic* at acpi?                  │ no matching runtime child instance               │
+│  376 │ disable │ wsmouse* at spic?               │ child exists only on another concrete attachment │
+│  377 │ disable │ thinkpad* at acpi?              │ no matching runtime child instance               │
+│  378 │ keep    │ tpm* at acpi?                   │ runtime child/parent edge matched                │
+│  379 │ disable │ ug* at acpi?                    │ no matching runtime child instance               │
+│  380 │ disable │ valz* at acpi?                  │ no matching runtime child instance               │
+│  381 │ disable │ wb* at acpi?                    │ no matching runtime child instance               │
+│  382 │ disable │ sdmmc* at wb?                   │ child exists only on another concrete attachment │
+│  383 │ disable │ wmidell* at acpiwmibus?         │ no matching runtime child instance               │
+│  384 │ disable │ wmieeepc* at acpiwmibus?        │ no matching runtime child instance               │
+│  385 │ keep    │ wmihp* at acpiwmibus?           │ observed child via interface/unknown attachment  │
+│  386 │ disable │ wmimsi* at acpiwmibus?          │ no matching runtime child instance               │
+│  391 │ keep    │ pci* at mainbus?                │ observed child via interface/unknown attachment  │
+│  392 │ disable │ pci* at pchb?                   │ child exists only on another concrete attachment │
+│  393 │ keep    │ pci* at ppb?                    │ runtime child/parent edge matched                │
+│  396 │ keep    │ pchb* at pci?                   │ runtime child/parent edge matched                │
+│  398 │ keep    │ pcib* at pci?                   │ runtime child/parent edge matched                │
+│  399 │ keep    │ ppb* at pci?                    │ runtime child/parent edge matched                │
+│  401 │ disable │ puc* at pci?                    │ no matching runtime child instance               │
+│  403 │ disable │ amdpcib* at pci?                │ no matching runtime child instance               │
+│  404 │ disable │ hpet* at amdpcib?               │ child exists only on another concrete attachment │
+│  406 │ disable │ pwdog* at pci?                  │ no matching runtime child instance               │
+│  408 │ disable │ ichlpcib* at pci?               │ no matching runtime child instance               │
+│  410 │ disable │ fwhrng* at ichlpcib?            │ no matching runtime child instance               │
+│  412 │ disable │ tco* at tcoichbus?              │ no matching runtime child instance               │
+│  414 │ disable │ aapic* at pci?                  │ no matching runtime child instance               │
+│  416 │ disable │ agp* at pchb?                   │ no matching runtime child instance               │
+│  419 │ keep    │ isa0 at mainbus?                │ observed child via interface/unknown attachment  │
+│  420 │ keep    │ isa0 at pcib?                   │ runtime child/parent edge matched                │
+│  422 │ disable │ isa0 at ichlpcib?               │ child exists only on another concrete attachment │
+│  425 │ disable │ cbb* at pci?                    │ no matching runtime child instance               │
+│  426 │ disable │ cardslot* at cbb?               │ no matching runtime child instance               │
+│  429 │ disable │ cardbus* at cardslot?           │ no matching runtime child instance               │
+│  430 │ disable │ pcmcia* at cardslot?            │ no matching runtime child instance               │
+│  435 │ disable │ pckbc0 at isa?                  │ no matching runtime child instance               │
+│  436 │ keep    │ pckbd* at pckbc?                │ runtime child/parent edge matched                │
+│  437 │ keep    │ pms* at pckbc?                  │ runtime child/parent edge matched                │
+│  442 │ disable │ vga* at pci?                    │ no matching runtime child instance               │
+│  443 │ disable │ genfb* at pci?                  │ no matching runtime child instance               │
+│  445 │ disable │ wsdisplay* at vga?              │ child exists only on another concrete attachment │
+│  446 │ keep    │ wsdisplay* at wsemuldisplaydev? │ observed child via interface/unknown attachment  │
+│  447 │ keep    │ wskbd* at pckbd?                │ runtime child/parent edge matched                │
+│  448 │ keep    │ wsmouse* at pms?                │ runtime child/parent edge matched                │
+│  449 │ keep    │ wsmouse* at wsmousedev?         │ observed child via interface/unknown attachment  │
+│  451 │ disable │ attimer0 at isa?                │ no matching runtime child instance               │
+│  452 │ keep    │ pcppi0 at isa?                  │ runtime child/parent edge matched                │
+│  453 │ keep    │ sysbeep0 at pcppi?              │ runtime child/parent edge matched                │
+│  466 │ keep    │ i915drmkms* at pci?             │ runtime child/parent edge matched                │
+│  467 │ keep    │ intelfb* at intelfbbus?         │ observed child via interface/unknown attachment  │
+│  469 │ keep    │ radeon* at pci?                 │ runtime child/parent edge matched                │
+│  470 │ disable │ radeondrmkmsfb* at radeonfbbus? │ no matching runtime child instance               │
+│  475 │ disable │ nouveau* at pci?                │ no matching runtime child instance               │
+│  476 │ disable │ nouveaufb* at nouveaufbbus?     │ no matching runtime child instance               │
+│  488 │ disable │ amdccp* at pci?                 │ no matching runtime child instance               │
+│  489 │ disable │ hifn* at pci?                   │ no matching runtime child instance               │
+│  491 │ disable │ ubsec* at pci?                  │ no matching runtime child instance               │
+│  494 │ disable │ tpm* at isa?                    │ child exists only on another concrete attachment │
+│  499 │ disable │ com* at puc?                    │ no matching runtime child instance               │
+│  500 │ disable │ cy* at pci?                     │ no matching runtime child instance               │
+│  501 │ disable │ cz* at pci?                     │ no matching runtime child instance               │
+│  504 │ disable │ com* at pcmcia?                 │ no matching runtime child instance               │
+│  506 │ disable │ pcmcom* at pcmcia?              │ no matching runtime child instance               │
+│  507 │ disable │ com* at pcmcom?                 │ no matching runtime child instance               │
+│  510 │ disable │ com* at cardbus?                │ no matching runtime child instance               │
+│  514 │ disable │ com0 at isa?                    │ no matching runtime child instance               │
+│  515 │ disable │ com1 at isa?                    │ no matching runtime child instance               │
+│  520 │ disable │ lpt* at puc?                    │ no matching runtime child instance               │
+│  523 │ disable │ lpt0 at isa?                    │ no matching runtime child instance               │
+│  524 │ disable │ lpt1 at isa?                    │ no matching runtime child instance               │
+│  528 │ disable │ amdnb_misc* at pci?             │ no matching runtime child instance               │
+│  529 │ disable │ amdtemp* at amdnb_misc?         │ no matching runtime child instance               │
+│  531 │ disable │ amdsmn* at pci?                 │ no matching runtime child instance               │
+│  532 │ disable │ amdzentemp* at amdsmnbus?       │ no matching runtime child instance               │
+│  554 │ disable │ amdpm* at pci?                  │ no matching runtime child instance               │
+│  558 │ disable │ nfsmbc* at pci?                 │ no matching runtime child instance               │
+│  559 │ disable │ nfsmb* at nfsmbc?               │ no matching runtime child instance               │
+│  560 │ disable │ iic* at nfsmb?                  │ child exists only on another concrete attachment │
+│  563 │ disable │ piixpm* at pci?                 │ no matching runtime child instance               │
+│  564 │ disable │ iic* at piixpm?                 │ child exists only on another concrete attachment │
+│  567 │ keep    │ ichsmb* at pci?                 │ runtime child/parent edge matched                │
+│  568 │ keep    │ iic* at ichsmb?                 │ runtime child/parent edge matched                │
+│  571 │ disable │ ismt* at pci?                   │ no matching runtime child instance               │
+│  572 │ disable │ iic* at ismt?                   │ child exists only on another concrete attachment │
+│  575 │ disable │ dwiic* at acpi?                 │ no matching runtime child instance               │
+│  576 │ disable │ dwiic* at pci?                  │ no matching runtime child instance               │
+│  577 │ disable │ iic* at dwiic?                  │ child exists only on another concrete attachment │
+│  615 │ disable │ igpio* at acpi?                 │ no matching runtime child instance               │
+│  618 │ disable │ ihidev* at iic?                 │ no matching runtime child instance               │
+│  621 │ disable │ ims* at ihidev?                 │ no matching runtime child instance               │
+│  622 │ disable │ wsmouse* at ims?                │ child exists only on another concrete attachment │
+│  625 │ disable │ iop* at pci?                    │ no matching runtime child instance               │
+│  626 │ disable │ iopsp* at iop?                  │ no matching runtime child instance               │
+│  627 │ disable │ ld* at iop?                     │ no matching runtime child instance               │
+│  632 │ disable │ gpio* at gpiobus?               │ no matching runtime child instance               │
+│  636 │ disable │ gpioow* at gpio?                │ no matching runtime child instance               │
+│  637 │ disable │ onewire* at gpioow?             │ no matching runtime child instance               │
+│  640 │ disable │ owtemp* at onewire?             │ no matching runtime child instance               │
+│  656 │ disable │ nct0 at isa?                    │ no matching runtime child instance               │
+│  661 │ disable │ adv* at pci?                    │ no matching runtime child instance               │
+│  662 │ disable │ adw* at pci?                    │ no matching runtime child instance               │
+│  663 │ disable │ ahc* at pci?                    │ no matching runtime child instance               │
+│  664 │ disable │ ahd* at pci?                    │ no matching runtime child instance               │
+│  665 │ disable │ bha* at pci?                    │ no matching runtime child instance               │
+│  666 │ disable │ dpt* at pci?                    │ no matching runtime child instance               │
+│  667 │ disable │ iha* at pci?                    │ no matching runtime child instance               │
+│  668 │ disable │ isp* at pci?                    │ no matching runtime child instance               │
+│  669 │ disable │ mfi* at pci?                    │ no matching runtime child instance               │
+│  670 │ disable │ mfii* at pci?                   │ no matching runtime child instance               │
+│  671 │ disable │ mly* at pci?                    │ no matching runtime child instance               │
+│  672 │ disable │ mpt* at pci?                    │ no matching runtime child instance               │
+│  673 │ disable │ mpii* at pci?                   │ no matching runtime child instance               │
+│  674 │ disable │ njs* at pci?                    │ no matching runtime child instance               │
+│  675 │ disable │ pcscp* at pci?                  │ no matching runtime child instance               │
+│  676 │ disable │ siop* at pci?                   │ no matching runtime child instance               │
+│  677 │ disable │ esiop* at pci?                  │ no matching runtime child instance               │
+│  679 │ disable │ trm* at pci?                    │ no matching runtime child instance               │
+│  682 │ disable │ aic* at pcmcia?                 │ no matching runtime child instance               │
+│  683 │ disable │ esp* at pcmcia?                 │ no matching runtime child instance               │
+│  684 │ disable │ spc* at pcmcia?                 │ no matching runtime child instance               │
+│  687 │ disable │ adv* at cardbus?                │ no matching runtime child instance               │
+│  688 │ disable │ ahc* at cardbus?                │ no matching runtime child instance               │
+│  689 │ disable │ njs* at cardbus?                │ no matching runtime child instance               │
+│  692 │ disable │ scsibus* at scsi?               │ no matching runtime child instance               │
+│  695 │ keep    │ sd* at scsibus?                 │ explicit --keep                                  │
+│  696 │ disable │ st* at scsibus?                 │ no matching runtime child instance               │
+│  697 │ keep    │ cd* at scsibus?                 │ explicit --keep                                  │
+│  698 │ disable │ ch* at scsibus?                 │ no matching runtime child instance               │
+│  699 │ disable │ ses* at scsibus?                │ no matching runtime child instance               │
+│  700 │ disable │ ss* at scsibus?                 │ no matching runtime child instance               │
+│  701 │ disable │ uk* at scsibus?                 │ no matching runtime child instance               │
+│  705 │ disable │ aac* at pci?                    │ no matching runtime child instance               │
+│  706 │ disable │ amr* at pci?                    │ no matching runtime child instance               │
+│  707 │ disable │ arcmsr* at pci?                 │ no matching runtime child instance               │
+│  708 │ disable │ cac* at pci?                    │ no matching runtime child instance               │
+│  709 │ disable │ ciss* at pci?                   │ no matching runtime child instance               │
+│  710 │ disable │ icp* at pci?                    │ no matching runtime child instance               │
+│  711 │ disable │ mlx* at pci?                    │ no matching runtime child instance               │
+│  712 │ disable │ twe* at pci?                    │ no matching runtime child instance               │
+│  713 │ disable │ twa* at pci?                    │ no matching runtime child instance               │
+│  715 │ disable │ ld* at aac?                     │ no matching runtime child instance               │
+│  716 │ disable │ ld* at amr?                     │ no matching runtime child instance               │
+│  717 │ disable │ ld* at cac?                     │ no matching runtime child instance               │
+│  718 │ disable │ ld* at icp?                     │ no matching runtime child instance               │
+│  719 │ disable │ ld* at twe?                     │ no matching runtime child instance               │
+│  720 │ disable │ ld* at twa?                     │ no matching runtime child instance               │
+│  721 │ disable │ ld* at mlx?                     │ no matching runtime child instance               │
+│  723 │ disable │ icpsp* at icp?                  │ no matching runtime child instance               │
+│  730 │ disable │ pciide* at pci?                 │ no matching runtime child instance               │
+│  731 │ disable │ acardide* at pci?               │ no matching runtime child instance               │
+│  732 │ disable │ aceride* at pci?                │ no matching runtime child instance               │
+│  733 │ keep    │ ahcisata* at pci?               │ runtime child/parent edge matched                │
+│  734 │ disable │ artsata* at pci?                │ no matching runtime child instance               │
+│  735 │ disable │ cmdide* at pci?                 │ no matching runtime child instance               │
+│  736 │ disable │ cypide* at pci?                 │ no matching runtime child instance               │
+│  737 │ disable │ hptide* at pci?                 │ no matching runtime child instance               │
+│  738 │ disable │ iteide* at pci?                 │ no matching runtime child instance               │
+│  739 │ disable │ ixpide* at pci?                 │ no matching runtime child instance               │
+│  740 │ disable │ jmide* at pci?                  │ no matching runtime child instance               │
+│  741 │ disable │ ahcisata* at jmide?             │ child exists only on another concrete attachment │
+│  742 │ disable │ mvsata* at pci?                 │ no matching runtime child instance               │
+│  743 │ disable │ optiide* at pci?                │ no matching runtime child instance               │
+│  744 │ disable │ piixide* at pci?                │ no matching runtime child instance               │
+│  745 │ disable │ pdcide* at pci?                 │ no matching runtime child instance               │
+│  746 │ disable │ pdcsata* at pci?                │ no matching runtime child instance               │
+│  747 │ disable │ satalink* at pci?               │ no matching runtime child instance               │
+│  748 │ disable │ siisata* at pci?                │ no matching runtime child instance               │
+│  749 │ disable │ siside* at pci?                 │ no matching runtime child instance               │
+│  750 │ disable │ slide* at pci?                  │ no matching runtime child instance               │
+│  751 │ disable │ svwsata* at pci?                │ no matching runtime child instance               │
+│  752 │ disable │ toshide* at pci?                │ no matching runtime child instance               │
+│  753 │ disable │ viaide* at pci?                 │ no matching runtime child instance               │
+│  756 │ disable │ wdc* at pcmcia?                 │ no matching runtime child instance               │
+│  759 │ disable │ njata* at cardbus?              │ no matching runtime child instance               │
+│  760 │ disable │ siisata* at cardbus?            │ no matching runtime child instance               │
+│  766 │ disable │ wdc0 at isa?                    │ no matching runtime child instance               │
+│  767 │ disable │ wdc1 at isa?                    │ no matching runtime child instance               │
+│  770 │ keep    │ atabus* at ata?                 │ observed child via interface/unknown attachment  │
+│  784 │ keep    │ wd* at atabus?                  │ runtime child/parent edge matched                │
+│  787 │ disable │ atapibus* at atapi?             │ no matching runtime child instance               │
+│  792 │ disable │ ld* at ataraid?                 │ no matching runtime child instance               │
+│  796 │ keep    │ cd* at atapibus?                │ explicit --keep                                  │
+│  797 │ keep    │ sd* at atapibus?                │ explicit --keep                                  │
+│  798 │ disable │ st* at atapibus?                │ no matching runtime child instance               │
+│  799 │ disable │ uk* at atapibus?                │ no matching runtime child instance               │
+│  803 │ disable │ nvme* at pci?                   │ no matching runtime child instance               │
+│  804 │ disable │ ld* at nvme?                    │ no matching runtime child instance               │
+│  816 │ disable │ age* at pci?                    │ no matching runtime child instance               │
+│  817 │ disable │ alc* at pci?                    │ no matching runtime child instance               │
+│  818 │ disable │ ale* at pci?                    │ no matching runtime child instance               │
+│  819 │ disable │ an* at pci?                     │ no matching runtime child instance               │
+│  820 │ disable │ aq* at pci?                     │ no matching runtime child instance               │
+│  821 │ disable │ ath* at pci?                    │ no matching runtime child instance               │
+│  822 │ disable │ athn* at pci?                   │ no matching runtime child instance               │
+│  823 │ disable │ atw* at pci?                    │ no matching runtime child instance               │
+│  824 │ disable │ bce* at pci?                    │ no matching runtime child instance               │
+│  825 │ disable │ bge* at pci?                    │ no matching runtime child instance               │
+│  826 │ disable │ bnx* at pci?                    │ no matching runtime child instance               │
+│  827 │ disable │ bwi* at pci?                    │ no matching runtime child instance               │
+│  828 │ disable │ bwfm* at pci?                   │ no matching runtime child instance               │
+│  829 │ disable │ cas* at pci?                    │ no matching runtime child instance               │
+│  830 │ disable │ dge* at pci?                    │ no matching runtime child instance               │
+│  831 │ disable │ ena* at pci?                    │ no matching runtime child instance               │
+│  832 │ disable │ ep* at pci?                     │ no matching runtime child instance               │
+│  833 │ disable │ epic* at pci?                   │ no matching runtime child instance               │
+│  835 │ disable │ et* at pci?                     │ no matching runtime child instance               │
+│  836 │ disable │ ex* at pci?                     │ no matching runtime child instance               │
+│  837 │ disable │ fxp* at pci?                    │ no matching runtime child instance               │
+│  838 │ disable │ gem* at pci?                    │ no matching runtime child instance               │
+│  839 │ disable │ gsip* at pci?                   │ no matching runtime child instance               │
+│  840 │ disable │ hme* at pci?                    │ no matching runtime child instance               │
+│  841 │ disable │ iavf* at pci?                   │ no matching runtime child instance               │
+│  842 │ disable │ igc* at pci?                    │ no matching runtime child instance               │
+│  843 │ disable │ ipw* at pci?                    │ no matching runtime child instance               │
+│  844 │ disable │ iwi* at pci?                    │ no matching runtime child instance               │
+│  845 │ keep    │ iwm* at pci?                    │ runtime child/parent edge matched                │
+│  846 │ disable │ iwn* at pci?                    │ no matching runtime child instance               │
+│  847 │ disable │ ixg* at pci?                    │ no matching runtime child instance               │
+│  848 │ disable │ ixl* at pci?                    │ no matching runtime child instance               │
+│  849 │ disable │ ixv* at pci?                    │ no matching runtime child instance               │
+│  850 │ disable │ jme* at pci?                    │ no matching runtime child instance               │
+│  851 │ disable │ kse* at pci?                    │ no matching runtime child instance               │
+│  852 │ disable │ lii* at pci?                    │ no matching runtime child instance               │
+│  853 │ disable │ malo* at pci?                   │ no matching runtime child instance               │
+│  854 │ disable │ mcx* at pci?                    │ no matching runtime child instance               │
+│  855 │ disable │ mskc* at pci?                   │ no matching runtime child instance               │
+│  856 │ disable │ msk* at mskc?                   │ no matching runtime child instance               │
+│  857 │ disable │ mtd* at pci?                    │ no matching runtime child instance               │
+│  858 │ disable │ ne* at pci?                     │ no matching runtime child instance               │
+│  859 │ disable │ nfe* at pci?                    │ no matching runtime child instance               │
+│  860 │ disable │ ntwoc* at pci?                  │ no matching runtime child instance               │
+│  861 │ disable │ pcn* at pci?                    │ no matching runtime child instance               │
+│  862 │ disable │ ral* at pci?                    │ no matching runtime child instance               │
+│  863 │ disable │ re* at pci?                     │ no matching runtime child instance               │
+│  864 │ disable │ rge* at pci?                    │ no matching runtime child instance               │
+│  865 │ disable │ rtk* at pci?                    │ no matching runtime child instance               │
+│  866 │ disable │ rtw* at pci?                    │ no matching runtime child instance               │
+│  867 │ disable │ rtwn* at pci?                   │ no matching runtime child instance               │
+│  868 │ disable │ sf* at pci?                     │ no matching runtime child instance               │
+│  869 │ disable │ sip* at pci?                    │ no matching runtime child instance               │
+│  870 │ disable │ skc* at pci?                    │ no matching runtime child instance               │
+│  871 │ disable │ sk* at skc?                     │ no matching runtime child instance               │
+│  872 │ disable │ ste* at pci?                    │ no matching runtime child instance               │
+│  873 │ disable │ stge* at pci?                   │ no matching runtime child instance               │
+│  874 │ disable │ ti* at pci?                     │ no matching runtime child instance               │
+│  875 │ disable │ tl* at pci?                     │ no matching runtime child instance               │
+│  876 │ disable │ tlp* at pci?                    │ no matching runtime child instance               │
+│  877 │ disable │ txp* at pci?                    │ no matching runtime child instance               │
+│  878 │ disable │ vge* at pci?                    │ no matching runtime child instance               │
+│  879 │ disable │ vmx* at pci?                    │ no matching runtime child instance               │
+│  880 │ disable │ vr* at pci?                     │ no matching runtime child instance               │
+│  881 │ disable │ wi* at pci?                     │ no matching runtime child instance               │
+│  882 │ keep    │ wm* at pci?                     │ runtime child/parent edge matched                │
+│  883 │ disable │ wpi* at pci?                    │ no matching runtime child instance               │
+│  884 │ disable │ xge* at pci?                    │ no matching runtime child instance               │
+│  887 │ disable │ an* at pcmcia?                  │ no matching runtime child instance               │
+│  888 │ disable │ awi* at pcmcia?                 │ no matching runtime child instance               │
+│  889 │ disable │ cnw* at pcmcia?                 │ no matching runtime child instance               │
+│  890 │ disable │ cs* at pcmcia?                  │ no matching runtime child instance               │
+│  891 │ disable │ ep* at pcmcia?                  │ no matching runtime child instance               │
+│  892 │ disable │ malo* at pcmcia?                │ no matching runtime child instance               │
+│  893 │ disable │ mbe* at pcmcia?                 │ no matching runtime child instance               │
+│  894 │ disable │ ne* at pcmcia?                  │ no matching runtime child instance               │
+│  895 │ disable │ ray* at pcmcia?                 │ no matching runtime child instance               │
+│  896 │ disable │ sm* at pcmcia?                  │ no matching runtime child instance               │
+│  897 │ disable │ wi* at pcmcia?                  │ no matching runtime child instance               │
+│  898 │ disable │ xirc* at pcmcia?                │ no matching runtime child instance               │
+│  899 │ disable │ com* at xirc?                   │ no matching runtime child instance               │
+│  900 │ disable │ xi* at xirc?                    │ no matching runtime child instance               │
+│  902 │ disable │ mhzc* at pcmcia?                │ no matching runtime child instance               │
+│  903 │ disable │ com* at mhzc?                   │ no matching runtime child instance               │
+│  904 │ disable │ sm* at mhzc?                    │ no matching runtime child instance               │
+│  907 │ disable │ ath* at cardbus?                │ no matching runtime child instance               │
+│  908 │ disable │ athn* at cardbus?               │ no matching runtime child instance               │
+│  909 │ disable │ atw* at cardbus?                │ no matching runtime child instance               │
+│  910 │ disable │ ex* at cardbus?                 │ no matching runtime child instance               │
+│  911 │ disable │ fxp* at cardbus?                │ no matching runtime child instance               │
+│  912 │ disable │ malo* at cardbus?               │ no matching runtime child instance               │
+│  913 │ disable │ ral* at cardbus?                │ no matching runtime child instance               │
+│  914 │ disable │ re* at cardbus?                 │ no matching runtime child instance               │
+│  915 │ disable │ rtk* at cardbus?                │ no matching runtime child instance               │
+│  916 │ disable │ rtw* at cardbus?                │ no matching runtime child instance               │
+│  917 │ disable │ tlp* at cardbus?                │ no matching runtime child instance               │
+│  920 │ disable │ acphy* at mii?                  │ no matching runtime child instance               │
+│  921 │ disable │ amhphy* at mii?                 │ no matching runtime child instance               │
+│  922 │ disable │ atphy* at mii?                  │ no matching runtime child instance               │
+│  923 │ disable │ bmtphy* at mii?                 │ no matching runtime child instance               │
+│  924 │ disable │ brgphy* at mii?                 │ no matching runtime child instance               │
+│  925 │ disable │ ciphy* at mii?                  │ no matching runtime child instance               │
+│  926 │ disable │ dmphy* at mii?                  │ no matching runtime child instance               │
+│  927 │ disable │ etphy* at mii?                  │ no matching runtime child instance               │
+│  928 │ disable │ exphy* at mii?                  │ no matching runtime child instance               │
+│  929 │ disable │ gentbi* at mii?                 │ no matching runtime child instance               │
+│  930 │ disable │ glxtphy* at mii?                │ no matching runtime child instance               │
+│  931 │ disable │ gphyter* at mii?                │ no matching runtime child instance               │
+│  932 │ disable │ icsphy* at mii?                 │ no matching runtime child instance               │
+│  933 │ disable │ igphy* at mii?                  │ no matching runtime child instance               │
+│  934 │ keep    │ ihphy* at mii?                  │ observed child via interface/unknown attachment  │
+│  935 │ disable │ ikphy* at mii?                  │ no matching runtime child instance               │
+│  936 │ disable │ inphy* at mii?                  │ no matching runtime child instance               │
+│  937 │ disable │ iophy* at mii?                  │ no matching runtime child instance               │
+│  938 │ disable │ ipgphy* at mii?                 │ no matching runtime child instance               │
+│  939 │ disable │ jmphy* at mii?                  │ no matching runtime child instance               │
+│  940 │ disable │ lxtphy* at mii?                 │ no matching runtime child instance               │
+│  941 │ disable │ makphy* at mii?                 │ no matching runtime child instance               │
+│  942 │ disable │ micphy* at mii?                 │ no matching runtime child instance               │
+│  943 │ disable │ nsphy* at mii?                  │ no matching runtime child instance               │
+│  944 │ disable │ nsphyter* at mii?               │ no matching runtime child instance               │
+│  945 │ disable │ pnaphy* at mii?                 │ no matching runtime child instance               │
+│  946 │ disable │ qsphy* at mii?                  │ no matching runtime child instance               │
+│  947 │ disable │ rgephy* at mii?                 │ no matching runtime child instance               │
+│  948 │ disable │ rlphy* at mii?                  │ no matching runtime child instance               │
+│  949 │ disable │ smscphy* at mii?                │ no matching runtime child instance               │
+│  950 │ disable │ sqphy* at mii?                  │ no matching runtime child instance               │
+│  951 │ disable │ tlphy* at mii?                  │ no matching runtime child instance               │
+│  952 │ disable │ tqphy* at mii?                  │ no matching runtime child instance               │
+│  953 │ disable │ ukphy* at mii?                  │ no matching runtime child instance               │
+│  954 │ disable │ urlphy* at mii?                 │ no matching runtime child instance               │
+│  963 │ keep    │ xhci* at pci?                   │ runtime child/parent edge matched                │
+│  964 │ keep    │ ehci* at pci?                   │ runtime child/parent edge matched                │
+│  965 │ disable │ ohci* at pci?                   │ no matching runtime child instance               │
+│  966 │ disable │ uhci* at pci?                   │ no matching runtime child instance               │
+│  969 │ disable │ ehci* at cardbus?               │ child exists only on another concrete attachment │
+│  970 │ disable │ ohci* at cardbus?               │ no matching runtime child instance               │
+│  971 │ disable │ uhci* at cardbus?               │ no matching runtime child instance               │
+│  977 │ disable │ slhci* at pcmcia?               │ no matching runtime child instance               │
+│  981 │ keep    │ usb* at xhci?                   │ runtime child/parent edge matched                │
+│  982 │ keep    │ usb* at ehci?                   │ runtime child/parent edge matched                │
+│  983 │ disable │ usb* at ohci?                   │ child exists only on another concrete attachment │
+│  984 │ disable │ usb* at uhci?                   │ child exists only on another concrete attachment │
+│  985 │ disable │ usb* at slhci?                  │ child exists only on another concrete attachment │
+│  990 │ disable │ fwohci* at pci?                 │ no matching runtime child instance               │
+│  993 │ disable │ fwohci* at cardbus?             │ no matching runtime child instance               │
+│  995 │ disable │ ieee1394if* at fwohci?          │ no matching runtime child instance               │
+│  996 │ disable │ fwip* at ieee1394if?            │ no matching runtime child instance               │
+│  997 │ disable │ sbp* at ieee1394if?             │ no matching runtime child instance               │
+│ 1002 │ disable │ auacer* at pci?                 │ no matching runtime child instance               │
+│ 1003 │ disable │ auich* at pci?                  │ no matching runtime child instance               │
+│ 1004 │ disable │ auixp* at pci?                  │ no matching runtime child instance               │
+│ 1005 │ disable │ autri* at pci?                  │ no matching runtime child instance               │
+│ 1006 │ disable │ auvia* at pci?                  │ no matching runtime child instance               │
+│ 1007 │ disable │ clcs* at pci?                   │ no matching runtime child instance               │
+│ 1008 │ disable │ clct* at pci?                   │ no matching runtime child instance               │
+│ 1009 │ disable │ cmpci* at pci?                  │ no matching runtime child instance               │
+│ 1010 │ disable │ eap* at pci?                    │ no matching runtime child instance               │
+│ 1011 │ disable │ emuxki* at pci?                 │ no matching runtime child instance               │
+│ 1012 │ disable │ esa* at pci?                    │ no matching runtime child instance               │
+│ 1013 │ disable │ esm* at pci?                    │ no matching runtime child instance               │
+│ 1014 │ disable │ eso* at pci?                    │ no matching runtime child instance               │
+│ 1015 │ disable │ fms* at pci?                    │ no matching runtime child instance               │
+│ 1016 │ disable │ neo* at pci?                    │ no matching runtime child instance               │
+│ 1017 │ disable │ sv* at pci?                     │ no matching runtime child instance               │
+│ 1018 │ disable │ yds* at pci?                    │ no matching runtime child instance               │
+│ 1022 │ disable │ opl* at cmpci?                  │ no matching runtime child instance               │
+│ 1023 │ disable │ opl* at eso?                    │ no matching runtime child instance               │
+│ 1024 │ disable │ opl* at fms?                    │ no matching runtime child instance               │
+│ 1025 │ disable │ opl* at sv?                     │ no matching runtime child instance               │
+│ 1028 │ keep    │ hdaudio* at pci?                │ runtime child/parent edge matched                │
+│ 1029 │ keep    │ hdafg* at hdaudiobus?           │ observed child via interface/unknown attachment  │
+│ 1032 │ keep    │ audio* at audiobus?             │ observed child via interface/unknown attachment  │
+│ 1035 │ keep    │ spkr* at pcppi?                 │ runtime child/parent edge matched                │
+│ 1036 │ keep    │ spkr* at audio?                 │ runtime child/parent edge matched                │
+│ 1041 │ disable │ mpu* at cmpci?                  │ no matching runtime child instance               │
+│ 1042 │ disable │ mpu* at eso?                    │ no matching runtime child instance               │
+│ 1043 │ disable │ mpu* at yds?                    │ no matching runtime child instance               │
+│ 1046 │ keep    │ midi* at midibus?               │ observed child via interface/unknown attachment  │
+│ 1047 │ keep    │ midi* at pcppi?                 │ runtime child/parent edge matched                │
+│ 1059 │ disable │ coram* at pci?                  │ no matching runtime child instance               │
+│ 1060 │ disable │ cxdtv* at pci?                  │ no matching runtime child instance               │
+│ 1062 │ disable │ video* at videobus?             │ no matching runtime child instance               │
+│ 1063 │ disable │ dtv* at dtvbus?                 │ no matching runtime child instance               │
+│ 1069 │ disable │ bktr* at pci?                   │ no matching runtime child instance               │
+│ 1070 │ disable │ radio* at bktr?                 │ no matching runtime child instance               │
+│ 1076 │ disable │ bt3c* at pcmcia?                │ no matching runtime child instance               │
+│ 1077 │ disable │ btbc* at pcmcia?                │ no matching runtime child instance               │
+│ 1080 │ disable │ sbt* at sdmmc?                  │ no matching runtime child instance               │
+│ 1083 │ keep    │ ubt* at uhub?                   │ observed child via interface/unknown attachment  │
+│ 1084 │ disable │ aubtfwl* at uhub?               │ no matching runtime child instance               │
+│ 1087 │ disable │ bthub* at bcsp?                 │ no matching runtime child instance               │
+│ 1088 │ disable │ bthub* at bt3c?                 │ no matching runtime child instance               │
+│ 1089 │ disable │ bthub* at btbc?                 │ no matching runtime child instance               │
+│ 1090 │ disable │ bthub* at btuart?               │ no matching runtime child instance               │
+│ 1091 │ disable │ bthub* at sbt?                  │ no matching runtime child instance               │
+│ 1092 │ disable │ bthub* at ubt?                  │ no matching runtime child instance               │
+│ 1095 │ disable │ bthidev* at bthub?              │ no matching runtime child instance               │
+│ 1098 │ disable │ btms* at bthidev?               │ no matching runtime child instance               │
+│ 1099 │ disable │ wsmouse* at btms?               │ child exists only on another concrete attachment │
+│ 1102 │ disable │ btkbd* at bthidev?              │ no matching runtime child instance               │
+│ 1103 │ disable │ wskbd* at btkbd?                │ child exists only on another concrete attachment │
+│ 1106 │ disable │ btmagic* at bthub?              │ no matching runtime child instance               │
+│ 1107 │ disable │ wsmouse* at btmagic?            │ child exists only on another concrete attachment │
+│ 1110 │ disable │ btsco* at bthub?                │ no matching runtime child instance               │
+│ 1116 │ disable │ sdhc* at pci?                   │ no matching runtime child instance               │
+│ 1117 │ keep    │ rtsx* at pci?                   │ runtime child/parent edge matched                │
+│ 1118 │ disable │ sdhc* at cardbus?               │ no matching runtime child instance               │
+│ 1119 │ disable │ sdmmc* at sdhc?                 │ child exists only on another concrete attachment │
+│ 1120 │ keep    │ sdmmc* at rtsx?                 │ runtime child/parent edge matched                │
+│ 1122 │ disable │ ld* at sdmmc?                   │ no matching runtime child instance               │
+│ 1127 │ disable │ weasel* at pci?                 │ no matching runtime child instance               │
+│ 1130 │ disable │ virtio* at pci?                 │ no matching runtime child instance               │
+│ 1135 │ disable │ vmbus* at acpi?                 │ no matching runtime child instance               │
+│ 1136 │ disable │ genfb* at vmbus?                │ no matching runtime child instance               │
+│ 1137 │ disable │ hvkbd* at vmbus?                │ no matching runtime child instance               │
+│ 1138 │ disable │ wskbd* at hvkbd?                │ child exists only on another concrete attachment │
+│ 1139 │ disable │ hvn* at vmbus?                  │ no matching runtime child instance               │
+│ 1140 │ disable │ hvs* at vmbus?                  │ no matching runtime child instance               │
+│ 1141 │ disable │ hvheartbeat* at vmbus?          │ no matching runtime child instance               │
+│ 1142 │ disable │ hvshutdown* at vmbus?           │ no matching runtime child instance               │
+│ 1143 │ disable │ hvtimesync* at vmbus?           │ no matching runtime child instance               │
+│ 1147 │ disable │ pvscsi* at pci?                 │ no matching runtime child instance               │
+└──────┴─────────┴─────────────────────────────────┴──────────────────────────────────────────────────┘
+--- /usr/src/sys/arch/amd64/conf/GENERIC
++++ /home/anonymous/src/adjustkernel/netbsd/ADJUSTED
+@@ -0,0 +1,408 @@
++# Generated by adjustkernel-ng 3.0.0.
++# Review after hardware changes and major NetBSD upgrades.
++# NetBSD config(1), not this program, is the final syntax authority.
++
++include "arch/amd64/conf/GENERIC"
++
++# Attachment rules absent from the observed runtime device tree.
++no est0 at cpu0
++no hyperv0 at cpu0
++no powernow0 at cpu0
++no viac7temp* at cpu?
++no vmt0 at cpu0
++no hypervisor* at mainbus?
++no xenbus* at hypervisor?
++no xencons* at hypervisor?
++no xennet* at xenbus?
++no xbd* at xenbus?
++no ipmi0 at mainbus?
++no ipmi_acpi* at acpi?
++no ipmi0 at ipmi_acpi?
++no acpidalb* at acpi?
++no acpiecdt* at acpi?
++no acpifan* at acpi?
++no acpihed* at acpi?
++no acpivmgenid* at acpi?
++no acpiwdrt* at acpi?
++no apei* at apeibus?
++no aibs* at acpi?
++no asus* at acpi?
++no com0 at acpi?
++no com1 at acpi?
++no com* at acpi?
++no fdc* at acpi?
++no fd* at fdc?
++no fujbp* at acpi?
++no fujhk* at acpi?
++no joy* at acpi?
++no lpt0 at acpi?
++no lpt1 at acpi?
++no lpt* at acpi?
++no mpu* at acpi?
++no pcppi* at acpi?
++no qemufwcfg* at acpi?
++no sdhc* at acpi?
++no sony* at acpi?
++no spic* at acpi?
++no wsmouse* at spic?
++no thinkpad* at acpi?
++no ug* at acpi?
++no valz* at acpi?
++no wb* at acpi?
++no sdmmc* at wb?
++no wmidell* at acpiwmibus?
++no wmieeepc* at acpiwmibus?
++no wmimsi* at acpiwmibus?
++no pci* at pchb?
++no puc* at pci?
++no amdpcib* at pci?
++no hpet* at amdpcib?
++no pwdog* at pci?
++no ichlpcib* at pci?
++no fwhrng* at ichlpcib?
++no tco* at tcoichbus?
++no aapic* at pci?
++no agp* at pchb?
++no isa0 at ichlpcib?
++no cbb* at pci?
++no cardslot* at cbb?
++no cardbus* at cardslot?
++no pcmcia* at cardslot?
++no pckbc0 at isa?
++no vga* at pci?
++no genfb* at pci?
++no wsdisplay* at vga?
++no attimer0 at isa?
++no radeondrmkmsfb* at radeonfbbus?
++no nouveau* at pci?
++no nouveaufb* at nouveaufbbus?
++no amdccp* at pci?
++no hifn* at pci?
++no ubsec* at pci?
++no tpm* at isa?
++no com* at puc?
++no cy* at pci?
++no cz* at pci?
++no com* at pcmcia?
++no pcmcom* at pcmcia?
++no com* at pcmcom?
++no com* at cardbus?
++no com0 at isa?
++no com1 at isa?
++no lpt* at puc?
++no lpt0 at isa?
++no lpt1 at isa?
++no amdnb_misc* at pci?
++no amdtemp* at amdnb_misc?
++no amdsmn* at pci?
++no amdzentemp* at amdsmnbus?
++no amdpm* at pci?
++no nfsmbc* at pci?
++no nfsmb* at nfsmbc?
++no iic* at nfsmb?
++no piixpm* at pci?
++no iic* at piixpm?
++no ismt* at pci?
++no iic* at ismt?
++no dwiic* at acpi?
++no dwiic* at pci?
++no iic* at dwiic?
++no igpio* at acpi?
++no ihidev* at iic?
++no ims* at ihidev?
++no wsmouse* at ims?
++no iop* at pci?
++no iopsp* at iop?
++no ld* at iop?
++no gpio* at gpiobus?
++no gpioow* at gpio?
++no onewire* at gpioow?
++no owtemp* at onewire?
++no nct0 at isa?
++no adv* at pci?
++no adw* at pci?
++no ahc* at pci?
++no ahd* at pci?
++no bha* at pci?
++no dpt* at pci?
++no iha* at pci?
++no isp* at pci?
++no mfi* at pci?
++no mfii* at pci?
++no mly* at pci?
++no mpt* at pci?
++no mpii* at pci?
++no njs* at pci?
++no pcscp* at pci?
++no siop* at pci?
++no esiop* at pci?
++no trm* at pci?
++no aic* at pcmcia?
++no esp* at pcmcia?
++no spc* at pcmcia?
++no adv* at cardbus?
++no ahc* at cardbus?
++no njs* at cardbus?
++no scsibus* at scsi?
++no st* at scsibus?
++no ch* at scsibus?
++no ses* at scsibus?
++no ss* at scsibus?
++no uk* at scsibus?
++no aac* at pci?
++no amr* at pci?
++no arcmsr* at pci?
++no cac* at pci?
++no ciss* at pci?
++no icp* at pci?
++no mlx* at pci?
++no twe* at pci?
++no twa* at pci?
++no ld* at aac?
++no ld* at amr?
++no ld* at cac?
++no ld* at icp?
++no ld* at twe?
++no ld* at twa?
++no ld* at mlx?
++no icpsp* at icp?
++no pciide* at pci?
++no acardide* at pci?
++no aceride* at pci?
++no artsata* at pci?
++no cmdide* at pci?
++no cypide* at pci?
++no hptide* at pci?
++no iteide* at pci?
++no ixpide* at pci?
++no jmide* at pci?
++no ahcisata* at jmide?
++no mvsata* at pci?
++no optiide* at pci?
++no piixide* at pci?
++no pdcide* at pci?
++no pdcsata* at pci?
++no satalink* at pci?
++no siisata* at pci?
++no siside* at pci?
++no slide* at pci?
++no svwsata* at pci?
++no toshide* at pci?
++no viaide* at pci?
++no wdc* at pcmcia?
++no njata* at cardbus?
++no siisata* at cardbus?
++no wdc0 at isa?
++no wdc1 at isa?
++no atapibus* at atapi?
++no ld* at ataraid?
++no st* at atapibus?
++no uk* at atapibus?
++no nvme* at pci?
++no ld* at nvme?
++no age* at pci?
++no alc* at pci?
++no ale* at pci?
++no an* at pci?
++no aq* at pci?
++no ath* at pci?
++no athn* at pci?
++no atw* at pci?
++no bce* at pci?
++no bge* at pci?
++no bnx* at pci?
++no bwi* at pci?
++no bwfm* at pci?
++no cas* at pci?
++no dge* at pci?
++no ena* at pci?
++no ep* at pci?
++no epic* at pci?
++no et* at pci?
++no ex* at pci?
++no fxp* at pci?
++no gem* at pci?
++no gsip* at pci?
++no hme* at pci?
++no iavf* at pci?
++no igc* at pci?
++no ipw* at pci?
++no iwi* at pci?
++no iwn* at pci?
++no ixg* at pci?
++no ixl* at pci?
++no ixv* at pci?
++no jme* at pci?
++no kse* at pci?
++no lii* at pci?
++no malo* at pci?
++no mcx* at pci?
++no mskc* at pci?
++no msk* at mskc?
++no mtd* at pci?
++no ne* at pci?
++no nfe* at pci?
++no ntwoc* at pci?
++no pcn* at pci?
++no ral* at pci?
++no re* at pci?
++no rge* at pci?
++no rtk* at pci?
++no rtw* at pci?
++no rtwn* at pci?
++no sf* at pci?
++no sip* at pci?
++no skc* at pci?
++no sk* at skc?
++no ste* at pci?
++no stge* at pci?
++no ti* at pci?
++no tl* at pci?
++no tlp* at pci?
++no txp* at pci?
++no vge* at pci?
++no vmx* at pci?
++no vr* at pci?
++no wi* at pci?
++no wpi* at pci?
++no xge* at pci?
++no an* at pcmcia?
++no awi* at pcmcia?
++no cnw* at pcmcia?
++no cs* at pcmcia?
++no ep* at pcmcia?
++no malo* at pcmcia?
++no mbe* at pcmcia?
++no ne* at pcmcia?
++no ray* at pcmcia?
++no sm* at pcmcia?
++no wi* at pcmcia?
++no xirc* at pcmcia?
++no com* at xirc?
++no xi* at xirc?
++no mhzc* at pcmcia?
++no com* at mhzc?
++no sm* at mhzc?
++no ath* at cardbus?
++no athn* at cardbus?
++no atw* at cardbus?
++no ex* at cardbus?
++no fxp* at cardbus?
++no malo* at cardbus?
++no ral* at cardbus?
++no re* at cardbus?
++no rtk* at cardbus?
++no rtw* at cardbus?
++no tlp* at cardbus?
++no acphy* at mii?
++no amhphy* at mii?
++no atphy* at mii?
++no bmtphy* at mii?
++no brgphy* at mii?
++no ciphy* at mii?
++no dmphy* at mii?
++no etphy* at mii?
++no exphy* at mii?
++no gentbi* at mii?
++no glxtphy* at mii?
++no gphyter* at mii?
++no icsphy* at mii?
++no igphy* at mii?
++no ikphy* at mii?
++no inphy* at mii?
++no iophy* at mii?
++no ipgphy* at mii?
++no jmphy* at mii?
++no lxtphy* at mii?
++no makphy* at mii?
++no micphy* at mii?
++no nsphy* at mii?
++no nsphyter* at mii?
++no pnaphy* at mii?
++no qsphy* at mii?
++no rgephy* at mii?
++no rlphy* at mii?
++no smscphy* at mii?
++no sqphy* at mii?
++no tlphy* at mii?
++no tqphy* at mii?
++no ukphy* at mii?
++no urlphy* at mii?
++no ohci* at pci?
++no uhci* at pci?
++no ehci* at cardbus?
++no ohci* at cardbus?
++no uhci* at cardbus?
++no slhci* at pcmcia?
++no usb* at ohci?
++no usb* at uhci?
++no usb* at slhci?
++no fwohci* at pci?
++no fwohci* at cardbus?
++no ieee1394if* at fwohci?
++no fwip* at ieee1394if?
++no sbp* at ieee1394if?
++no auacer* at pci?
++no auich* at pci?
++no auixp* at pci?
++no autri* at pci?
++no auvia* at pci?
++no clcs* at pci?
++no clct* at pci?
++no cmpci* at pci?
++no eap* at pci?
++no emuxki* at pci?
++no esa* at pci?
++no esm* at pci?
++no eso* at pci?
++no fms* at pci?
++no neo* at pci?
++no sv* at pci?
++no yds* at pci?
++no opl* at cmpci?
++no opl* at eso?
++no opl* at fms?
++no opl* at sv?
++no mpu* at cmpci?
++no mpu* at eso?
++no mpu* at yds?
++no coram* at pci?
++no cxdtv* at pci?
++no video* at videobus?
++no dtv* at dtvbus?
++no bktr* at pci?
++no radio* at bktr?
++no bt3c* at pcmcia?
++no btbc* at pcmcia?
++no sbt* at sdmmc?
++no aubtfwl* at uhub?
++no bthub* at bcsp?
++no bthub* at bt3c?
++no bthub* at btbc?
++no bthub* at btuart?
++no bthub* at sbt?
++no bthub* at ubt?
++no bthidev* at bthub?
++no btms* at bthidev?
++no wsmouse* at btms?
++no btkbd* at bthidev?
++no wskbd* at btkbd?
++no btmagic* at bthub?
++no wsmouse* at btmagic?
++no btsco* at bthub?
++no sdhc* at pci?
++no sdhc* at cardbus?
++no sdmmc* at sdhc?
++no ld* at sdmmc?
++no weasel* at pci?
++no virtio* at pci?
++no vmbus* at acpi?
++no genfb* at vmbus?
++no hvkbd* at vmbus?
++no wskbd* at hvkbd?
++no hvn* at vmbus?
++no hvs* at vmbus?
++no hvheartbeat* at vmbus?
++no hvshutdown* at vmbus?
++no hvtimesync* at vmbus?
++no pvscsi* at pci?
+
+config(1) validation passed.
+wrote /home/anonymous/src/adjustkernel/netbsd/ADJUSTED
